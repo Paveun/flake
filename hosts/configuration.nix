@@ -111,7 +111,7 @@
     font-awesome
     corefonts
     jetbrains-mono
-  ]
+  ];
 
   # Enable sway/wayland
   programs.sway.enable = true;
