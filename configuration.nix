@@ -6,22 +6,30 @@
 
 {
   nix = {
-    #package = pkgs.nixUnstable;
     package = pkgs.nixFlakes;
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
+    # Garbage collection
+    settings.auto-optimise-store = true;
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
   };
 
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
     ];
 
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
   hardware.tuxedo-keyboard.enable = true;
   
-  # Bootloader.
-  #boot.loader.systemd-boot.enable = true;
+  # Bootloader
   boot.loader.grub.enable = true;
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.useOSProber = true;
@@ -49,10 +57,6 @@
   networking.hostName = "intl"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -77,9 +81,6 @@
     layout = "us";
     xkbVariant = "";
   };
-
-  #enable sway
-  programs.sway.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -129,13 +130,7 @@
     ];
   };
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     alacritty
     neofetch
@@ -145,10 +140,15 @@
     pciutils
     python311
   ];
+
+  # Enable sway/wayland
+  programs.sway.enable = true;
+
   programs.fish = {
     enable = true;
     interactiveShellInit = "neofetch";
   };
+  
   programs.git.enable = true;
 
   # Configuring Nvidia PRIME
@@ -170,16 +170,6 @@
   
   # Optionally, you may need to select the appropriate driver version for your specific GPU.
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
-
-  # Garbage Collection
-  nix = {
-    settings.auto-optimise-store = true;
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 7d";
-    };
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
