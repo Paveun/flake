@@ -1,10 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, user, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "paveun";
-  home.homeDirectory = "/home/paveun";
+  home.username = "${user}";
+  home.homeDirectory = "/home/${user}";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -17,7 +17,20 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
+    firefox
+    kate
+    vscode
+    google-chrome
+    steam
+    xivlauncher
+    slack
+    tidal-hifi
+    cider
+    postman
+    discord
+    haruna
+    transmission
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -45,7 +58,7 @@
     # ".screenrc".source = dotfiles/screenrc;
 
     ".config/alacritty/alacritty.yml"={
-      source = dotfiles/alacritty.yml;
+      source = ../config/alacritty.yml;
     };
 
     # # You can also set the file content immediately.

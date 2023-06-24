@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, user, ... }:
 
 {
   nix = {
@@ -19,15 +19,8 @@
     };
   };
 
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  hardware.tuxedo-keyboard.enable = true;
   
   # Bootloader
   boot.loader.grub.enable = true;
@@ -39,22 +32,6 @@
   # Set kernel version to latest
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  # Setup keyfile
-  boot.initrd.secrets = {
-    "/crypto_keyfile.bin" = null;
-  };
-
-  # Enable swap on luks
-  boot.initrd.luks.devices."luks-511f83db-a000-4258-91fd-bf13ccd8399a".device = "/dev/disk/by-uuid/511f83db-a000-4258-91fd-bf13ccd8399a";
-  boot.initrd.luks.devices."luks-511f83db-a000-4258-91fd-bf13ccd8399a".keyFile = "/crypto_keyfile.bin";
-
-  boot.kernelParams = [
-   "tuxedo_keyboard.mode=0"
-   "tuxedo_keyboard.brightness=255"
-   "tuxedo_keyboard.color_left=0xffffff"
-  ];
-
-  networking.hostName = "intl"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Enable networking
@@ -106,40 +83,35 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.paveun = {
+  users.users.${user} = {
     isNormalUser = true;
     description = "Paveun";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.fish;
-    packages = with pkgs; [
-      firefox
-      kate
-      vscode
-      google-chrome
-      steam
-      xivlauncher
-      slack
-      tidal-hifi
-      cider
-      postman
-      discord
-      haruna
-      transmission
-      # github-desktop
-      # thunderbird
+  };
+
+  environment = {
+    variables = {
+      TERMINAL = "alacritty";
+    };
+    systemPackages = with pkgs; [
+      wget
+      alacritty
+      neofetch
+      btop
+      #jetbrains-mono
+      fontconfig
+      pciutils
+      python311
     ];
   };
 
-  environment.systemPackages = with pkgs; [
-    wget
-    alacritty
-    neofetch
-    btop
+  fonts.fonts = with pkgs; [
+    source-code-pro
+    font-awesome
+    corefonts
     jetbrains-mono
-    fontconfig
-    pciutils
-    python311
-  ];
+  ]
 
   # Enable sway/wayland
   programs.sway.enable = true;
@@ -151,25 +123,6 @@
   
   programs.git.enable = true;
 
-  # Configuring Nvidia PRIME
-  hardware.nvidia.nvidiaSettings = true;
-  services.xserver.videoDrivers = ["nvidia"];
-  hardware.opengl.enable = true;
-  hardware.nvidia.modesetting.enable = true;
-  hardware.nvidia.prime = {
-    offload.enable = true;
-    # sync.enable = true; # Keeps GPU always on
-    # Bus ID of the NVIDIA GPU. You can find it using lspci, either under 3D or VGA
-    nvidiaBusId = "PCI:1:0:0";
-
-    # Bus ID of the Intel GPU. You can find it using lspci, either under 3D or VGA
-    intelBusId = "PCI:0:2:0";
-  };
-  hardware.opengl.driSupport32Bit = true;
-  hardware.nvidia.powerManagement.enable = true;
-  
-  # Optionally, you may need to select the appropriate driver version for your specific GPU.
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
