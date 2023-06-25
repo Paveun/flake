@@ -20,7 +20,7 @@
   boot.kernelParams = [
    "tuxedo_keyboard.mode=0"
    "tuxedo_keyboard.brightness=255"
-   #"tuxedo_keyboard.color_left=0xffffff"
+   "tuxedo_keyboard.color_left=0xffffff"
   ];
 
   networking.hostName = "intl"; # Define your hostname.
@@ -42,7 +42,6 @@
 
   hardware.nvidia = {
     modesetting.enable = true;
-    nvidiaSettings = true;
     powerManagement.enable = true;
     prime = {
       offload.enable = true;
