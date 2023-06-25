@@ -28,6 +28,7 @@
     tidal-hifi
     cider
     postman
+    openssl
     discord
     haruna
     transmission
