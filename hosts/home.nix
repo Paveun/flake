@@ -24,14 +24,17 @@
     google-chrome
     steam
     xivlauncher
+    protonup-qt
     slack
     tidal-hifi
     cider
     postman
     openssl
+    telegram-desktop
     discord
     haruna
     transmission
+    protonvpn-gui
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
