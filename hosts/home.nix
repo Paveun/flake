@@ -19,6 +19,7 @@
   # environment.
   home.packages = with pkgs; [
     firefox
+    latte-dock
     kate
     vscode
     google-chrome
