@@ -25,6 +25,7 @@
     steam
     xivlauncher
     protonup-qt
+    prismlauncher
     slack
     tidal-hifi
     cider
