@@ -99,7 +99,6 @@
       alacritty
       neofetch
       btop
-      #jetbrains-mono
       fontconfig
       pciutils
       python311
@@ -121,8 +120,11 @@
     interactiveShellInit = "neofetch";
   };
   
-  programs.git.enable = true;
-
+  programs.git = {
+    enable = true;
+    package = pkgs.gitFull;
+    config.credential.helper = "libsecret";
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
