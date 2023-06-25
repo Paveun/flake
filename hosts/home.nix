@@ -35,6 +35,7 @@
     haruna
     transmission
     protonvpn-gui
+    conda
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
