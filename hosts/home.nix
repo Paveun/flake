@@ -34,7 +34,7 @@
     telegram-desktop
     discord
     haruna
-    transmission
+    deluge
     protonvpn-gui
     conda
     # # Adds the 'hello' command to your environment. It prints a friendly
