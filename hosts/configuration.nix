@@ -96,6 +96,7 @@
     };
     systemPackages = with pkgs; [
       wget
+      subversionClient
       alacritty
       neofetch
       btop

@@ -22,6 +22,7 @@
     kate
     vscode
     google-chrome
+    heroic
     steam
     xivlauncher
     protonup-qt
