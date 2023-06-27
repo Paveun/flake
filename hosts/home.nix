@@ -15,30 +15,13 @@
   # release notes.
   home.stateVersion = "23.05"; # Please read the comment before changing.
 
+  nixpkgs.config.allowUnfree = true;
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    #firefox
     brave
     kate
-    vscode
-    google-chrome
-    heroic
-    steam
-    xivlauncher
-    protonup-qt
-    prismlauncher
-    slack
-    tidal-hifi
-    cider
-    postman
-    openssl
-    telegram-desktop
-    discord
-    haruna
-    deluge
-    protonvpn-gui
-    conda
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
