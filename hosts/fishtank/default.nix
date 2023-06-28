@@ -14,7 +14,7 @@
           #"intel_iommu=igfx_off"
           #"nvidia-drm.modeset=1"
         ];
-      kernelPackages = pkgs.linuxPackages_5_4;
+      kernelPackages = pkgs.linuxPackages_latest;
       extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
     };
 
