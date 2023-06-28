@@ -21,7 +21,7 @@
   networking.hostName = "fishtank"; # Define your hostname.
 
   hardware.openrazer.enable = true;
-  users.users.${user}.extraGroups = [ "openrazer" ];
+  users.users.${user}.extraGroups = [ "openrazer" "plugdev"];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
