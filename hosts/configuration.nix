@@ -40,21 +40,20 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
-
-  # Configure Default Session
-  services.xserver.displayManager.defaultSession = "plasmawayland";
-
-  # Configure keymap in X11
+  # Configure X11
   services.xserver = {
+    enable = true;
     layout = "us";
     xkbVariant = "";
+    desktopManager.plasma5.enable = true;
+    displayManager = {
+      sddm.enable = true;
+      defaultSession = "plasmawayland";
+    };
   };
+  
+  # Enable sway/wayland
+  programs.sway.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -110,9 +109,6 @@
     roboto
     jetbrains-mono
   ];
-
-  # Enable sway/wayland
-  programs.sway.enable = true;
 
   programs.fish = {
     enable = true;
