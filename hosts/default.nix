@@ -4,7 +4,7 @@
   laptop = lib.nixosSystem {
     inherit system;
     specialArgs = { inherit user inputs; };
-      modules = [
+    modules = [
       ./laptop
       ./configuration.nix
       home-manager.nixosModules.home-manager {
@@ -20,7 +20,7 @@
   fishtank = lib.nixosSystem {
     inherit system;
     specialArgs = { inherit user inputs; };
-      modules = [
+    modules = [
       ./fishtank
       ./configuration.nix
       home-manager.nixosModules.home-manager {
