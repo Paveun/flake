@@ -20,6 +20,9 @@
 
   networking.hostName = "fishtank"; # Define your hostname.
 
+  hardware.openrazer.enable = true;
+  users.users.${user}.extraGroups = [ "openrazer" ];
+
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # NVIDIA drivers are unfree.
