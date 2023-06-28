@@ -23,6 +23,9 @@
    "tuxedo_keyboard.color_left=0xffffff"
   ];
 
+  # Set kernel version to latest
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   networking.hostName = "intl"; # Define your hostname.
 
   # NVIDIA drivers are unfree.
