@@ -1,10 +1,9 @@
 { config, pkgs, user, lib, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+  ];
 
   # Setup keyfile
   boot.initrd.secrets = {
@@ -16,15 +15,15 @@
   boot.initrd.luks.devices."luks-511f83db-a000-4258-91fd-bf13ccd8399a".keyFile = "/crypto_keyfile.bin";
 
   boot = {
-      kernelParams =
-        [
-          "acpi_rev_override"
-          "mem_sleep_default=deep"
-          "intel_iommu=igfx_off"
-        ];
-      kernelPackages = pkgs.linuxPackages_latest;
-      extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
-    };
+    kernelParams =
+      [
+        "acpi_rev_override"
+        "mem_sleep_default=deep"
+        "intel_iommu=igfx_off"
+      ];
+    kernelPackages = pkgs.linuxPackages_latest;
+    extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
+  };
 
   networking.hostName = "intl"; # Define your hostname.
   

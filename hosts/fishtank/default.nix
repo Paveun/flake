@@ -1,27 +1,29 @@
 { config, pkgs, user, lib, inputs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      #../../config/flatpak_font_fix.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    #../../config/flatpak_font_fix.nix
+  ];
 
   boot = {
-      kernelParams =
-        [
-          "acpi_rev_override"
-          "mem_sleep_default=deep"
-          #"intel_iommu=igfx_off"
-        ];
-      kernelPackages = pkgs.linuxPackages_6_3;
-      extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
-    };
+    kernelParams =
+      [
+        "acpi_rev_override"
+        "mem_sleep_default=deep"
+        #"intel_iommu=igfx_off"
+      ];
+    kernelPackages = pkgs.linuxPackages_6_3;
+    extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
+  };
 
   networking.hostName = "fishtank"; # Define your hostname.
 
   hardware.openrazer.enable = true;
-  users.users.${user}.extraGroups = [ "openrazer" "plugdev"];
+  users.users.${user}.extraGroups = [
+    "openrazer"
+    "plugdev"
+  ];
 
   # NVIDIA drivers are unfree.
   nixpkgs.config.allowUnfreePredicate = pkg:
