@@ -4,8 +4,11 @@
   home.packages = with pkgs; [
     vscode
     google-chrome
+    wine-wayland
     heroic
+    lutris
     steam
+    mangohud
     xivlauncher
     protonup-qt
     prismlauncher

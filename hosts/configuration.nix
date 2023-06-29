@@ -96,7 +96,6 @@
       alacritty
       neofetch
       btop
-      fontconfig
       pciutils
       python311
     ];
