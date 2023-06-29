@@ -6,9 +6,7 @@
     google-chrome
     wine-wayland
     heroic
-    lutris
     mangohud
-    xivlauncher
     protonup-qt
     prismlauncher
     slack

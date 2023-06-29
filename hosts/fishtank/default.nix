@@ -20,11 +20,7 @@
 
   networking.hostName = "fishtank"; # Define your hostname.
 
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-  };
+  services.flatpak.enable = true;
 
   hardware.openrazer.enable = true;
   users.users.${user}.extraGroups = [ "openrazer" "plugdev"];
