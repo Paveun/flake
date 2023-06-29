@@ -25,6 +25,8 @@
     "plugdev"
   ];
 
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
   # NVIDIA drivers are unfree.
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
