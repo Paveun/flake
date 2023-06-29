@@ -4,7 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
-      ../../config/bindfs.nix
+      #../../config/flatpak_font_fix.nix
     ];
 
   boot = {
@@ -20,8 +20,6 @@
     };
 
   networking.hostName = "fishtank"; # Define your hostname.
-
-  services.flatpak.enable = true;
 
   hardware.openrazer.enable = true;
   users.users.${user}.extraGroups = [ "openrazer" "plugdev"];

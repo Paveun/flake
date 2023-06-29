@@ -5,6 +5,8 @@
     vscode
     google-chrome
     protonup-qt
+    steam
+    xivlauncher
     prismlauncher
     slack
     tidal-hifi
