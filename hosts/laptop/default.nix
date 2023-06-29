@@ -27,7 +27,7 @@
     };
 
   networking.hostName = "intl"; # Define your hostname.
-
+  
   # NVIDIA drivers are unfree.
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
