@@ -13,7 +13,6 @@
           "acpi_rev_override"
           "mem_sleep_default=deep"
           #"intel_iommu=igfx_off"
-          #"nvidia-drm.modeset=1"
         ];
       kernelPackages = pkgs.linuxPackages_6_3;
       extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
@@ -40,6 +39,7 @@
   };
 
   hardware.nvidia = {
+    open = true;
     nvidiaSettings = true;
     modesetting.enable = true;
     powerManagement.enable = true;

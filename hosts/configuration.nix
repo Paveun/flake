@@ -48,9 +48,24 @@
     desktopManager.plasma5.enable = true;
     displayManager = {
       sddm.enable = true;
-      defaultSession = "plasma";
+      defaultSession = "plasmawayland";
     };
   };
+
+  # Disable default KDE apps
+  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
+    elisa
+    gwenview
+    okular
+    oxygen
+    khelpcenter
+    konsole
+    plasma-browser-integration
+    print-manager
+  ];
+
+  # Apply GTK themes to wayland apps
+  programs.dconf.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
