@@ -11,14 +11,20 @@
         [
           "acpi_rev_override"
           "mem_sleep_default=deep"
-          #"intel_iommu=igfx_off"
+          "intel_iommu=igfx_off"
           #"nvidia-drm.modeset=1"
         ];
-      kernelPackages = pkgs.linuxPackages_latest;
+      kernelPackages = pkgs.linuxPackages_6_3;
       extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
     };
 
   networking.hostName = "fishtank"; # Define your hostname.
+
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  };
 
   hardware.openrazer.enable = true;
   users.users.${user}.extraGroups = [ "openrazer" "plugdev"];

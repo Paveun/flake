@@ -7,7 +7,6 @@
     wine-wayland
     heroic
     lutris
-    steam
     mangohud
     xivlauncher
     protonup-qt
