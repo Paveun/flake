@@ -6,8 +6,6 @@
       ./hardware-configuration.nix
     ];
 
-  hardware.tuxedo-keyboard.enable = true;
-
   # Setup keyfile
   boot.initrd.secrets = {
     "/crypto_keyfile.bin" = null;
@@ -17,14 +15,16 @@
   boot.initrd.luks.devices."luks-511f83db-a000-4258-91fd-bf13ccd8399a".device = "/dev/disk/by-uuid/511f83db-a000-4258-91fd-bf13ccd8399a";
   boot.initrd.luks.devices."luks-511f83db-a000-4258-91fd-bf13ccd8399a".keyFile = "/crypto_keyfile.bin";
 
-  boot.kernelParams = [
-   "tuxedo_keyboard.mode=0"
-   "tuxedo_keyboard.brightness=255"
-   "tuxedo_keyboard.color_left=0xffffff"
-  ];
-
-  # Set kernel version to latest
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot = {
+      kernelParams =
+        [
+          "acpi_rev_override"
+          "mem_sleep_default=deep"
+          "intel_iommu=igfx_off"
+        ];
+      kernelPackages = pkgs.linuxPackages_latest;
+      extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
+    };
 
   networking.hostName = "intl"; # Define your hostname.
 
