@@ -24,8 +24,6 @@
   hardware.openrazer.enable = true;
   users.users.${user}.extraGroups = [ "openrazer" "plugdev"];
 
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
-
   # NVIDIA drivers are unfree.
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
@@ -44,6 +42,7 @@
   hardware.nvidia = {
     nvidiaSettings = true;
     modesetting.enable = true;
+    powerManagement.enable = true;
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };

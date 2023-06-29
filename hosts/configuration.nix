@@ -48,12 +48,9 @@
     desktopManager.plasma5.enable = true;
     displayManager = {
       sddm.enable = true;
-      defaultSession = "plasmawayland";
+      defaultSession = "plasma";
     };
   };
-  
-  # Enable sway/wayland
-  programs.sway.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
