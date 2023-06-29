@@ -4,6 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      ../config/bindfs.nix
     ];
 
   boot = {
