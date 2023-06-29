@@ -12,7 +12,7 @@
         [
           "acpi_rev_override"
           "mem_sleep_default=deep"
-          "intel_iommu=igfx_off"
+          #"intel_iommu=igfx_off"
           #"nvidia-drm.modeset=1"
         ];
       kernelPackages = pkgs.linuxPackages_6_3;
