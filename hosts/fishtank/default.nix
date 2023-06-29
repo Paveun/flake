@@ -13,7 +13,7 @@
         "mem_sleep_default=deep"
         #"intel_iommu=igfx_off"
       ];
-    kernelPackages = pkgs.linuxPackages_6_3;
+    kernelPackages = pkgs.linuxPackages_6_4;
     extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
   };
 
