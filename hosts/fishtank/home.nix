@@ -4,9 +4,7 @@
   home.packages = with pkgs; [
     vscode
     google-chrome
-    wine-wayland
-    heroic
-    mangohud
+    #wine-wayland
     protonup-qt
     prismlauncher
     slack
