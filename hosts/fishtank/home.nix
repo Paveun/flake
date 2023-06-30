@@ -14,7 +14,7 @@
     postman
     openssl
     telegram-desktop
-    discord
+    webcord
     haruna
     deluge
     protonvpn-gui
