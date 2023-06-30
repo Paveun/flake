@@ -6,6 +6,8 @@
     google-chrome
     heroic
     steam
+    lutris
+    mangohud
     xivlauncher
     protonup-qt
     prismlauncher
