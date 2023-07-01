@@ -25,12 +25,20 @@
     extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
   };
 
+  services.xserver.libinput.enable = true;
+
   networking.hostName = "intl"; # Define your hostname.
   
-  # Enable sway/wayland
-  programs.sway.enable = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   
+  environment.systemPackages = with pkgs; [
+    waybar
+  ];
+
+  users.users.${user}.extraGroups = [
+    "input"
+  ];
+
   # NVIDIA drivers are unfree.
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
