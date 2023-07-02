@@ -25,6 +25,18 @@
     extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
   };
 
+  # Configure X11
+  services.xserver = {
+    enable = true;
+    layout = "us";
+    xkbVariant = "";
+    #desktopManager.plasma5.enable = true;
+    displayManager = {
+      sddm.enable = true;
+      defaultSession = "hyprland";
+    };
+  };
+
   services.xserver.libinput.enable = true;
 
   networking.hostName = "intl"; # Define your hostname.
