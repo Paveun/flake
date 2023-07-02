@@ -59,7 +59,7 @@
     wofi
     hyprpaper
     dunst
-    pcmanfm
+    libsForQt5.dolphin
   ];
 
   users.users.${user}.extraGroups = [
