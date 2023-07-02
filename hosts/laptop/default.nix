@@ -42,7 +42,7 @@
   networking.hostName = "intl"; # Define your hostname.
   
   security.polkit.enable = true;
-  programs.seahorse.enable = true;
+  services.gnome.gnome-keyring.enable = true;
 
   #environment.sessionVariables.NIXOS_OZONE_WL = "1";
   
