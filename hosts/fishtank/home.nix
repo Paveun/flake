@@ -38,4 +38,15 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
   ];
+  xdg.desktopEntries = {
+    postman = {
+      categories = [ "Development" ];
+      comment = "API Development Environment";
+      exec = "postman --disable-gpu";
+      genericName = "Postman";
+      icon = "postman";
+      name = "Postman";
+      type = "Application";
+    };
+  };
 }
