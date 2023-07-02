@@ -41,7 +41,7 @@
 
   networking.hostName = "intl"; # Define your hostname.
   
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  #environment.sessionVariables.NIXOS_OZONE_WL = "1";
   
   programs.waybar.enable = true;
 
@@ -57,6 +57,9 @@
     pavucontrol
     networkmanagerapplet
     wofi
+    hyprpaper
+    dunst
+    pcmanfm
   ];
 
   users.users.${user}.extraGroups = [
