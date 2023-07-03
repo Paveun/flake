@@ -96,6 +96,7 @@
     corefonts
     roboto
     jetbrains-mono
+    roboto-mono
   ];
 
   programs.fish = {
