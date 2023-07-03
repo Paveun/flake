@@ -1,7 +1,5 @@
-:root {
-    --accent: #60d8ee;
-    --bg: #333333;
-}
+@define-color accent #60d8ee;
+@define-color dark #333333;
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -67,8 +65,8 @@ button:hover {
 }
 
 #workspaces button.active {
-    background-color: var(--accent);
-    color: var(--bg);
+    background-color: @accent;
+    color: @dark;
     /* box-shadow: inset 0 -3px #333333; */
 }
 
@@ -99,8 +97,8 @@ button:hover {
 #mpd {
     padding: 0 10px;
     margin: 6px 1px;
-    color: var(--bg);
-    background-color: var(--accent);
+    color: @dark;
+    background-color: @accent;
 }
 
 #window,
@@ -119,22 +117,22 @@ button:hover {
 }
 
 #clock {
-    background-color: var(--accent);
+    background-color: @accent;
 }
 
 #battery {
-    background-color: var(--accent);
+    background-color: @accent;
     /* color: #000000; */
 }
 
 #battery.charging, #battery.plugged {
     /* color: #ffffff; */
-    background-color: var(--accent);
+    background-color: @accent;
 }
 
 @keyframes blink {
     to {
-        background-color: var(--accent);
+        background-color: @accent;
         /* color: #000000; */
     }
 }
@@ -150,69 +148,69 @@ button:hover {
 }
 
 label:focus {
-    background-color: var(--accent);
+    background-color: @accent;
 }
 
 #cpu {
-    background-color: var(--accent);
+    background-color: @accent;
     /* color: #000000; */
 }
 
 #memory {
-    background-color: var(--accent);
+    background-color: @accent;
 }
 
 #disk {
-    background-color: var(--accent);
+    background-color: @accent;
 }
 
 #backlight {
-    background-color: var(--accent);
+    background-color: @accent;
 }
 
 #network {
-    background-color: var(--accent);
+    background-color: @accent;
 }
 
 #network.disconnected {
-    background-color: var(--accent);
+    background-color: @accent;
 }
 
 #pulseaudio {
-    background-color: var(--accent);
+    background-color: @accent;
     /* color: #000000; */
 }
 
 #pulseaudio.muted {
-    background-color: var(--accent);
+    background-color: @accent;
     /* color: #2a5c45; */
 }
 
 #wireplumber {
-    background-color: var(--accent);
+    background-color: @accent;
     /* color: #000000; */
 }
 
 #wireplumber.muted {
-    background-color: var(--accent);
+    background-color: @accent;
 }
 
 #custom-media {
-    background-color: var(--accent);
+    background-color: @accent;
     /* color: #2a5c45; */
     min-width: 100px;
 }
 
 #custom-media.custom-spotify {
-    background-color: var(--accent);
+    background-color: @accent;
 }
 
 #custom-media.custom-vlc {
-    background-color: var(--accent);
+    background-color: @accent;
 }
 
 #temperature {
-    background-color: var(--accent);
+    background-color: @accent;
 }
 
 #temperature.critical {
@@ -220,7 +218,7 @@ label:focus {
 }
 
 #tray {
-    background-color: var(--accent);
+    background-color: @accent;
 }
 
 #tray > .passive {
@@ -233,11 +231,11 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: var(--accent);
+    background-color: @accent;
 }
 
 #idle_inhibitor.activated {
-    background-color: var(--accent);
+    background-color: @accent;
     /* color: #2d3436; */
 }
 
@@ -259,7 +257,7 @@ label:focus {
 }
 
 #language {
-    background: var(--accent);
+    background: @accent;
     color: #740864;
     padding: 0 5px;
     margin: 0 5px;
@@ -267,7 +265,7 @@ label:focus {
 }
 
 #keyboard-state {
-    background: var(--accent);
+    background: @accent;
     /* color: #000000; */
     /* padding: 0 0px; */
     /* margin: 0 5px; */
