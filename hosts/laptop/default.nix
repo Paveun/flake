@@ -48,6 +48,11 @@
   
   programs.waybar.enable = true;
   qt.platformTheme = "qt5ct";
+  
+  environment.variables = {
+        # This will become a global environment variable
+       "QT_QPA_PLATFORMTHEME"="qt5ct";
+     };
 
   nixpkgs.overlays = [
     (self: super: {
@@ -64,6 +69,7 @@
     hyprpaper
     dunst
     libsForQt5.dolphin
+    libsForQt5.qt5ct
   ];
 
   users.users.${user}.extraGroups = [
