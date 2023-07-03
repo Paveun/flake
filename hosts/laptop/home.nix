@@ -55,6 +55,9 @@
     ".config/wallpapers/mountain.jpg"={
       source = ../../resources/mountain.jpg;
     };
+    ".config/wallpapers/mountain.jpg"={
+      source = ../../resources/mountain2.jpg;
+    };
   };
   xdg.desktopEntries = {
     chrome = {
