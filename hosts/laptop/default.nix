@@ -47,6 +47,7 @@
   #environment.sessionVariables.NIXOS_OZONE_WL = "1";
   
   programs.waybar.enable = true;
+  qt.platformTheme = "qt5ct";
 
   nixpkgs.overlays = [
     (self: super: {
