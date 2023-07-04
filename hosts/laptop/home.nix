@@ -20,7 +20,7 @@
     discord
     haruna
     deluge
-    protonvpn-gui
+    protonvpn-cli
     conda
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
