@@ -5,15 +5,6 @@
     ./hardware-configuration.nix
   ];
 
-  # Setup keyfile
-  boot.initrd.secrets = {
-    "/crypto_keyfile.bin" = null;
-  };
-
-  # Enable swap on luks
-  boot.initrd.luks.devices."luks-511f83db-a000-4258-91fd-bf13ccd8399a".device = "/dev/disk/by-uuid/511f83db-a000-4258-91fd-bf13ccd8399a";
-  boot.initrd.luks.devices."luks-511f83db-a000-4258-91fd-bf13ccd8399a".keyFile = "/crypto_keyfile.bin";
-
   boot = {
     kernelParams =
       [
