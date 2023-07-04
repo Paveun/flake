@@ -34,6 +34,15 @@
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  services.xserver.windowManager.qtile = {
+    enable = true;
+    package = pkgs.qtile-unwrapped;
+    backend = "wayland";
+    extraPackages = python3Packages: with python3Packages; [
+      qtile-extras
+    ];
+  };
+
   users.users.${user}.extraGroups = [
     "input"
   ];
