@@ -7,8 +7,8 @@
     modules = [
       ./laptop
       ./configuration.nix
-      hyprland.nixosModules.default
-      {programs.hyprland.enable = true;}
+      # hyprland.nixosModules.default
+      # {programs.hyprland.enable = true;}
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
