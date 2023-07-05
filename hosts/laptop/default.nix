@@ -42,6 +42,7 @@
       qtile-extras
     ];
   };
+  services.gnome.gnome-keyring.enable = true;
 
   users.users.${user}.extraGroups = [
     "input"
