@@ -3,22 +3,22 @@
 {
  home.file = {
     ".config/hypr/hyprland.conf"={
-      source = ../../../config/hyprland.conf;
+      source = ./hyprland.conf;
     };
     ".config/hypr/hyprpaper.conf"={
-      source = ../../../config/hyprpaper.conf;
+      source = ./hyprpaper.conf;
     };
     ".config/waybar/config"={
-      source = ../../../config/waybar/config;
+      source = ../waybar/config;
     };
     ".config/waybar/style.css"={
-      source = ../../../config/waybar/style.css;
+      source = ../waybar/style.css;
     };
     ".config/wallpapers/mountain.jpg"={
-      source = ../../../resources/mountain.jpg;
+      source = ../../resources/mountain.jpg;
     };
     ".config/wallpapers/mountain2.jpg"={
-      source = ../../../resources/mountain2.jpg;
+      source = ../../resources/mountain2.jpg;
     };
   };
   xdg.desktopEntries = {

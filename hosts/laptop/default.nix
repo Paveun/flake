@@ -3,6 +3,8 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ../../config/qtile
+    #../../config/hyprland
   ];
 
   boot = {
@@ -33,16 +35,6 @@
   networking.hostName = "intl"; # Define your hostname.
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-
-  services.xserver.windowManager.qtile = {
-    enable = true;
-    package = pkgs.qtile-unwrapped;
-    backend = "x11";
-    extraPackages = python3Packages: with python3Packages; [
-      qtile-extras
-    ];
-  };
-  services.gnome.gnome-keyring.enable = true;
 
   users.users.${user}.extraGroups = [
     "input"
