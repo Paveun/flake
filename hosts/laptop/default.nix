@@ -37,7 +37,7 @@
   services.xserver.windowManager.qtile = {
     enable = true;
     package = pkgs.qtile-unwrapped;
-    backend = "wayland";
+    backend = "x11";
     extraPackages = python3Packages: with python3Packages; [
       qtile-extras
     ];
