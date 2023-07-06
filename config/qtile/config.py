@@ -25,12 +25,12 @@ keys = [
              desc='Launches My Terminal'
              ),
          Key([mod, "shift"], "Return",
-             lazy.spawn("dm-run"),
+             lazy.spawn("rofi -show drun"),
              desc='Run Launcher'
              ),
          Key([mod], "b",
              lazy.spawn(myBrowser),
-             desc='Qutebrowser'
+             desc='Chrome'
              ),
          # Key([mod], "/",
          #     lazy.spawn("dtos-help"),
@@ -49,13 +49,13 @@ keys = [
              desc='Restart Qtile'
              ),
          Key([mod, "shift"], "q",
-             lazy.spawn("dm-logout"),
+             lazy.spawn("i3lock --fuzzy"),
              desc='Logout menu'
              ),
-         Key(["control", "shift"], "e",
-             lazy.spawn("emacsclient -c -a emacs"),
-             desc='Doom Emacs'
-             ),
+        #  Key(["control", "shift"], "e",
+        #      lazy.spawn("emacsclient -c -a emacs"),
+        #      desc='Doom Emacs'
+        #      ),
          ### Switch focus to specific monitor (out of three)
          Key([mod], "w",
              lazy.to_screen(0),
@@ -147,119 +147,119 @@ keys = [
              desc='Toggle between split and unsplit sides of stack'
              ),
          # Emacs programs launched using the key chord CTRL+e followed by 'key'
-         KeyChord([mod],"e", [
-             Key([], "e",
-                 lazy.spawn("emacsclient -c -a 'emacs'"),
-                 desc='Emacsclient Dashboard'
-                 ),
-             Key([], "a",
-                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(emms)' --eval '(emms-play-directory-tree \"~/Music/\")'"),
-                 desc='Emacsclient EMMS (music)'
-                 ),
-             Key([], "b",
-                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(ibuffer)'"),
-                 desc='Emacsclient Ibuffer'
-                 ),
-             Key([], "d",
-                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(dired nil)'"),
-                 desc='Emacsclient Dired'
-                 ),
-             Key([], "i",
-                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(erc)'"),
-                 desc='Emacsclient ERC (IRC)'
-                 ),
-             Key([], "n",
-                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(elfeed)'"),
-                 desc='Emacsclient Elfeed (RSS)'
-                 ),
-             Key([], "s",
-                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(eshell)'"),
-                 desc='Emacsclient Eshell'
-                 ),
-             Key([], "v",
-                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(+vterm/here nil)'"),
-                 desc='Emacsclient Vterm'
-                 ),
-             Key([], "w",
-                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(doom/window-maximize-buffer(eww \"distro.tube\"))'"),
-                 desc='Emacsclient EWW Browser'
-                 )
-         ]),
+        #  KeyChord([mod],"e", [
+        #      Key([], "e",
+        #          lazy.spawn("emacsclient -c -a 'emacs'"),
+        #          desc='Emacsclient Dashboard'
+        #          ),
+        #      Key([], "a",
+        #          lazy.spawn("emacsclient -c -a 'emacs' --eval '(emms)' --eval '(emms-play-directory-tree \"~/Music/\")'"),
+        #          desc='Emacsclient EMMS (music)'
+        #          ),
+        #      Key([], "b",
+        #          lazy.spawn("emacsclient -c -a 'emacs' --eval '(ibuffer)'"),
+        #          desc='Emacsclient Ibuffer'
+        #          ),
+        #      Key([], "d",
+        #          lazy.spawn("emacsclient -c -a 'emacs' --eval '(dired nil)'"),
+        #          desc='Emacsclient Dired'
+        #          ),
+        #      Key([], "i",
+        #          lazy.spawn("emacsclient -c -a 'emacs' --eval '(erc)'"),
+        #          desc='Emacsclient ERC (IRC)'
+        #          ),
+        #      Key([], "n",
+        #          lazy.spawn("emacsclient -c -a 'emacs' --eval '(elfeed)'"),
+        #          desc='Emacsclient Elfeed (RSS)'
+        #          ),
+        #      Key([], "s",
+        #          lazy.spawn("emacsclient -c -a 'emacs' --eval '(eshell)'"),
+        #          desc='Emacsclient Eshell'
+        #          ),
+        #      Key([], "v",
+        #          lazy.spawn("emacsclient -c -a 'emacs' --eval '(+vterm/here nil)'"),
+        #          desc='Emacsclient Vterm'
+        #          ),
+        #      Key([], "w",
+        #          lazy.spawn("emacsclient -c -a 'emacs' --eval '(doom/window-maximize-buffer(eww \"distro.tube\"))'"),
+        #          desc='Emacsclient EWW Browser'
+        #          )
+        #  ]),
          # Dmenu scripts launched using the key chord SUPER+p followed by 'key'
-         KeyChord([mod], "p", [
-             Key([], "h",
-                 lazy.spawn("dm-hub"),
-                 desc='List all dmscripts'
-                 ),
-             Key([], "a",
-                 lazy.spawn("dm-sounds"),
-                 desc='Choose ambient sound'
-                 ),
-             Key([], "b",
-                 lazy.spawn("dm-setbg"),
-                 desc='Set background'
-                 ),
-             Key([], "c",
-                 lazy.spawn("dtos-colorscheme"),
-                 desc='Choose color scheme'
-                 ),
-             Key([], "e",
-                 lazy.spawn("dm-confedit"),
-                 desc='Choose a config file to edit'
-                 ),
-             Key([], "i",
-                 lazy.spawn("dm-maim"),
-                 desc='Take a screenshot'
-                 ),
-             Key([], "k",
-                 lazy.spawn("dm-kill"),
-                 desc='Kill processes '
-                 ),
-             Key([], "m",
-                 lazy.spawn("dm-man"),
-                 desc='View manpages'
-                 ),
-             Key([], "n",
-                 lazy.spawn("dm-note"),
-                 desc='Store and copy notes'
-                 ),
-             Key([], "o",
-                 lazy.spawn("dm-bookman"),
-                 desc='Browser bookmarks'
-                 ),
-             Key([], "p",
-                 lazy.spawn("passmenu -p \"Pass: \""),
-                 desc='Logout menu'
-                 ),
-             Key([], "q",
-                 lazy.spawn("dm-logout"),
-                 desc='Logout menu'
-                 ),
-             Key([], "r",
-                 lazy.spawn("dm-radio"),
-                 desc='Listen to online radio'
-                 ),
-             Key([], "s",
-                 lazy.spawn("dm-websearch"),
-                 desc='Search various engines'
-                 ),
-             Key([], "t",
-                 lazy.spawn("dm-translate"),
-                 desc='Translate text'
-                 )
-         ])
+        #  KeyChord([mod], "p", [
+        #      Key([], "h",
+        #          lazy.spawn("dm-hub"),
+        #          desc='List all dmscripts'
+        #          ),
+        #      Key([], "a",
+        #          lazy.spawn("dm-sounds"),
+        #          desc='Choose ambient sound'
+        #          ),
+        #      Key([], "b",
+        #          lazy.spawn("dm-setbg"),
+        #          desc='Set background'
+        #          ),
+        #      Key([], "c",
+        #          lazy.spawn("dtos-colorscheme"),
+        #          desc='Choose color scheme'
+        #          ),
+        #      Key([], "e",
+        #          lazy.spawn("dm-confedit"),
+        #          desc='Choose a config file to edit'
+        #          ),
+        #      Key([], "i",
+        #          lazy.spawn("dm-maim"),
+        #          desc='Take a screenshot'
+        #          ),
+        #      Key([], "k",
+        #          lazy.spawn("dm-kill"),
+        #          desc='Kill processes '
+        #          ),
+        #      Key([], "m",
+        #          lazy.spawn("dm-man"),
+        #          desc='View manpages'
+        #          ),
+        #      Key([], "n",
+        #          lazy.spawn("dm-note"),
+        #          desc='Store and copy notes'
+        #          ),
+        #      Key([], "o",
+        #          lazy.spawn("dm-bookman"),
+        #          desc='Browser bookmarks'
+        #          ),
+        #      Key([], "p",
+        #          lazy.spawn("passmenu -p \"Pass: \""),
+        #          desc='Logout menu'
+        #          ),
+        #      Key([], "q",
+        #          lazy.spawn("dm-logout"),
+        #          desc='Logout menu'
+        #          ),
+        #      Key([], "r",
+        #          lazy.spawn("dm-radio"),
+        #          desc='Listen to online radio'
+        #          ),
+        #      Key([], "s",
+        #          lazy.spawn("dm-websearch"),
+        #          desc='Search various engines'
+        #          ),
+        #      Key([], "t",
+        #          lazy.spawn("dm-translate"),
+        #          desc='Translate text'
+        #          )
+        #  ])
 ]
 
-groups = [Group("DEV", layout='monadtall'),
-          Group("WWW", layout='monadtall'),
-          Group("SYS", layout='monadtall'),
-          Group("SYS", layout='monadtall'),
-          Group("DOC", layout='monadtall'),
-          Group("VBOX", layout='monadtall'),
-          Group("CHAT", layout='monadtall'),
-          Group("MUS", layout='monadtall'),
-          Group("VID", layout='monadtall'),
-          Group("GFX", layout='floating')]
+groups = [Group("1", layout='monadtall'),
+          Group("2", layout='monadtall'),
+          Group("3", layout='monadtall'),
+          Group("4", layout='monadtall'),
+          Group("5", layout='monadtall'),
+          Group("6", layout='monadtall'),
+          Group("7", layout='monadtall'),
+          Group("8", layout='monadtall'),
+          Group("9", layout='monadtall'),
+          Group("0", layout='monadtall')]
 
 # Allow MODKEY+[0 through 9] to bind to groups, see https://docs.qtile.org/en/stable/manual/config/groups.html
 # MOD4 + index Number : Switch to Group[index]
@@ -288,7 +288,7 @@ layouts = [
     layout.Stack(num_stacks=2),
     layout.RatioTile(**layout_theme),
     layout.TreeTab(
-         font = "Ubuntu",
+         font = "Roboto",
          fontsize = 10,
          sections = ["FIRST", "SECOND", "THIRD", "FOURTH"],
          section_fontsize = 10,
@@ -325,7 +325,7 @@ prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
 ##### DEFAULT WIDGET SETTINGS #####
 widget_defaults = dict(
-    font="Ubuntu Bold",
+    font="Roboto Bold",
     fontsize = 10,
     padding = 2,
     background=colors[2]
@@ -352,7 +352,7 @@ def init_widgets_list():
                        background = colors[0]
                        ),
               widget.GroupBox(
-                       font = "Ubuntu Bold",
+                       font = "Roboto Bold",
                        fontsize = 9,
                        margin_y = 3,
                        margin_x = 0,
@@ -373,7 +373,7 @@ def init_widgets_list():
                        ),
              widget.TextBox(
                        text = '|',
-                       font = "Ubuntu Mono",
+                       font = "JetBrains Mono",
                        background = colors[0],
                        foreground = '474747',
                        padding = 2,
@@ -393,7 +393,7 @@ def init_widgets_list():
                        ),
              widget.TextBox(
                        text = '|',
-                       font = "Ubuntu Mono",
+                       font = "Roboto Mono",
                        background = colors[0],
                        foreground = '474747',
                        padding = 2,
@@ -415,7 +415,7 @@ def init_widgets_list():
                        background = colors[0]
                        ),
              widget.Net(
-                       interface = "enp6s0",
+                       interface = "wlp62s0",
                        format = 'Net: {down} ↓↑ {up}',
                        foreground = colors[3],
                        background = colors[0],
@@ -450,31 +450,31 @@ def init_widgets_list():
                            )
                        ],
                        ),
-              widget.Sep(
-                       linewidth = 0,
-                       padding = 6,
-                       foreground = colors[0],
-                       background = colors[0]
-                       ),
-              widget.CheckUpdates(
-                       update_interval = 1800,
-                       distro = "Arch_checkupdates",
-                       display_format = "Updates: {updates} ",
-                       foreground = colors[5],
-                       colour_have_updates = colors[5],
-                       colour_no_updates = colors[5],
-                       mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e sudo pacman -Syu')},
-                       padding = 5,
-                       background = colors[0],
-                       decorations=[
-                           BorderDecoration(
-                               colour = colors[5],
-                               border_width = [0, 0, 2, 0],
-                               padding_x = 5,
-                               padding_y = None,
-                           )
-                       ],
-                       ),
+            #   widget.Sep(
+            #            linewidth = 0,
+            #            padding = 6,
+            #            foreground = colors[0],
+            #            background = colors[0]
+            #            ),
+            #   widget.CheckUpdates(
+            #            update_interval = 1800,
+            #            distro = "Arch_checkupdates",
+            #            display_format = "Updates: {updates} ",
+            #            foreground = colors[5],
+            #            colour_have_updates = colors[5],
+            #            colour_no_updates = colors[5],
+            #            mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e sudo pacman -Syu')},
+            #            padding = 5,
+            #            background = colors[0],
+            #            decorations=[
+            #                BorderDecoration(
+            #                    colour = colors[5],
+            #                    border_width = [0, 0, 2, 0],
+            #                    padding_x = 5,
+            #                    padding_y = None,
+            #                )
+            #            ],
+            #            ),
               widget.Sep(
                        linewidth = 0,
                        padding = 6,
@@ -545,14 +545,14 @@ def init_widgets_list():
                        foreground = colors[0],
                        background = colors[0]
                        ),
-              widget.AnalogueClock(
-                       background = colors[0],
-                       face_shape = "square",
-                       face_background = colors[6],
-                       face_border_colour = colors[6],
-                       face_border_width = 4,
-                       padding = 5
-                       ),
+            #   widget.AnalogueClock(
+            #            background = colors[0],
+            #            face_shape = "square",
+            #            face_background = colors[6],
+            #            face_border_colour = colors[6],
+            #            face_border_width = 4,
+            #            padding = 5
+            #            ),
               widget.Clock(
                        foreground = colors[6],
                        background = colors[0],
