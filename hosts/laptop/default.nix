@@ -3,7 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    #../../config/qtile
+    ../../config/qtile
     #../../config/hyprland
   ];
 
