@@ -353,7 +353,7 @@ def init_widgets_list():
                        ),
               widget.GroupBox(
                        font = "Roboto Bold",
-                       fontsize = 9,
+                       fontsize = 11,
                        margin_y = 3,
                        margin_x = 0,
                        padding_y = 5,
