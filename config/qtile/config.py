@@ -289,9 +289,9 @@ layouts = [
     layout.RatioTile(**layout_theme),
     layout.TreeTab(
          font = "Roboto",
-         fontsize = 10,
+         fontsize = 12,
          sections = ["FIRST", "SECOND", "THIRD", "FOURTH"],
-         section_fontsize = 10,
+         section_fontsize = 12,
          border_width = 2,
          bg_color = "1c1f24",
          active_bg = "c678dd",
@@ -301,7 +301,7 @@ layouts = [
          padding_left = 0,
          padding_x = 0,
          padding_y = 5,
-         section_top = 10,
+         section_top = 12,
          section_bottom = 20,
          level_shift = 8,
          vspace = 3,
@@ -326,7 +326,7 @@ prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 ##### DEFAULT WIDGET SETTINGS #####
 widget_defaults = dict(
     font="Roboto Bold",
-    fontsize = 10,
+    fontsize = 12,
     padding = 2,
     background=colors[2]
 )
