@@ -49,8 +49,8 @@ keys = [
              desc='Restart Qtile'
              ),
          Key([mod, "shift"], "q",
-             lazy.spawn("i3lock --fuzzy"),
-             desc='Logout menu'
+             lazy.spawn("xsecurelock"),
+             desc='Lock screen'
              ),
         #  Key(["control", "shift"], "e",
         #      lazy.spawn("emacsclient -c -a emacs"),

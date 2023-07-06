@@ -11,15 +11,13 @@
   };
   services.xserver.desktopManager.xterm.enable = false;
   services.gnome.gnome-keyring.enable = true;
-  programs.i3lock = {
-    enable = true;
-    package = pkgs.i3lock-blur;
-  };
+  programs.nm-applet.enable = true;
   environment.systemPackages = [
     pkgs.rofi
     pkgs.feh
     pkgs.picom
     pkgs.lxde.lxsession
     pkgs.dmenu
+    pkgs.xsecurelock
   ];
 }
