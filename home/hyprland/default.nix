@@ -1,15 +1,31 @@
-{ config, pkgs, user, lib, ... }:
-
+{ config, pkgs, user, lib, hyprland, ... }:
+hyprland.nixosModules.default
 {
+  imports = [
+    ../waybar
+  ];
   home-manager.sharedModules = [
     ./home.nix
   ];
+
+  programs.hyprland.enable = true;
+
+  # Configure X11
+  services.xserver = {
+    enable = true;
+    layout = "us";
+    xkbVariant = "";
+    displayManager = {
+      sddm.enable = true;
+      defaultSession = "hyprland";
+    };
+  };
+
   security.polkit.enable = true;
   services.gnome.gnome-keyring.enable = true;
   services.udisks2.enable = true;
   programs.thunar.enable = true;
 
-  programs.waybar.enable = true;
   qt.platformTheme = "qt5ct";
   
   environment.variables = {
@@ -17,17 +33,7 @@
        "QT_QPA_PLATFORMTHEME"="qt5ct";
      };
 
-  nixpkgs.overlays = [
-    (self: super: {
-      waybar = super.waybar.overrideAttrs (oldAttrs: {
-        mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-      });
-    })
-  ];
-
   environment.systemPackages = with pkgs; [
-    pavucontrol
-    networkmanagerapplet
     wofi
     hyprpaper
     dunst
