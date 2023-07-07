@@ -93,6 +93,12 @@
     enable = true;
     userName  = "paveun";
     userEmail = "a.tresierrajansen@gmail.com";
+    extraConfig = {
+      credential = {
+        credentialStore = "secretservice";
+        helper = "${pkgs.git-credential-manager}/bin/git-credential-manager-core";
+      };
+    };
   };
-  programs.git-credential-oauth.enable = true;
+  # programs.git-credential-oauth.enable = true;
 }

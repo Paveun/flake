@@ -1,5 +1,5 @@
 { config, pkgs, user, lib, hyprland, ... }:
-# hyprland.nixosModules.default
+
 {
   imports = [
     ../waybar
@@ -22,7 +22,7 @@
     xkbVariant = "";
     displayManager = {
       sddm.enable = true;
-      # defaultSession = "hyprland";
+      defaultSession = "hyprland";
     };
   };
 
