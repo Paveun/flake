@@ -9,4 +9,15 @@
   home.sessionVariables = {
     TERMINAL = "alacritty";
   };
+  programs = {
+    alacritty = {
+      enable = true;
+    };
+    fish = {
+      enable = true;
+      shellAliases = {
+        ssh = "TERM=xterm-256color command ssh";
+      };
+    };
+  };
 }
