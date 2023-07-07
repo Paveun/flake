@@ -8,9 +8,6 @@
     ".config/hypr/hyprpaper.conf"={
       source = ./hyprpaper.conf;
     };
-    ".config/wallpapers/wallpaper.jpg"={
-      source = ../wallpaper.jpg;
-    };
   };
   xdg.desktopEntries = {
     chrome = {

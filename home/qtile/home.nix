@@ -2,9 +2,6 @@
 
 {
  home.file = {
-    ".config/wallpapers/wallpaper.jpg"={
-      source = ../wallpaper.jpg;
-    };
     ".config/qtile/config.py"={
       source = ./config.py;
     };
