@@ -19,6 +19,7 @@
     rofi
     feh
     picom
+    networkmanagerapplet
     lxde.lxsession
     dmenu
     xsecurelock

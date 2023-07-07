@@ -5,7 +5,8 @@
     ./hardware-configuration.nix
     ../../qtile
     ../../alacritty
-    # ../../hyprland
+    ../../plasma
+    ../../hyprland
   ];
 
   boot = {
@@ -19,38 +20,7 @@
     extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
   };
 
-  # Configure X11
-  services.xserver = {
-    enable = true;
-    layout = "us";
-    xkbVariant = "";
-    desktopManager.plasma5.enable = true;
-    displayManager = {
-      sddm.enable = true;
-      defaultSession = "plasmawayland";
-    };
-  };
-
-  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
-    elisa
-    gwenview
-    okular
-    oxygen
-    khelpcenter
-    konsole
-    plasma-browser-integration
-    print-manager
-  ];
-
-  services.xserver.libinput.enable = true;
-
   networking.hostName = "intl"; # Define your hostname.
-
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
-
-  users.users.${user}.extraGroups = [
-    "input"
-  ];
 
   # NVIDIA drivers are unfree.
   nixpkgs.config.allowUnfreePredicate = pkg:

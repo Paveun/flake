@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../alacritty
+    ../../plasma
     #../../flatpak
   ];
 
@@ -20,37 +21,11 @@
 
   networking.hostName = "fishtank"; # Define your hostname.
 
-  # Configure X11
-  services.xserver = {
-    enable = true;
-    layout = "us";
-    xkbVariant = "";
-    desktopManager.plasma5.enable = true;
-    displayManager = {
-      sddm.enable = true;
-      defaultSession = "plasmawayland";
-    };
-  };
-
-  # Disable default KDE apps
-  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
-    elisa
-    gwenview
-    okular
-    oxygen
-    khelpcenter
-    konsole
-    plasma-browser-integration
-    print-manager
-  ];
-
   hardware.openrazer.enable = true;
   users.users.${user}.extraGroups = [
     "openrazer"
     "plugdev"
   ];
-
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # NVIDIA drivers are unfree.
   nixpkgs.config.allowUnfreePredicate = pkg:

@@ -8,12 +8,6 @@
     ".config/hypr/hyprpaper.conf"={
       source = ./hyprpaper.conf;
     };
-    ".config/waybar/config"={
-      source = ../waybar/config;
-    };
-    ".config/waybar/style.css"={
-      source = ../waybar/style.css;
-    };
     ".config/wallpapers/wallpaper.jpg"={
       source = ../wallpaper.jpg;
     };
