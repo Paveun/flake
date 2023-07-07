@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 {
+  services.flatpak.enable = true;
+
+  # Font fix
   system.fsPackages = [ pkgs.bindfs ];
   fileSystems = let
     mkRoSymBind = path: {

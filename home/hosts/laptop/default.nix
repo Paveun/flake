@@ -3,9 +3,9 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../qtile
-    ../alacritty
-    # ../hyprland
+    ../../qtile
+    ../../alacritty
+    # ../../hyprland
   ];
 
   boot = {
@@ -30,6 +30,17 @@
       defaultSession = "plasmawayland";
     };
   };
+
+  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
+    elisa
+    gwenview
+    okular
+    oxygen
+    khelpcenter
+    konsole
+    plasma-browser-integration
+    print-manager
+  ];
 
   services.xserver.libinput.enable = true;
 

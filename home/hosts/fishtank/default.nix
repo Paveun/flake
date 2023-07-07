@@ -3,8 +3,8 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../alacritty
-    #../../config/flatpak_font_fix.nix
+    ../../alacritty
+    #../../flatpak
   ];
 
   boot = {
