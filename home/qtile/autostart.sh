@@ -19,4 +19,4 @@ nm-applet &
 # find /usr/share/backgrounds/dtos-backgrounds/ -type f | shuf -n 1 | xargs xwallpaper --stretch &
 # 3. Uncomment to set wallpaper with nitrogen
 # nitrogen --restore &
-feh --bg-scale ~/.config/wallpapers/mountain2.jpg
+feh --bg-scale ~/.config/wallpapers/wallpaper.jpg

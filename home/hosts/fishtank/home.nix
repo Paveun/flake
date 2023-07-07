@@ -2,26 +2,8 @@
 
 {
   home.packages = with pkgs; [
-    vscode
-    google-chrome
-    heroic
-    steam
-    lutris
-    mangohud
-    xivlauncher
-    protonup-qt
-    prismlauncher
-    slack
-    tidal-hifi
-    cider
-    postman
-    openssl
-    telegram-desktop
-    discord
-    haruna
-    deluge
-    protonvpn-cli
-    conda
+    liquidctl
+    razergenie
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -39,4 +21,15 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
   ];
+  xdg.desktopEntries = {
+    postman = {
+      categories = [ "Development" ];
+      comment = "API Development Environment";
+      exec = "postman --disable-gpu";
+      genericName = "Postman";
+      icon = "postman";
+      name = "Postman";
+      type = "Application";
+    };
+  };
 }

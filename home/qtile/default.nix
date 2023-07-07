@@ -1,6 +1,9 @@
 { config, pkgs, user, lib, ... }:
 
 {
+  home-manager.sharedModules = [
+    ./home.nix
+  ];
   services.xserver.windowManager.qtile = {
     enable = true;
     package = pkgs.qtile-unwrapped;

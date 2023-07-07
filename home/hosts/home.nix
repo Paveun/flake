@@ -22,6 +22,23 @@
   home.packages = with pkgs; [
     brave
     kate
+    vscode
+    google-chrome
+    protonup-qt
+    steam
+    xivlauncher
+    prismlauncher
+    slack
+    tidal-hifi
+    cider
+    postman
+    openssl
+    telegram-desktop
+    webcord
+    haruna
+    deluge
+    protonvpn-gui
+    conda
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -48,10 +65,6 @@
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
 
-    ".config/alacritty/alacritty.yml"={
-      source = ../config/alacritty.yml;
-    };
-
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose
@@ -70,9 +83,16 @@
   #
   # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    # TERMINAL = "alacritty";
   };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.git = {
+    enable = true;
+    userName  = "paveun";
+    userEmail = "a.tresierrajansen@gmail.com";
+  };
+  programs.git-credential-oauth.enable = true;
 }

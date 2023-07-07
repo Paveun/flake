@@ -14,11 +14,8 @@
     ".config/waybar/style.css"={
       source = ../waybar/style.css;
     };
-    ".config/wallpapers/mountain.jpg"={
-      source = ../../resources/mountain.jpg;
-    };
-    ".config/wallpapers/mountain2.jpg"={
-      source = ../../resources/mountain2.jpg;
+    ".config/wallpapers/wallpaper.jpg"={
+      source = ../wallpaper.jpg;
     };
   };
   xdg.desktopEntries = {

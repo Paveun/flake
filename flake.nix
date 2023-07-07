@@ -23,7 +23,7 @@
     in 
     {
       nixosConfigurations = (
-        import ./hosts {
+        import ./home/hosts {
           inherit (nixpkgs) lib;
           inherit inputs user system home-manager hyprland;
         }

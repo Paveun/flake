@@ -75,9 +75,9 @@
   };
 
   environment = {
-    variables = {
-      TERMINAL = "alacritty";
-    };
+    # variables = {
+    #   TERMINAL = "alacritty";
+    # };
     systemPackages = with pkgs; [
       wget
       subversionClient
@@ -104,11 +104,11 @@
     interactiveShellInit = "nitch";
   };
   
-  programs.git = {
-    enable = true;
-    package = pkgs.gitFull;
-    config.credential.helper = "libsecret";
-  };
+  # programs.git = {
+  #   enable = true;
+  #   package = pkgs.gitFull;
+  #   config.credential.helper = "libsecret";
+  # };
 
   fileSystems."/mnt/qnas" = {
       device = "//10.1.0.8/qnas";

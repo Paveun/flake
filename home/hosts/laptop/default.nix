@@ -1,9 +1,11 @@
-{ config, pkgs, user, lib, inputs, ... }:
+{ config, pkgs, user, lib, ... }:
 
 {
   imports = [
     ./hardware-configuration.nix
-    #../../config/flatpak_font_fix.nix
+    ../qtile
+    ../alacritty
+    # ../hyprland
   ];
 
   boot = {
@@ -11,13 +13,11 @@
       [
         "acpi_rev_override"
         "mem_sleep_default=deep"
-        #"intel_iommu=igfx_off"
+        "intel_iommu=igfx_off"
       ];
     kernelPackages = pkgs.linuxPackages_latest;
     extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
   };
-
-  networking.hostName = "fishtank"; # Define your hostname.
 
   # Configure X11
   services.xserver = {
@@ -31,25 +31,15 @@
     };
   };
 
-  # Disable default KDE apps
-  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
-    elisa
-    gwenview
-    okular
-    oxygen
-    khelpcenter
-    konsole
-    plasma-browser-integration
-    print-manager
-  ];
+  services.xserver.libinput.enable = true;
 
-  hardware.openrazer.enable = true;
-  users.users.${user}.extraGroups = [
-    "openrazer"
-    "plugdev"
-  ];
+  networking.hostName = "intl"; # Define your hostname.
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+  users.users.${user}.extraGroups = [
+    "input"
+  ];
 
   # NVIDIA drivers are unfree.
   nixpkgs.config.allowUnfreePredicate = pkg:
@@ -57,7 +47,7 @@
       "nvidia-x11"
   ];
 
-  # Configuring Nvidia
+  # Configuring Nvidia PRIME
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.opengl = {
@@ -67,10 +57,18 @@
   };
 
   hardware.nvidia = {
-    modesetting.enable =true;
+    modesetting.enable = true;
     powerManagement.enable = true;
-    open = true;
-    nvidiaSettings = true;
+    prime = {
+      offload.enable = true;
+      # sync.enable = true; # Keeps GPU always on
+      # Bus ID of the NVIDIA GPU. You can find it using lspci, either under 3D or VGA
+      nvidiaBusId = "PCI:1:0:0";
+
+      # Bus ID of the Intel GPU. You can find it using lspci, either under 3D or VGA
+      intelBusId = "PCI:0:2:0";
+    };
+    # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 }

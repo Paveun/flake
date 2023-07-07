@@ -1,6 +1,9 @@
 { config, pkgs, user, lib, ... }:
 
 {
+  home-manager.sharedModules = [
+    ./home.nix
+  ];
   security.polkit.enable = true;
   services.gnome.gnome-keyring.enable = true;
   services.udisks2.enable = true;
