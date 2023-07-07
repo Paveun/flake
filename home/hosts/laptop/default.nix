@@ -6,7 +6,7 @@
     ../../qtile
     ../../alacritty
     ../../plasma
-    ../../hyprland
+    # ../../hyprland
   ];
 
   boot = {

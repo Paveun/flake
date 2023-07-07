@@ -1,5 +1,5 @@
 { config, pkgs, user, lib, hyprland, ... }:
-hyprland.nixosModules.default
+# hyprland.nixosModules.default
 {
   imports = [
     ../waybar
@@ -8,7 +8,12 @@ hyprland.nixosModules.default
     ./home.nix
   ];
 
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+    xwayland.hidpi = true;
+    nvidiaPatches = true;
+  };
 
   # Configure X11
   services.xserver = {
@@ -17,7 +22,7 @@ hyprland.nixosModules.default
     xkbVariant = "";
     displayManager = {
       sddm.enable = true;
-      defaultSession = "hyprland";
+      # defaultSession = "hyprland";
     };
   };
 
@@ -29,9 +34,9 @@ hyprland.nixosModules.default
   qt.platformTheme = "qt5ct";
   
   environment.variables = {
-        # This will become a global environment variable
-       "QT_QPA_PLATFORMTHEME"="qt5ct";
-     };
+      # This will become a global environment variable
+      "QT_QPA_PLATFORMTHEME"="qt5ct";
+    };
 
   environment.systemPackages = with pkgs; [
     wofi
