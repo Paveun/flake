@@ -3,11 +3,11 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../qtile
+    # ../../qtile
     ../../alacritty
     ../../gnome
     # ../../plasma
-    # ../../hyprland
+    ../../hyprland
   ];
 
   boot = {

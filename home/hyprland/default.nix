@@ -21,8 +21,8 @@
     layout = "us";
     xkbVariant = "";
     displayManager = {
-      sddm.enable = true;
-      defaultSession = "hyprland";
+      # sddm.enable = true;
+      # defaultSession = "hyprland";
     };
   };
 
@@ -46,5 +46,7 @@
     lxappearance
     libsForQt5.dolphin
     libsForQt5.qt5ct
+    libsForQt5.polkit-kde-agent
+    libsForQt5.qt5.qtwayland
   ];
 }
