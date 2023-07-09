@@ -43,7 +43,6 @@
     hyprpaper
     dunst
     udiskie
-    xsecurelock
     lxappearance
     libsForQt5.dolphin
     libsForQt5.qt5ct
