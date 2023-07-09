@@ -12,4 +12,5 @@
       source = ./icons;
     };
   };
+  services.network-manager-applet.enable = true;
 }

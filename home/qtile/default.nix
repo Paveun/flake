@@ -25,12 +25,12 @@
   # Extra app setup
   services.xserver.desktopManager.xterm.enable = false;
   services.gnome.gnome-keyring.enable = true;
-  programs.nm-applet.enable = true;
+  # programs.nm-applet.enable = true;
   environment.systemPackages = with pkgs; [
     rofi
     feh
     picom
-    networkmanagerapplet
+    # networkmanagerapplet
     lxde.lxsession
     dmenu
     xsecurelock
