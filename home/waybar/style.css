@@ -67,6 +67,7 @@ button:hover {
 #workspaces button.active {
     background-color: @accent;
     color: @dark;
+    box-shadow: inset 2px 2px 2px 1px rgba(16, 16, 16, 0.5);
     /* box-shadow: inset 0 -3px #333333; */
 }
 
@@ -99,6 +100,7 @@ button:hover {
     margin: 6px 1px;
     color: @dark;
     background-color: @accent;
+    box-shadow: inset 2px 2px 2px 1px rgba(16, 16, 16, 0.5);
 }
 
 #window,
