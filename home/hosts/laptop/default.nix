@@ -5,7 +5,7 @@
     ./hardware-configuration.nix
     # ../../qtile
     ../../alacritty
-    ../../gnome
+    # ../../gnome
     # ../../plasma
     ../../hyprland
   ];
