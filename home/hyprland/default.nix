@@ -30,15 +30,12 @@
   services.gnome.gnome-keyring.enable = true;
   services.udisks2.enable = true;
   programs.thunar.enable = true;
-
-  qt.enable = true;
-  qt.platformTheme = "qt5ct";
-  
-  environment.sessionVariables = {
-      # This will become a global environment variable
-      QT_QPA_PLATFORM = "wayland";
-      QT_QPA_PLATFORMTHEME="qt5ct";
-    };
+  programs.thunar.plugins = with pkgs.xfce; [
+    thunar-archive-plugin
+    thunar-volman
+  ];
+  services.gvfs.enable = true; # Mount, trash, and other functionalities
+  services.tumbler.enable = true; # Thumbnail support for images
 
   environment.systemPackages = with pkgs; [
     wofi
@@ -46,9 +43,5 @@
     dunst
     udiskie
     lxappearance
-    libsForQt5.dolphin
-    libsForQt5.qt5ct
-    libsForQt5.polkit-kde-agent
-    libsForQt5.qt5.qtwayland
   ];
 }
