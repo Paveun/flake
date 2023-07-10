@@ -27,6 +27,7 @@
   };
 
   security.polkit.enable = true;
+  security.pam.services.${user}.enableGnomeKeyring = true;
   services.gnome.gnome-keyring.enable = true;
   services.udisks2.enable = true;
   programs.thunar.enable = true;
