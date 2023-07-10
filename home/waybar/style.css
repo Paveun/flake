@@ -72,6 +72,7 @@ button:hover {
 }
 
 #workspaces button.urgent {
+    box-shadow: inset 2px 2px 2px 1px rgba(16, 16, 16, 0.5);
     background-color: #eb4d4b;
 }
 
@@ -229,7 +230,6 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    box-shadow: inset 2px 2px 2px 1px rgba(16, 16, 16, 0.5);
     background-color: #eb4d4b;
 }
 
