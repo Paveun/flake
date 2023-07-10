@@ -1,7 +1,10 @@
 { config, pkgs, lib, user, ... }:
 
 {
- home.file = {
+  home.packages = with pkgs; [
+    feh
+  ];
+  home.file = {
     ".config/hypr/hyprland.conf"={
       source = ./hyprland.conf;
     };

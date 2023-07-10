@@ -31,11 +31,13 @@
   services.udisks2.enable = true;
   programs.thunar.enable = true;
 
+  qt.enable = true;
   qt.platformTheme = "qt5ct";
   
-  environment.variables = {
+  environment.sessionVariables = {
       # This will become a global environment variable
-      "QT_QPA_PLATFORMTHEME"="qt5ct";
+      QT_QPA_PLATFORM = "wayland";
+      QT_QPA_PLATFORMTHEME="qt5ct";
     };
 
   environment.systemPackages = with pkgs; [
