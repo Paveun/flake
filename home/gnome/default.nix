@@ -9,6 +9,7 @@
     desktopManager.gnome.enable = true;
     displayManager = {
       gdm.enable = true;
+      gdm.wayland = true;
       # defaultSession = "plasmawayland";
     };
   };
