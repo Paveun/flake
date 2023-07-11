@@ -15,6 +15,9 @@
     };
     fish = {
       enable = true;
+      interactiveShellInit = ''
+        set fish_greeting # Disable greeting
+      '';
       shellAliases = {
         ssh = "TERM=xterm-256color command ssh";
       };
