@@ -70,7 +70,7 @@
   users.users.${user} = {
     isNormalUser = true;
     description = "Paveun";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker"];
     shell = pkgs.fish;
   };
 
@@ -109,6 +109,16 @@
   #   package = pkgs.gitFull;
   #   config.credential.helper = "libsecret";
   # };
+
+  # Docker
+  virtualisation.docker = {
+    enable = true;
+    # enableNvidia = true;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
 
   fileSystems."/mnt/qnas" = {
       device = "//10.1.0.8/qnas";
