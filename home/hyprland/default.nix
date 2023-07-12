@@ -44,5 +44,6 @@
     dunst
     udiskie
     lxappearance
+    libsForQt5.ark
   ];
 }
