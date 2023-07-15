@@ -21,7 +21,15 @@
     layout = "us";
     xkbVariant = "";
     displayManager = {
-      sddm.enable = true;
+      sddm = {
+        enable = true;
+        theme = "${(pkgs.fetchFromGitHub {
+          owner = "rototrash";
+          repo = "tokyo-night-sddm";
+          rev = "320c8e74ade1e94f640708eee0b9a75a395697c6";
+          sha256 = "JRVVzyefqR2L3UrEK2iWyhUKfPMUNUnfRZmwdz05wL0=";
+        })}";
+      };
       defaultSession = "hyprland";
     };
   };
@@ -29,6 +37,7 @@
   security.polkit.enable = true;
   security.pam.services.${user}.enableGnomeKeyring = true;
   services.gnome.gnome-keyring.enable = true;
+  security.pam.services.swaylock = {};
   services.udisks2.enable = true;
   programs.thunar.enable = true;
   programs.thunar.plugins = with pkgs.xfce; [
@@ -44,9 +53,12 @@
     dunst
     libsecret
     libgnome-keyring
+    swaylock
+    swaylock-effects
     udiskie
     xsettingsd
     lxappearance
+    libsForQt5.qt5.qtgraphicaleffects
     libsForQt5.ark
   ];
 }
