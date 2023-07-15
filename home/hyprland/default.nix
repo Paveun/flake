@@ -21,7 +21,7 @@
     layout = "us";
     xkbVariant = "";
     displayManager = {
-      gdm.enable = true;
+      sddm.enable = true;
       defaultSession = "hyprland";
     };
   };
@@ -42,7 +42,10 @@
     wofi
     hyprpaper
     dunst
+    libsecret
+    libgnome-keyring
     udiskie
+    xsettingsd
     lxappearance
     libsForQt5.ark
   ];
