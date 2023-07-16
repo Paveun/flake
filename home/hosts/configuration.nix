@@ -87,6 +87,8 @@
       btop
       python311
       cifs-utils
+      fishPlugins.tide
+      fishPlugins.z
     ];
   };
 
@@ -97,6 +99,8 @@
     roboto
     jetbrains-mono
     roboto-mono
+    meslo-lgs-nf
+    nerdfonts
   ];
 
   programs.fish = {
