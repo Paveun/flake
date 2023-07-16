@@ -16,6 +16,9 @@
         "acpi_rev_override"
         "mem_sleep_default=deep"
         "intel_iommu=igfx_off"
+        "tuxedo_keyboard.mode=0"
+        "tuxedo_keyboard.brightness=25"
+        "tuxedo_keyboard.color_left=0x0000ff"
       ];
     kernelPackages = pkgs.linuxPackages_latest;
     extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
