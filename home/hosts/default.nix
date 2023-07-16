@@ -1,4 +1,4 @@
-{ lib, inputs, system, home-manager, user, hyprland, ... }:
+{ lib, inputs, system, home-manager, user, hyprland, tuxedo-nixos, ... }:
 
 {
   laptop = lib.nixosSystem {

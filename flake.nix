@@ -15,7 +15,7 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, hyprland,... }:
+  outputs = inputs @ { self, nixpkgs, home-manager, hyprland, tuxedo-nixos, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -29,7 +29,7 @@
       nixosConfigurations = (
         import ./home/hosts {
           inherit (nixpkgs) lib;
-          inherit inputs user system home-manager hyprland;
+          inherit inputs user system home-manager hyprland tuxedo-nixos;
         }
       );
     };

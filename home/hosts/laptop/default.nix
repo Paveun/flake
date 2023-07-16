@@ -1,4 +1,4 @@
-{ config, pkgs, user, lib, ... }:
+{ config, pkgs, user, lib, tuxedo-nixos, hyprland, ... }:
 
 {
   imports = [
@@ -23,6 +23,12 @@
 
   hardware.tuxedo-control-center.enable = true;
   hardware.tuxedo-keyboard.enable = true;
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "openssl-1.1.1u"
+    "nodejs-14.21.3"
+    "electron-13.6.9"
+  ];
 
   networking.hostName = "intl"; # Define your hostname.
 

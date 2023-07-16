@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "flake-compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1673956053,
+        "narHash": "sha256-4gtG9iQuiKITOjNQQeQIpoIB6b16fm+504Ch3sNKLd8=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "35bb57c0c8d8b62bbfd284272c928ceb64ddbde9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -115,7 +131,29 @@
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "nixpkgs": "nixpkgs_2",
-        "nixpkgs-unable": "nixpkgs-unable"
+        "nixpkgs-unable": "nixpkgs-unable",
+        "tuxedo-nixos": "tuxedo-nixos"
+      }
+    },
+    "tuxedo-nixos": {
+      "inputs": {
+        "flake-compat": "flake-compat",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1685384046,
+        "narHash": "sha256-FJNQ93vlzIc0+CKsRGEBA3wdElPP2G8VSFV8U2jyhJA=",
+        "owner": "blitz",
+        "repo": "tuxedo-nixos",
+        "rev": "3002821d13ff9b011a411f420d2aac36a394c433",
+        "type": "github"
+      },
+      "original": {
+        "owner": "blitz",
+        "repo": "tuxedo-nixos",
+        "type": "github"
       }
     },
     "wlroots": {
