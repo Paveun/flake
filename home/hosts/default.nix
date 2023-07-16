@@ -1,4 +1,4 @@
-{ lib, inputs, system, home-manager, user, hyprland, tuxedo-nixos, ... }:
+{ lib, inputs, system, home-manager, user, hyprland, ... }:
 
 {
   laptop = lib.nixosSystem {
@@ -9,7 +9,6 @@
       ./configuration.nix
       hyprland.nixosModules.default
       # {programs.hyprland.enable = true;}
-      tuxedo-nixos.nixosModules.default
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;

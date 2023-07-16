@@ -1,4 +1,4 @@
-{ config, pkgs, user, lib, tuxedo-nixos, hyprland, ... }:
+{ config, pkgs, user, lib, hyprland, ... }:
 
 {
   imports = [
@@ -16,22 +16,10 @@
         "acpi_rev_override"
         "mem_sleep_default=deep"
         "intel_iommu=igfx_off"
-        "tuxedo_keyboard.mode=0"
-        "tuxedo_keyboard.brightness=25"
-        "tuxedo_keyboard.color_left=0x0000ff"
       ];
     kernelPackages = pkgs.linuxPackages_latest;
     extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
   };
-
-  hardware.tuxedo-control-center.enable = true;
-  hardware.tuxedo-keyboard.enable = true;
-
-  nixpkgs.config.permittedInsecurePackages = [
-    "openssl-1.1.1u"
-    "nodejs-14.21.3"
-    "electron-13.6.9"
-  ];
 
   networking.hostName = "intl"; # Define your hostname.
 

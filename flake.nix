@@ -9,13 +9,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "github:hyprwm/Hyprland";
-    tuxedo-nixos = {
-      url = "github:blitz/tuxedo-nixos";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, hyprland, tuxedo-nixos, ... }:
+  outputs = inputs @ { self, nixpkgs, home-manager, hyprland, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -29,7 +25,7 @@
       nixosConfigurations = (
         import ./home/hosts {
           inherit (nixpkgs) lib;
-          inherit inputs user system home-manager hyprland tuxedo-nixos;
+          inherit inputs user system home-manager hyprland;
         }
       );
     };
