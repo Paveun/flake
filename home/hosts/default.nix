@@ -9,6 +9,7 @@
       ./configuration.nix
       hyprland.nixosModules.default
       # {programs.hyprland.enable = true;}
+      tuxedo-nixos.nixosModules.default
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;

@@ -21,6 +21,9 @@
     extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
   };
 
+  hardware.tuxedo-control-center.enable = true;
+  hardware.tuxedo-keyboard.enable = true;
+
   networking.hostName = "intl"; # Define your hostname.
 
   # NVIDIA drivers are unfree.

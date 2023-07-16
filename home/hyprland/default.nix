@@ -53,7 +53,6 @@
     dunst
     libsecret
     libgnome-keyring
-    swaylock
     swaylock-effects
     udiskie
     xsettingsd
