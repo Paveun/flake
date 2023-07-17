@@ -98,6 +98,16 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  programs.neovim = {
+    enable = true;
+    withPython3 = true;
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
+    withNodeJs = true;
+    withRuby = true;
+  };
+
   programs.git = {
     enable = true;
     userName  = "paveun";

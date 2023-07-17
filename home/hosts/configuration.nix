@@ -89,7 +89,6 @@
       cifs-utils
       fishPlugins.tide
       fishPlugins.z
-      vimPlugins.nvchad
     ];
   };
 
@@ -107,11 +106,6 @@
   programs.fish = {
     enable = true;
     interactiveShellInit = "nitch";
-  };
-  
-  programs.neovim = {
-    enable = true;
-    withPython3 = true;
   };
 
   # programs.git = {
