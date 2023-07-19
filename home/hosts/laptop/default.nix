@@ -8,6 +8,7 @@
     # ../../gnome
     # ../../plasma
     ../../hyprland
+    ../../awesomewm
   ];
 
   boot = {
