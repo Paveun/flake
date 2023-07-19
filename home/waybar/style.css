@@ -1,5 +1,5 @@
 @define-color accent #60d8ee;
-@define-color dark #333333;
+@define-color dark #232627;
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -9,7 +9,7 @@
 }
 
 window#waybar {
-    background-color: rgba(51, 51, 51, 0.7);
+    background-color: rgba(35, 38, 39, 0.95);
     /* border-bottom: 0px solid rgba(100, 114, 125, 0.5); */
     color: #ffffff;
     transition-property: background-color;
