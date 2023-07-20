@@ -23,6 +23,7 @@
     brave
     kate
     vscode
+    winbox
     google-chrome
     protonup-qt
     steam
@@ -38,6 +39,7 @@
     haruna
     deluge
     protonvpn-gui
+    protonvpn-cli
     conda
     keepassxc
     google-drive-ocamlfuse
