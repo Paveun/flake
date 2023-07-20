@@ -5,7 +5,7 @@
     ./hardware-configuration.nix
     ../../alacritty
     ../../plasma
-    ../../qtile2
+    # ../../qtile2
     #../../flatpak
   ];
 
