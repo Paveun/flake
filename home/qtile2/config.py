@@ -19,35 +19,43 @@ myTerm = "alacritty"      # My terminal of choice
 myBrowser = "google-chrome-stable" # My browser of choice
 
 keys = [
-         ### The essentials
-         Key([mod], "q",
-             lazy.spawn(myTerm),
-             desc='Launches My Terminal'
-             ),
-         Key([mod], "r",
-             lazy.spawn("rofi -show drun"),
-             desc='Run Launcher'
-             ),
-         Key([mod], "b",
-             lazy.spawn(myBrowser),
-             desc='Chrome'
-             ),
+        ### The essentials
+        Key([mod], "q",
+            lazy.spawn(myTerm),
+            desc='Launches My Terminal'
+            ),
+        Key([mod], "r",
+            lazy.spawn("rofi -show drun"),
+            desc='Run Launcher'
+            ),
+        Key([mod], "b",
+            lazy.spawn(myBrowser),
+            desc='Chrome'
+            ),
         #  Key([mod], "Tab",
         #      lazy.next_layout(),
         #      desc='Toggle through layouts'
         #      ),
-         Key([mod], "c",
-             lazy.window.kill(),
-             desc='Kill active window'
-             ),
-         Key([mod, "shift"], "r",
-             lazy.restart(),
-             desc='Restart Qtile'
-             ),
-         Key([mod], "l",
-             lazy.spawn("xsecurelock"),
-             desc='Lock screen'
-             ),
+        Key([mod], "c",
+            lazy.window.kill(),
+            desc='Kill active window'
+            ),
+        Key([mod, "shift"], "r",
+            lazy.restart(),
+            desc='Restart Qtile'
+            ),
+        Key([mod, "shift"], "q",
+            lazy.shutdown(),
+            desc='Quit qtile'
+            ),
+        Key([mod], "l",
+            lazy.spawn("xsecurelock"),
+            desc='Lock screen'
+            ),
+        Key([mod], "e",
+            lazy.spawn("thunar"),
+            desc='File browser'
+            ),
         #  ### Treetab controls
         #   Key([mod, "shift"], "h",
         #      lazy.layout.move_left(),
