@@ -3,7 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    # ../../qtile
+    ../../qtile2
     ../../alacritty
     # ../../gnome
     # ../../plasma
