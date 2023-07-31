@@ -87,7 +87,7 @@
       btop
       python311
       cifs-utils
-      fishPlugins.tide
+      # fishPlugins.tide
       fishPlugins.z
     ];
   };
