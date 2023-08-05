@@ -15,6 +15,9 @@
     nvidiaPatches = true;
   };
 
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtx ];
+
   # Configure X11
   services.xserver = {
     enable = true;
