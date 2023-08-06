@@ -50,17 +50,20 @@
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images
 
-  environment.systemPackages = with pkgs; [
-    wofi
-    hyprpaper
-    dunst
-    libsecret
-    libgnome-keyring
-    swaylock-effects
-    udiskie
-    xsettingsd
-    lxappearance
-    libsForQt5.qt5.qtgraphicaleffects
-    libsForQt5.ark
-  ];
+  environment = {
+    systemPackages = with pkgs; [
+      wofi
+      hyprpaper
+      dunst
+      libsecret
+      libgnome-keyring
+      swaylock-effects
+      udiskie
+      xsettingsd
+      lxappearance
+      libsForQt5.qt5.qtgraphicaleffects
+      libsForQt5.ark
+    ];
+  sessionVariables.NIXOS_OZONE_WL = "1";
+  };
 }
