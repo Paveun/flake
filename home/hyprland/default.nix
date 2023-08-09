@@ -15,8 +15,8 @@
     nvidiaPatches = true;
   };
 
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  # xdg.portal.enable = true;
+  # xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
   # Configure X11
   services.xserver = {
@@ -40,6 +40,8 @@
   security.polkit.enable = true;
   security.pam.services.${user}.enableGnomeKeyring = true;
   services.gnome.gnome-keyring.enable = true;
+  programs.seahorse.enable = true;
+  security.pam.services.sddm.enableGnomeKeyring = true;
   security.pam.services.swaylock = {};
   services.udisks2.enable = true;
   programs.thunar.enable = true;
