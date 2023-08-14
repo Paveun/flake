@@ -65,6 +65,7 @@
       lxappearance
       libsForQt5.qt5.qtgraphicaleffects
       libsForQt5.ark
+      glxinfo
     ];
   sessionVariables.NIXOS_OZONE_WL = "1";
   };
