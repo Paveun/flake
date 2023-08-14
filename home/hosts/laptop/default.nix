@@ -3,11 +3,11 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../qtile2
+    # ../../qtile2
     ../../alacritty
     # ../../gnome
-    # ../../plasma
-    ../../hyprland
+    ../../plasma
+    # ../../hyprland
     # ../../awesomewm
   ];
 
