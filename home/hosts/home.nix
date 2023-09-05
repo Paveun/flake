@@ -23,6 +23,7 @@
     brave
     kate
     vscode
+    sublime4
     winbox
     google-chrome
     protonup-qt

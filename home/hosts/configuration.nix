@@ -92,6 +92,10 @@
     ];
   };
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "openssl-1.1.1v"
+  ];
+
   fonts.packages = with pkgs; [
     source-code-pro
     font-awesome
