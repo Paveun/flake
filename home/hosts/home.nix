@@ -100,6 +100,10 @@
     # TERMINAL = "alacritty";
   };
 
+  xresources.properties  = {
+    "Xft.dpi" = 96;
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
