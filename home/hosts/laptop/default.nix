@@ -26,12 +26,12 @@
 
   hardware.tuxedo-keyboard.enable = true;
 
-  # NVIDIA drivers are unfree.
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [
-      "nvidia-x11"
-      "nvidia-settings"
-  ];
+  # # NVIDIA drivers are unfree.
+  # nixpkgs.config.allowUnfreePredicate = pkg:
+  #   builtins.elem (lib.getName pkg) [
+  #     "nvidia-x11"
+  #     "nvidia-settings"
+  # ];
 
   # Configuring Nvidia PRIME
   services.xserver.videoDrivers = ["nvidia"];

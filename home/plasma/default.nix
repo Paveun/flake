@@ -24,7 +24,7 @@
     print-manager
   ];
 
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  # environment.sessionVariables.NIXOS_OZONE_WL = "1";
   
   services.xserver.libinput.enable = true;
   users.users.${user}.extraGroups = [
