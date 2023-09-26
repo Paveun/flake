@@ -44,12 +44,13 @@
 
   hardware.nvidia = {
     modesetting.enable = true;
-    powerManagement.enable = true;
-    open = false;
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    open = true;
     prime = {
-      offload.enable = true;
-      offload.enableOffloadCmd = true;
-      # sync.enable = true; # Keeps GPU always on
+      # offload.enable = true;
+      # offload.enableOffloadCmd = true;
+      sync.enable = true; # Keeps GPU always on
       # Bus ID of the NVIDIA GPU. You can find it using lspci, either under 3D or VGA
       nvidiaBusId = "PCI:1:0:0";
 
