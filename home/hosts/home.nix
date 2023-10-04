@@ -33,7 +33,7 @@
     slack
     tidal-hifi
     cider
-    postman
+    # postman
     openssl
     telegram-desktop
     webcord
