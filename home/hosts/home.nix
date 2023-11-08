@@ -48,6 +48,7 @@
     openfortivpn
     distrobox
     openconnect
+    openvpn
     flameshot
     jq
     # # Adds the 'hello' command to your environment. It prints a friendly
