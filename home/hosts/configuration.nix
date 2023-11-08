@@ -85,10 +85,11 @@
       neofetch
       nitch
       btop
-      python311
+      # python311
       cifs-utils
       # fishPlugins.tide
       fishPlugins.z
+      linuxHeaders
     ];
   };
 
