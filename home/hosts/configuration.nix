@@ -85,6 +85,7 @@
       neofetch
       nitch
       btop
+      screen
       # python311
       cifs-utils
       # fishPlugins.tide
