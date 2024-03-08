@@ -5,8 +5,6 @@
     ./hardware-configuration.nix
     ../../alacritty
     ../../plasma
-    # ../../qtile2
-    #../../flatpak
   ];
 
   boot = {

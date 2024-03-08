@@ -6,14 +6,14 @@
     enable = true;
     layout = "us";
     xkbVariant = "";
-    desktopManager.plasma5.enable = true;
+    desktopManager.plasma6.enable = true;
     displayManager = {
       sddm.enable = true;
       defaultSession = "plasmawayland";
     };
   };
 
-  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [
     elisa
     gwenview
     okular

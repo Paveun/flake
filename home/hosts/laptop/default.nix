@@ -1,14 +1,11 @@
-{ config, pkgs, user, lib, hyprland, ... }:
+{ config, pkgs, user, lib, ... }:
 
 {
   imports = [
     ./hardware-configuration.nix
-    # ../../qtile2
     ../../alacritty
-    # ../../gnome
     ../../plasma
     # ../../hyprland
-    # ../../awesomewm
   ];
 
   boot = {

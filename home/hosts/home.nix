@@ -20,23 +20,12 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    brave
     kate
     vscode
-    sublime4
     winbox
     google-chrome
-    protonup-qt
-    steam
-    xivlauncher
-    prismlauncher
-    slack
-    tidal-hifi
-    cider
     # postman
     openssl
-    telegram-desktop
-    webcord
     haruna
     deluge
     protonvpn-gui
@@ -77,8 +66,8 @@
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
 
-    ".config/wallpapers/wallpaper.jpg"={
-      source = ../wallpaper.jpg;
+    ".config/wallpaper/default.png"={
+      source = ../wallpaper/default.png;
     };
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''

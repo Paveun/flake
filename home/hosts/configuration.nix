@@ -85,19 +85,20 @@
       neofetch
       nitch
       btop
-      screen
-      # python311
+      tmux
       cifs-utils
-      # fishPlugins.tide
       fishPlugins.z
+      fishPlugins.autopair
+      fishPlugins.puffer
       linuxHeaders
+      krabby
     ];
   };
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "openssl-1.1.1v"
-    "openssl-1.1.1w"
-  ];
+  #nixpkgs.config.permittedInsecurePackages = [
+  #  "openssl-1.1.1v"
+  #  "openssl-1.1.1w"
+  #];
 
   fonts.packages = with pkgs; [
     source-code-pro
@@ -112,8 +113,12 @@
 
   programs.fish = {
     enable = true;
-    interactiveShellInit = "nitch";
+    interactiveShellInit = krabby --no-title;
   };
+  
+  programs.starship.enable = true;
+
+  services.flatpak.enable = true;
 
   # programs.git = {
   #   enable = true;
@@ -141,15 +146,6 @@
        dns_enabled = true;
       };
     };
-  };
-
-  fileSystems."/mnt/qnas" = {
-      device = "//10.1.0.8/qnas";
-      fsType = "cifs";
-      options = let
-        # this line prevents hanging on network split
-        automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
-      in ["${automount_opts},credentials=/etc/nixos/smb-secrets,uid=1000,gid=100"];
   };
 
   # Some programs need SUID wrappers, can be configured further or are

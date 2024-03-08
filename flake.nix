@@ -3,15 +3,13 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, hyprland, ... }:
+  outputs = inputs @ { self, nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -25,7 +23,7 @@
       nixosConfigurations = (
         import ./home/hosts {
           inherit (nixpkgs) lib;
-          inherit inputs user system home-manager hyprland;
+          inherit inputs user system home-manager;
         }
       );
     };

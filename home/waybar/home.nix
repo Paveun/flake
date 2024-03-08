@@ -8,5 +8,8 @@
     ".config/waybar/style.css"={
       source = ./style.css;
     };
+    ".config/waybar/mediaplayer.py"={
+      source = ./medialpayer.py;
+    };
   };
 }
