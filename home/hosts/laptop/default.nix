@@ -21,7 +21,12 @@
 
   networking.hostName = "intl"; # Define your hostname.
 
-  hardware.tuxedo-keyboard.enable = true;
+  # hardware.tuxedo-keyboard.enable = true;
+  
+  hardware.tuxedo-rs = {
+    enable = true;
+    tailor-gui.enable = true;
+  };
 
   # # NVIDIA drivers are unfree.
   # nixpkgs.config.allowUnfreePredicate = pkg:
