@@ -113,7 +113,7 @@
 
   programs.fish = {
     enable = true;
-    interactiveShellInit = krabby --no-title;
+    interactiveShellInit = "krabby random --no-title";
   };
   
   programs.starship.enable = true;
