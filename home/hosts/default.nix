@@ -16,7 +16,7 @@
         };
       }
       nix-flatpak.nixosModules.nix-flatpak
-      nixvim.homeManagerModules.nixvim
+      nixvim.nixosModules.nixvim
     ];
   };
   fishtank = lib.nixosSystem {
@@ -34,7 +34,7 @@
         };
       }
       nix-flatpak.nixosModules.nix-flatpak
-      nixvim.homeManagerModules.nixvim
+      nixvim.nixosModules.nixvim
     ];
   };
 }
