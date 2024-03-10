@@ -127,7 +127,7 @@
       "com.obsproject.Studio"
       "com.discordapp.Discord"
       "org.polymc.PolyMC"
-      "org.spotify.Client"
+      "com.spotify.Client"
       "com.valvesoftware.Steam"
       "dev.goats.xivlauncher"
     ];
