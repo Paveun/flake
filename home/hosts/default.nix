@@ -32,6 +32,7 @@
           imports = [(import ./home.nix )] ++ [(import ./fishtank/home.nix)];
         };
       }
+      nix-flatpak.nixosModules.nix-flatpak
     ];
   };
 }
