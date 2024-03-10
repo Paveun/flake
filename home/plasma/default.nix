@@ -13,7 +13,10 @@
       defaultSession = "plasma";
     };
   };
-
+  
+  environment.systemPackages = with pkgs; [
+    catppuccin-kde
+  ];
 #  environment.plasma6.excludePackages = with pkgs.kdePackages; [
 #    elisa
 #    gwenview
