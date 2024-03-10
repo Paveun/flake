@@ -38,6 +38,7 @@
     powerManagement.enable = false;
     powerManagement.finegrained = false;
     open = false;
+    nvidiaSettings = true;
     prime = {
       # offload.enable = true;
       # offload.enableOffloadCmd = true;
