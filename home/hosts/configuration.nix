@@ -111,6 +111,7 @@
     packages = [
       "com.github.tchx84.Flatseal"
       "com.brave.Browser"
+      "com.slack.Slack"
       "com.obsproject.Studio"
       "com.discordapp.Discord"
       "org.polymc.PolyMC"
