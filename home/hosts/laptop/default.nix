@@ -5,7 +5,6 @@
     ./hardware-configuration.nix
     ../../alacritty
     ../../plasma
-    # ../../hyprland
   ];
 
   boot = {
@@ -19,23 +18,13 @@
     extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
   };
 
-  networking.hostName = "intl"; # Define your hostname.
+  networking.hostName = "intl";
 
-  # hardware.tuxedo-keyboard.enable = true;
-  
   hardware.tuxedo-rs = {
     enable = true;
     tailor-gui.enable = true;
   };
 
-  # # NVIDIA drivers are unfree.
-  # nixpkgs.config.allowUnfreePredicate = pkg:
-  #   builtins.elem (lib.getName pkg) [
-  #     "nvidia-x11"
-  #     "nvidia-settings"
-  # ];
-
-  # Configuring Nvidia PRIME
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.opengl = {
@@ -48,18 +37,14 @@
     modesetting.enable = true;
     powerManagement.enable = false;
     powerManagement.finegrained = false;
-    open = true;
+    open = false;
     prime = {
       # offload.enable = true;
       # offload.enableOffloadCmd = true;
       sync.enable = true; # Keeps GPU always on
-      # Bus ID of the NVIDIA GPU. You can find it using lspci, either under 3D or VGA
       nvidiaBusId = "PCI:1:0:0";
-
-      # Bus ID of the Intel GPU. You can find it using lspci, either under 3D or VGA
       intelBusId = "PCI:0:2:0";
     };
-    # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 }
