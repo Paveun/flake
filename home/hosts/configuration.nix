@@ -118,6 +118,8 @@
   
   programs.starship.enable = true;
 
+  programs.steam.enable = true;
+
   services.flatpak = {
     enable = true;
     update.onActivation = true;
@@ -129,7 +131,7 @@
       "com.discordapp.Discord"
       "org.polymc.PolyMC"
       "com.spotify.Client"
-      "com.valvesoftware.Steam"
+      # "com.valvesoftware.Steam"
       "dev.goats.xivlauncher"
     ];
   };
