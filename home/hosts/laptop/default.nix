@@ -1,10 +1,11 @@
-{ config, pkgs, user, lib, ... }:
+{ config, pkgs, user, lib, nixvim, ... }:
 
 {
   imports = [
     ./hardware-configuration.nix
     ../../alacritty
     ../../plasma
+    ../../nixvim
   ];
 
   boot = {

@@ -7,10 +7,14 @@
       url = github:nix-community/home-manager;
       inputs.nixpkgs.follows = "nixpkgs";
     };
+   nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nix-flatpak, ... }:
+  outputs = inputs @ { self, nixpkgs, home-manager, nix-flatpak, nixvim, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -24,7 +28,7 @@
       nixosConfigurations = (
         import ./home/hosts {
           inherit (nixpkgs) lib;
-          inherit inputs user system home-manager nix-flatpak;
+          inherit inputs user system home-manager nix-flatpak nixvim;
         }
       );
     };
