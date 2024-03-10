@@ -118,7 +118,15 @@
   
   programs.starship.enable = true;
 
-  services.flatpak.enable = true;
+  services.flatpak = {
+    enable = true;
+    update.onActivation = true;
+    uninstallUnmanagedPackages = true;
+    packages = [
+      "com.brave.Browser"
+      "com.obsproject.Studio"
+    ];
+  };
 
   # programs.git = {
   #   enable = true;

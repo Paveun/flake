@@ -1,4 +1,4 @@
-{ lib, inputs, system, home-manager, user, ... }:
+{ lib, inputs, system, home-manager, nix-flatpak, user, ... }:
 
 {
   laptop = lib.nixosSystem {
@@ -15,6 +15,7 @@
           imports = [(import ./home.nix )] ++ [(import ./laptop/home.nix)];
         };
       }
+      nix-flatpak.nixosModules.nix-flatpak
     ];
   };
   fishtank = lib.nixosSystem {
