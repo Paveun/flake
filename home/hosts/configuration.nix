@@ -123,6 +123,7 @@
     update.onActivation = true;
     uninstallUnmanagedPackages = true;
     packages = [
+      "com.github.tchx84.Flatseal"
       "com.brave.Browser"
       "com.obsproject.Studio"
       "com.discordapp.Discord"
