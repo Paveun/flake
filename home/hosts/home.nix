@@ -31,6 +31,7 @@
     gh
     lazygit
     ncspot
+    webcord-vencord
   ];
 
   home.file = {
