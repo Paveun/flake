@@ -30,6 +30,7 @@
     jq
     gh
     lazygit
+    ncspot
   ];
 
   home.file = {
