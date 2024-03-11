@@ -99,7 +99,9 @@
     enable = true;
     interactiveShellInit = "krabby random --no-title";
   };
-  
+ 
+  programs.git.enable = true;
+
   programs.starship.enable = true;
 
   programs.steam.enable = true;

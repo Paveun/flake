@@ -48,10 +48,10 @@
 
   programs.home-manager.enable = true;
 
-  programs.git = {
-    enable = true;
-    userName  = "paveun";
-    userEmail = "a.tresierrajansen@gmail.com";
-  };
+  # programs.git = {
+  #   enable = true;
+  #   userName  = "paveun";
+  #   userEmail = "a.tresierrajansen@gmail.com";
+  # };
   # programs.git-credential-oauth.enable = true;
 }
