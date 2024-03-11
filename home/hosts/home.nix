@@ -53,5 +53,5 @@
     userName  = "paveun";
     userEmail = "a.tresierrajansen@gmail.com";
   };
-  programs.git-credential-oauth.enable = true;
+  # programs.git-credential-oauth.enable = true;
 }
