@@ -17,16 +17,16 @@
   environment.systemPackages = with pkgs; [
     catppuccin-kde
   ];
-#  environment.plasma6.excludePackages = with pkgs.kdePackages; [
-#    elisa
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    elisa
 #    gwenview
 #    okular
-#    oxygen
+    oxygen
 #    khelpcenter
-#    konsole
-#    plasma-browser-integration
+    konsole
+    plasma-browser-integration
 #    print-manager
-#  ];
+  ];
 
   # environment.sessionVariables.NIXOS_OZONE_WL = "1";
   
