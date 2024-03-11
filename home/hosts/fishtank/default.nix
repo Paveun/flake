@@ -20,6 +20,12 @@
 
   networking.hostName = "fishtank";
 
+  fileSystems."/vault" = {
+    device = "UUID=1d3eed88-e24d-48a1-b5d6-dd94b17ed6db";
+    fsType = "ext4";
+    options = [ "noatime" ];
+  };
+
   hardware.openrazer.enable = true;
   users.users.${user}.extraGroups = [
     "openrazer"
