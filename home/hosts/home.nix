@@ -31,6 +31,7 @@
     gh
     lazygit
     ncspot
+    slack
   ];
 
   home.file = {
