@@ -40,8 +40,11 @@
       telescope = {
         enable = true;
         keymaps = {
-          "<leader>fg" = "live_grep";
-          "<C-p>" = {
+          "<leader>ff" = {
+              action = "live_grep";
+              desc = "Telescope Files";
+            };
+          "<leader>fg" = {
             action = "git_files";
             desc = "Telescope Git Files";
           };
@@ -79,6 +82,23 @@
       lightline.enable = true;
       bufferline.enable = true;
     };
+    keymaps = [
+      {
+        # Toggle NvimTree
+        key = "<leader>e";
+        action = "<CMD>NvimTreeToggle<CR>";
+      }
+      {
+        key = "<leader>t";
+        action = "<CMD>ToggleTerm<CR>";
+      }
+      {
+        # Escape terminal mode using ESC
+        mode = "t";
+        key = "<esc>";
+        action = "<C-\\><C-n>";
+      }
+    ];
   };
 
   environment.systemPackages = [
