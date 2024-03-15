@@ -11,14 +11,14 @@
       shiftwidth = 2;
       expandtab = true;
       autoindent = true;
-      # smartindent = true;
+      smartindent = true;
       # tabstop = 2;
       ignorecase = true;
       smartcase = true;
       swapfile = false;
       undofile = true;
     };
-    globals.mapleader = ",";
+    globals.mapleader = " ";
     colorschemes.catppuccin.enable = true;
     plugins = {
       treesitter = {
@@ -30,6 +30,7 @@
       rainbow-delimiters.enable = true;
       which-key = {
 	enable = true;
+        showKeys = true;
       };
       lsp = {
 	enable = true;
@@ -37,6 +38,7 @@
 	  bashls.enable = true;
 	  nixd.enable = true;
 	  ruff-lsp.enable = true;
+          pyright.enable = true;
 	};
 	keymaps.lspBuf = {
 	  "gd" = "definition";
