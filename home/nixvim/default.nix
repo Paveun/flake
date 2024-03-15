@@ -32,6 +32,22 @@
 	enable = true;
         showKeys = true;
       };
+      nvim-tree = {
+        enable = true;
+        openOnSetupFile = true;
+        autoReloadOnWrite = true;
+      };
+      telescope = {
+        enable = true;
+        keymaps = {
+          "<leader>fg" = "live_grep";
+          "<C-p>" = {
+            action = "git_files";
+            desc = "Telescope Git Files";
+          };
+        };
+        extensions.fzf-native = { enable = true; };
+      };
       lsp = {
 	enable = true;
 	servers = {
@@ -64,6 +80,11 @@
       bufferline.enable = true;
     };
   };
+
+  environment.systemPackages = [
+    pkgs.ripgrep
+  ];
+
   nixpkgs.config.permittedInsecurePackages = [
     "nix-2.16.2"
   ];
