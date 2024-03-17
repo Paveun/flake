@@ -62,7 +62,7 @@
   users.users.${user} = {
     isNormalUser = true;
     description = "Paveun";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" ];
     shell = pkgs.fish;
   };
 
