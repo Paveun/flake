@@ -2,15 +2,18 @@
 
 {
   # Configure X11
-  services.xserver = {
-    enable = true;
-    layout = "us";
-    xkbVariant = "";
+  services = {
     desktopManager.plasma6.enable = true;
-    displayManager = {
-      sddm.enable = true;
-      sddm.wayland.enable = true;
-      defaultSession = "plasma";
+    xserver = {
+      enable = true;
+      xkb.layout = "us";
+      xkb.variant = "";
+      # desktopManager.plasma6.enable = true;
+      displayManager = {
+        sddm.enable = true;
+        sddm.wayland.enable = true;
+        defaultSession = "plasma";
+      };
     };
   };
   
