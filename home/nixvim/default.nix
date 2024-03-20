@@ -57,7 +57,11 @@
 	  bashls.enable = true;
 	  nixd.enable = true;
 	  ruff-lsp.enable = true;
-          pyright.enable = true;
+          pyright = {
+            enable = true;
+            autostart = true;
+            filetypes = [ "python" ];
+          };
 	};
 	keymaps.lspBuf = {
 	  "gd" = "definition";
