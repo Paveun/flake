@@ -32,13 +32,8 @@
     lazygit
     ncspot
     slack
-    wl-clipboard
-    tree-sitter
-    ripgrep
     gdu
     bottom
-    gcc
-    lunarvim
   ];
 
   # programs.neovim = {
