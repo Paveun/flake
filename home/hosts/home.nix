@@ -32,7 +32,19 @@
     lazygit
     ncspot
     slack
+    wl-clipboard
+    tree-sitter
+    ripgrep
+    gdu
+    bottom
+    gcc
+    lunarvim
   ];
+
+  # programs.neovim = {
+  #   enable = true;
+  #   withNodeJs = true;
+  # };
 
   home.file = {
     ".config/wallpaper/default.png"={
