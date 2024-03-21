@@ -11,8 +11,7 @@
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
-    xwayland.hidpi = true;
-    nvidiaPatches = true;
+    # xwayland.hidpi = true;
   };
 
   # xdg.portal.enable = true;
@@ -21,8 +20,10 @@
   # Configure X11
   services.xserver = {
     enable = true;
-    layout = "us";
-    xkbVariant = "";
+    xkb = {
+      layout = "us";
+      variant = "";
+    };
     displayManager = {
       sddm = {
         enable = true;

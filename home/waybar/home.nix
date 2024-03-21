@@ -9,7 +9,7 @@
       source = ./style.css;
     };
     ".config/waybar/mediaplayer.py"={
-      source = ./medialpayer.py;
+      source = ./mediaplayer.py;
     };
   };
 }

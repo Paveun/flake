@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ../../alacritty
     ../../plasma
+    # ../../hyprland
     ../../lunarvim
     # ../../nixvim
   ];
