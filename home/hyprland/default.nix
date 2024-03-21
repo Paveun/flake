@@ -37,35 +37,35 @@
     };
   };
 
-  security.polkit.enable = true;
-  security.pam.services.${user}.enableGnomeKeyring = true;
-  services.gnome.gnome-keyring.enable = true;
-  programs.seahorse.enable = true;
-  security.pam.services.sddm.enableGnomeKeyring = true;
+  # security.polkit.enable = true;
+  # security.pam.services.${user}.enableGnomeKeyring = true;
+  # services.gnome.gnome-keyring.enable = true;
+  # programs.seahorse.enable = true;
+  # security.pam.services.sddm.enableGnomeKeyring = true;
   security.pam.services.swaylock = {};
-  services.udisks2.enable = true;
-  programs.thunar.enable = true;
-  programs.thunar.plugins = with pkgs.xfce; [
-    thunar-archive-plugin
-    thunar-volman
-  ];
-  services.gvfs.enable = true; # Mount, trash, and other functionalities
-  services.tumbler.enable = true; # Thumbnail support for images
+  # services.udisks2.enable = true;
+  # programs.thunar.enable = true;
+  # programs.thunar.plugins = with pkgs.xfce; [
+  #   thunar-archive-plugin
+  #   thunar-volman
+  # ];
+  # services.gvfs.enable = true; # Mount, trash, and other functionalities
+  # services.tumbler.enable = true; # Thumbnail support for images
 
   environment = {
     systemPackages = with pkgs; [
       wofi
       hyprpaper
       dunst
-      libsecret
-      libgnome-keyring
+      # libsecret
+      # libgnome-keyring
       swaylock-effects
       udiskie
-      xsettingsd
-      lxappearance
-      libsForQt5.qt5.qtgraphicaleffects
-      libsForQt5.ark
-      glxinfo
+      # xsettingsd
+      # lxappearance
+      # libsForQt5.qt5.qtgraphicaleffects
+      # libsForQt5.ark
+      # glxinfo
     ];
   sessionVariables.NIXOS_OZONE_WL = "1";
   };
