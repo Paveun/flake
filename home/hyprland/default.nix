@@ -40,7 +40,8 @@
   };
 
   qt.style = "breeze";
-
+  qt.platformTheme = "qt5ct";
+  
   # security.polkit.enable = true;
   # security.pam.services.${user}.enableGnomeKeyring = true;
   # services.gnome.gnome-keyring.enable = true;
@@ -72,6 +73,8 @@
       # xsettingsd
       # lxappearance
       libsForQt5.qt5.qtgraphicaleffects
+      qt6Packages.qt6ct
+      qt6.qtwayland
       # libsForQt5.ark
       # glxinfo
     ];
