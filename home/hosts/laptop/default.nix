@@ -18,7 +18,7 @@
         "intel_iommu=igfx_off"
       ];
     kernelPackages = pkgs.linuxPackages_latest;
-    extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
+    # extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
   };
 
   networking.hostName = "intl";
@@ -37,7 +37,7 @@
   };
 
   hardware.nvidia = {
-    modesetting.enable = true;
+    # modesetting.enable = true;
     powerManagement.enable = false;
     powerManagement.finegrained = false;
     open = false;
