@@ -24,6 +24,7 @@
       layout = "us";
       variant = "";
     };
+    # xkb.variant = "";
     displayManager = {
       sddm = {
         enable = true;
@@ -38,11 +39,14 @@
     };
   };
 
+  qt.style = "breeze";
+
   # security.polkit.enable = true;
   # security.pam.services.${user}.enableGnomeKeyring = true;
   # services.gnome.gnome-keyring.enable = true;
   # programs.seahorse.enable = true;
   # security.pam.services.sddm.enableGnomeKeyring = true;
+  security.pam.services.sddm.enableKwallet = true;
   security.pam.services.swaylock = {};
   # services.udisks2.enable = true;
   # programs.thunar.enable = true;
@@ -58,13 +62,16 @@
       wofi
       hyprpaper
       dunst
+      nwg-look
       # libsecret
       # libgnome-keyring
       swaylock-effects
       udiskie
+      kdePackages.dolphin
+      kdePackages.breeze
       # xsettingsd
       # lxappearance
-      # libsForQt5.qt5.qtgraphicaleffects
+      libsForQt5.qt5.qtgraphicaleffects
       # libsForQt5.ark
       # glxinfo
     ];

@@ -4,8 +4,8 @@
   imports = [
     ./hardware-configuration.nix
     ../../alacritty
-    ../../plasma
-    # ../../hyprland
+    # ../../plasma
+    ../../hyprland
     ../../lunarvim
     # ../../nixvim
   ];
