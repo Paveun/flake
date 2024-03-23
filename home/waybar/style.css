@@ -103,6 +103,8 @@ window#waybar {
 #custom-media {
   color: rgb(102, 220, 105);
 }
-
+#custom-playerctl {
+  color: rgb(102, 220, 105);
+}
 #tray {
 }
