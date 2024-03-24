@@ -77,6 +77,8 @@
       qt6.qtwayland
       # libsForQt5.ark
       # glxinfo
+      fluent-icon-theme
+      kora-icon-theme
     ];
   sessionVariables.NIXOS_OZONE_WL = "1";
   };
