@@ -8,6 +8,7 @@
     ../../hyprland
     ../../lunarvim
     # ../../nixvim
+    ../../lutris
   ];
 
   boot = {
