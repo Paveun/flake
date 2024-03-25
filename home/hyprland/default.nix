@@ -62,8 +62,12 @@
     systemPackages = with pkgs; [
       wofi
       hyprpaper
+      hyprcursor
       dunst
       nwg-look
+      catppuccin
+      catppuccin-gtk
+      catppuccin-cursors
       # libsecret
       # libgnome-keyring
       swaylock-effects
