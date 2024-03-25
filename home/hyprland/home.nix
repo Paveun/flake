@@ -11,6 +11,12 @@
     ".config/hypr/hyprpaper.conf"={
       source = ./hyprpaper.conf;
     };
+    ".config/wofi/config"={
+      source = ./wofi/config;
+    };
+    ".config/wofi/style.css"={
+      source = ./wofi/style.css;
+    };
   };
   gtk = {
     enable = true;
