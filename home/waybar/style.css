@@ -7,8 +7,9 @@
 }
 
 window#waybar {
-  background: transparent;
-  color: white;
+  /*background: transparent;*/
+  background: #303446;
+  color: #c6d0f5;
 }
 
 #window {
@@ -24,7 +25,7 @@ window#waybar {
 #workspaces button {
   padding: 0 5px;
   background: transparent;
-  color: white;
+  color: #c6d0f5;
   border-top: 2px solid transparent;
 }
 
@@ -77,7 +78,7 @@ window#waybar {
 }
 
 #battery.warning:not(.charging) {
-  color: white;
+  color: #c6d0f5;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -108,7 +109,7 @@ window#waybar {
   color: rgb(102, 220, 105);
 }
 #custom-playerctl {
-  color: rgb(102, 220, 105);
+  color: rgb(242, 213, 207);
 }
 #tray {
 }
