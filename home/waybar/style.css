@@ -1,7 +1,7 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: "Jetbrains Mono Nerd Font";
+  font-family: "JetBrainsMono Nerd Font";
   font-size: 13px;
   min-height: 0;
 }
@@ -46,6 +46,10 @@ window#waybar {
 #pulseaudio,
 #custom-media,
 #tray,
+#custom-playerctl
+#backlight
+#battery
+#temperature
 #mode {
   padding: 0 3px;
   margin: 0 2px;
