@@ -13,8 +13,9 @@ window#waybar {
 }
 
 #window {
+  color: #f4b8e4;
   font-weight: bold;
-  font-family: "Ubuntu";
+  font-family: "Roboto";
 }
 /*
 #workspaces {
