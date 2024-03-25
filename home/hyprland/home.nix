@@ -17,6 +17,9 @@
     ".config/wofi/style.css"={
       source = ./wofi/style.css;
     };
+    ".config/bottom/bottom.toml"={
+      source = ./bottom/bottom.toml;
+    };
   };
   gtk = {
     enable = true;
