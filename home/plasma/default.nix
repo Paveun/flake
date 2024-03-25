@@ -8,7 +8,6 @@
       enable = true;
       xkb.layout = "us";
       xkb.variant = "";
-      # desktopManager.plasma6.enable = true;
       displayManager = {
         sddm.enable = true;
         sddm.wayland.enable = true;
@@ -23,17 +22,16 @@
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
     elisa
-#    gwenview
-#    okular
     oxygen
-#    khelpcenter
     konsole
     plasma-browser-integration
-#    print-manager
   ];
 
   # environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  
+
+  xdg.portal.enable = true;
+  xdg.portal.wlr.enable = true;
+
   services.xserver.libinput.enable = true;
   users.users.${user}.extraGroups = [
     "input"
