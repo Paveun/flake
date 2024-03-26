@@ -50,11 +50,11 @@
   security.pam.services.sddm.enableKwallet = true;
   security.pam.services.swaylock = {};
   # services.udisks2.enable = true;
-  # programs.thunar.enable = true;
-  # programs.thunar.plugins = with pkgs.xfce; [
-  #   thunar-archive-plugin
-  #   thunar-volman
-  # ];
+  programs.thunar.enable = true;
+  programs.thunar.plugins = with pkgs.xfce; [
+    thunar-archive-plugin
+    thunar-volman
+  ];
   # services.gvfs.enable = true; # Mount, trash, and other functionalities
   # services.tumbler.enable = true; # Thumbnail support for images
 
@@ -65,9 +65,13 @@
       hyprcursor
       dunst
       nwg-look
-      catppuccin
-      catppuccin-gtk
-      catppuccin-cursors
+      # (catppuccin-gtk.override {
+      #   accents = [ "rosewater" ]; # You can specify multiple accents here to output multiple themes
+      #   size = "compact";
+      #   tweaks = [ "rimless" ]; # You can also specify multiple tweaks here
+      #   variant = "frappe";
+      # })
+      ranger
       # libsecret
       # libgnome-keyring
       swaylock-effects

@@ -21,28 +21,49 @@
       source = ./bottom/bottom.toml;
     };
   };
+
   gtk = {
     enable = true;
-    font.name = "Roboto";
-    theme = {
-      name = "Juno";
-      package = pkgs.juno-theme;
+    font = {
+      name = "Roboto";
+      package = pkgs.roboto;
     };
+    cursorTheme = {
+      name = "frappeRosewater";
+      package = pkgs.catppuccin-cursors.frappeRosewater;
+    };
+    # iconTheme = {
+    #   name = "Catppuccin-Frappe-Rosewater-Icons";
+    #   package = pkgs.catppuccin-papirus-folders.override {
+    #     flavor = "frappe";
+    #     accent = "rosewater";
+    #   };
+    # };
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
-    gtk3.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
+    theme = {
+      name = "Catppuccin-Frappe-Compact-Rosewater-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "rosewater" ];
+        size = "compact";
+        tweaks = [ "rimless" ];
+        variant = "frappe";
+      };
     };
-    gtk4.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
-    };
+    # iconTheme = {
+    #   name = "Papirus-Dark";
+    #   package = pkgs.papirus-icon-theme;
+    # };
   };
+
+  xdg.configFile = {
+    "gtk-4.0/assets".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";
+    "gtk-4.0/gtk.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk.css";
+    "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
+  };
+
   # xdg.desktopEntries = {
   #   chrome = {
   #     comment = "Google Chrome web browser";
