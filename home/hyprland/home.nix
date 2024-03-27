@@ -1,15 +1,21 @@
 { config, pkgs, lib, user, ... }:
 
 {
-  home.packages = with pkgs; [
-    feh
-  ];
   home.file = {
     ".config/hypr/hyprland.conf"={
-      source = ./hyprland.conf;
+      source = ./hypr/hyprland.conf;
     };
     ".config/hypr/hyprpaper.conf"={
-      source = ./hyprpaper.conf;
+      source = ./hypr/hyprpaper.conf;
+    };
+    ".config/waybar/config"={
+      source = ./waybar/config;
+    };
+    ".config/waybar/style.css"={
+      source = ./waybar/style.css;
+    };
+    ".config/waybar/mediaplayer.py"={
+      source = ./waybar/mediaplayer.py;
     };
     ".config/wofi/config"={
       source = ./wofi/config;
@@ -21,6 +27,10 @@
       source = ./bottom/bottom.toml;
     };
   };
+
+  home.packages = with pkgs; [
+    feh
+  ];
 
   gtk = {
     enable = true;
