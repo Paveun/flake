@@ -9,6 +9,7 @@
     ../../lunarvim
     # ../../nixvim
     ../../lutris
+    ../../flatpak
   ];
 
   boot = {
