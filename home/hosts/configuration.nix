@@ -84,16 +84,22 @@
     ];
   };
 
-  fonts.packages = with pkgs; [
-    source-code-pro
-    font-awesome
-    corefonts
-    roboto
-    jetbrains-mono
-    roboto-mono
-    meslo-lgs-nf
-    nerdfonts
-  ];
+  fonts = {
+    fontDir.enable = true;
+    packages = with pkgs; [
+      # source-code-pro
+      # font-awesome
+      # corefonts
+      roboto
+      jetbrains-mono
+      # roboto-mono
+      # meslo-lgs-nf
+      nerdfonts
+      noto-fonts
+      noto-fonts-emoji
+      noto-fonts-cjk
+    ];
+  };
 
   programs.fish = {
     enable = true;
@@ -110,6 +116,7 @@
     gamescopeSession.enable = true;
   };
 
+  # Flatpak setup
   services.flatpak = {
     enable = true;
     update.onActivation = true;
@@ -127,6 +134,43 @@
     ];
   };
 
+  system.fsPackages = [ pkgs.bindfs ];
+  fileSystems = let
+    mkRoSymBind = path: {
+      device = path;
+      fsType = "fuse.bindfs";
+      options = [ "ro" "resolve-symlinks" "x-gvfs-hide" ];
+    };
+    aggregatedIcons = pkgs.buildEnv {
+      name = "system-icons";
+      paths = with pkgs; [
+        catppuccin-cursors.frappeRosewater
+        libsForQt5.breeze-qt5  # for plasma
+        # gnome.gnome-themes-extra
+      ];
+      pathsToLink = [ "/share/icons" ];
+    };
+    aggregatedFonts = pkgs.buildEnv {
+      name = "system-fonts";
+      paths = config.fonts.packages;
+      pathsToLink = [ "/share/fonts" ];
+    };
+  in {
+    "/usr/share/icons" = mkRoSymBind "${aggregatedIcons}/share/icons";
+    "/usr/local/share/fonts" = mkRoSymBind "${aggregatedFonts}/share/fonts";
+  };
+  # fonts = {
+  #   fontDir.enable = true;
+  #   packages = with pkgs; [
+  #     jetbrains-mono
+  #     roboto
+  #     noto-fonts
+  #     noto-fonts-emoji
+  #     noto-fonts-cjk
+  #   ];
+  # };
+
+  # Containers
   virtualisation = {
     podman = {
       enable = true;
