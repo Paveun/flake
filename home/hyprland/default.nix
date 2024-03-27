@@ -1,9 +1,6 @@
 { config, pkgs, user, lib, ... }:
 
 {
-  # imports = [
-  #   ../waybar
-  # ];
   home-manager.sharedModules = [
     ./home.nix
   ];
@@ -15,13 +12,13 @@
   };
 
   programs.waybar.enable = true;
-  nixpkgs.overlays = [
-    (self: super: {
-      waybar = super.waybar.overrideAttrs (oldAttrs: {
-        mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-      });
-    })
-  ];
+  # nixpkgs.overlays = [
+  #   (self: super: {
+  #     waybar = super.waybar.overrideAttrs (oldAttrs: {
+  #       mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+  #     });
+  #   })
+  # ];
 
   # xdg.portal.enable = true;
   # xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
@@ -77,7 +74,6 @@
       pavucontrol
       networkmanagerapplet
       playerctl
-
       # (catppuccin-gtk.override {
       #   accents = [ "rosewater" ]; # You can specify multiple accents here to output multiple themes
       #   size = "compact";
