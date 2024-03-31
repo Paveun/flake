@@ -120,7 +120,7 @@
   services.flatpak = {
     enable = true;
     update.onActivation = true;
-    # uninstallUnmanagedPackages = true;
+    uninstallUnmanaged = true;
     packages = [
       "com.github.tchx84.Flatseal"
       "com.brave.Browser"
