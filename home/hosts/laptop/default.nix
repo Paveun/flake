@@ -14,9 +14,9 @@
   boot = {
     kernelParams =
       [
-        # "acpi_rev_override"
-        # "mem_sleep_default=deep"
-        # "intel_iommu=igfx_off"
+        "acpi_rev_override"
+        "mem_sleep_default=deep"
+        "intel_iommu=igfx_off"
       ];
     kernelPackages = pkgs.linuxPackages_latest;
     # extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
@@ -29,12 +29,6 @@
     tailor-gui.enable = true;
   };
 
-  hardware.tuxedo-keyboard.enable = true;
-
-  users.users.${user}.extraGroups = [
-    "input"
-    # "plugdev"
-  ];
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.opengl = {

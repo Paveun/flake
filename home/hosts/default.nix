@@ -1,9 +1,9 @@
-{ lib, inputs, system, pkgs, home-manager, nix-flatpak, nixvim, user, ... }:
+{ lib, inputs, system, home-manager, nix-flatpak, nixvim, user, ... }:
 
 {
   laptop = lib.nixosSystem {
     inherit system;
-    specialArgs = { inherit user inputs pkgs; };
+    specialArgs = { inherit user inputs; };
     modules = [
       ./laptop
       ./configuration.nix
@@ -21,7 +21,7 @@
   };
   fishtank = lib.nixosSystem {
     inherit system;
-    specialArgs = { inherit user inputs pkgs; };
+    specialArgs = { inherit user inputs; };
     modules = [
       ./fishtank
       ./configuration.nix
