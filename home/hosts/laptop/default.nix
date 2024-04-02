@@ -31,6 +31,12 @@
 
   hardware.tuxedo-keyboard.enable = true;
 
+  hardware.acpilight.enable = true;
+
+  users.users.${user}.extraGroups = [
+    "input"
+    # "plugdev"
+  ];
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.opengl = {
