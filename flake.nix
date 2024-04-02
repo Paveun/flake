@@ -2,19 +2,23 @@
   description = "A flake of Paveun";
 
   inputs = {
-    nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable;
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
-      url = github:nix-community/home-manager;
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-   nixvim = {
+    nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak";
+    tuxedo-nixos = {
+      url = "github:blitz/tuxedo-nixos";
+      # inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nix-flatpak, nixvim, ... }:
+  outputs = inputs @ { self, nixpkgs, home-manager, nix-flatpak, nixvim, tuxedo-nixos, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -27,8 +31,8 @@
     {
       nixosConfigurations = (
         import ./home/hosts {
-          inherit (nixpkgs) lib;
-          inherit inputs user system home-manager nix-flatpak nixvim;
+          # inherit (nixpkgs) lib;
+          inherit inputs pkgs lib user system home-manager nix-flatpak nixvim tuxedo-nixos;
         }
       );
     };

@@ -16,7 +16,7 @@
   };
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  #nixpkgs.config.allowUnfree = true;
   
   # Bootloader
   boot.loader.grub.enable = true;
