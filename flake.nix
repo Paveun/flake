@@ -12,13 +12,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak";
-    tuxedo-nixos = {
-      url = "github:blitz/tuxedo-nixos";
-      # inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nix-flatpak, nixvim, tuxedo-nixos, ... }:
+  outputs = inputs @ { self, nixpkgs, home-manager, nix-flatpak, nixvim, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -32,7 +28,7 @@
       nixosConfigurations = (
         import ./home/hosts {
           # inherit (nixpkgs) lib;
-          inherit inputs pkgs lib user system home-manager nix-flatpak nixvim tuxedo-nixos;
+          inherit inputs pkgs lib user system home-manager nix-flatpak nixvim;
         }
       );
     };

@@ -1,4 +1,4 @@
-{ lib, inputs, system, pkgs, home-manager, nix-flatpak, nixvim, user, tuxedo-nixos, ... }:
+{ lib, inputs, system, pkgs, home-manager, nix-flatpak, nixvim, user, ... }:
 
 {
   laptop = lib.nixosSystem {
@@ -17,7 +17,6 @@
       }
       nix-flatpak.nixosModules.nix-flatpak
       nixvim.nixosModules.nixvim
-      tuxedo-nixos.nixosModules.default
     ];
   };
   fishtank = lib.nixosSystem {

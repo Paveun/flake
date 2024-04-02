@@ -1,4 +1,4 @@
-{ config, pkgs, user, lib, nixvim, tuxedo-nixos, ... }:
+{ config, pkgs, user, lib, nixvim, ... }:
 
 {
   imports = [
@@ -24,13 +24,11 @@
 
   networking.hostName = "intl";
 
-  # hardware.tuxedo-rs = {
-  #   enable = true;
-  #   tailor-gui.enable = true;
-  # };
+  hardware.tuxedo-rs = {
+    enable = true;
+    tailor-gui.enable = true;
+  };
 
-  hardware.tuxedo-control-center.enable = true;
-  hardware.tuxedo-control-center.package = tuxedo-nixos.packages.x86_64-linux.default;
   hardware.tuxedo-keyboard.enable = true;
 
   services.xserver.videoDrivers = ["nvidia"];
