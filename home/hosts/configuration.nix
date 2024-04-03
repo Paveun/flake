@@ -69,17 +69,17 @@
   environment = {
     systemPackages = with pkgs; [
       wget
-      subversionClient
+      # subversionClient
       alacritty
       neofetch
-      nitch
+      # nitch
       btop
       tmux
       cifs-utils
       fishPlugins.z
       fishPlugins.autopair
       fishPlugins.puffer
-      linuxHeaders
+      # linuxHeaders
       krabby
     ];
   };
