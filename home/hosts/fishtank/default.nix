@@ -6,7 +6,7 @@
     ../../alacritty
     ../../plasma
     ../../lunarvim
-    # ../../nixvim
+    ../../nixvim
   ];
 
   boot = {
