@@ -69,7 +69,7 @@
   environment = {
     systemPackages = with pkgs; [
       wget
-      # subversionClient
+      subversionClient
       alacritty
       neofetch
       # nitch
