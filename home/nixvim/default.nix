@@ -4,19 +4,21 @@
   programs.nixvim = {
     enable = true;
     clipboard.providers.wl-copy.enable = true;
-    options = {
+    opts = {
       updatetime = 100;
       number = true;
       relativenumber = true;
       shiftwidth = 2;
-      expandtab = true;
-      autoindent = true;
-      smartindent = true;
+      wrap = false;
+      cmdheight = 1;
+      # expandtab = true;
+      # autoindent = true;
+      # smartindent = true;
       # tabstop = 2;
-      ignorecase = true;
-      smartcase = true;
-      swapfile = false;
-      undofile = true;
+      # ignorecase = true;
+      # smartcase = true;
+      # swapfile = false;
+      # undofile = true;
     };
     globals.mapleader = " ";
     colorschemes.catppuccin.enable = true;
@@ -29,7 +31,7 @@
       treesitter-context.enable = true;
       rainbow-delimiters.enable = true;
       which-key = {
-	enable = true;
+	      enable = true;
         showKeys = true;
       };
       nvim-tree = {
@@ -37,6 +39,20 @@
         openOnSetupFile = true;
         autoReloadOnWrite = true;
       };
+      alpha = {
+        enable = true;
+        theme = "startify";
+      };
+      nvim-autopairs.enable = true;
+      vim-css-color.enable = true;
+      comment.enable = true;
+      cmp = {
+        enable = true;
+        settings.sources = [
+          {name = "nvim_lsp";}
+        ];
+      };
+      cmp-nvim-lsp.enable = true;
       telescope = {
         enable = true;
         keymaps = {
@@ -52,55 +68,84 @@
         extensions.fzf-native = { enable = true; };
       };
       lsp = {
-	enable = true;
-	servers = {
-	  bashls.enable = true;
-	  nixd.enable = true;
-	  ruff-lsp.enable = true;
+	      enable = true;
+	      servers = {
+	        bashls.enable = true;
+	        nixd.enable = true;
+	        ruff-lsp.enable = true;
           pyright = {
             enable = true;
             autostart = true;
             filetypes = [ "python" ];
           };
-	};
-	keymaps.lspBuf = {
-	  "gd" = "definition";
-	  "gD" = "references";
-	  "gt" = "type_definition";
-	  "gi" = "implementation";
-	  "K" = "hover";
-	};
+	      };
+	      keymaps.lspBuf = {
+	        "gd" = "definition";
+	        "gD" = "references";
+	        "gt" = "type_definition";
+	        "gi" = "implementation";
+	        "K" = "hover";
+	      };
       };
       toggleterm = {
         enable = true;
-	openMapping = "<C-t>";
+	      openMapping = "<C-t>";
         direction = "horizontal";
       };
       autoclose = {
-	enable = true;
+	      enable = true;
       };
       wilder = {
-	enable = true;
-	modes = [ ":" "/" "?" ];
+	      enable = true;
+	      modes = [ ":" "/" "?" ];
       };
       lightline.enable = true;
       bufferline.enable = true;
     };
+
+    extraPlugins = with pkgs.vimPlugins; [
+      neoformat
+    ];
+
     keymaps = [
       {
         # Toggle NvimTree
         key = "<leader>e";
         action = "<CMD>NvimTreeToggle<CR>";
+        mode = "n";
+        options = {
+          desc = "Toggle Tree View.";
+        };
       }
       {
         key = "<leader>t";
         action = "<CMD>ToggleTerm<CR>";
+        mode = ["n"];
+        options = {
+          desc = "open terminal";
+        };
       }
       {
         # Escape terminal mode using ESC
         mode = "t";
         key = "<esc>";
         action = "<C-\\><C-n>";
+      }
+      {
+        action = "<cmd>lua vim.lsp.buf.hover()<CR>";
+        key = "<space>k"; # this line is changed
+        mode = "n";
+        options = {
+          desc = "info about things";
+        };
+      }
+      {
+        action = "<cmd>Neoformat<CR>";
+        key = "<space>="; # this line is changed
+        mode = ["n"];
+        options = {
+          desc = "formatting";
+        };
       }
     ];
   };

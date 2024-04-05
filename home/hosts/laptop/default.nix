@@ -7,7 +7,7 @@
     # ../../plasma
     ../../hyprland
     ../../lunarvim
-    # ../../nixvim
+    ../../nixvim
     ../../lutris
   ];
 
