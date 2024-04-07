@@ -58,11 +58,15 @@
         keymaps = {
           "<leader>ff" = {
               action = "live_grep";
-              desc = "Telescope Files";
+              options = {
+                desc = "Telescope Files";
+              };
             };
           "<leader>fg" = {
             action = "git_files";
-            desc = "Telescope Git Files";
+            options = {
+              desc = "Telescope Git Files";
+            };
           };
         };
         extensions.fzf-native = { enable = true; };
