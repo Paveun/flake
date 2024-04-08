@@ -132,7 +132,7 @@
       name = "system-icons";
       paths = with pkgs; [
         catppuccin-cursors.frappeRosewater
-        libsForQt5.breeze-qt5  # for plasma
+        # libsForQt5.breeze-qt5  # for plasma
         # gnome.gnome-themes-extra
       ];
       pathsToLink = [ "/share/icons" ];
