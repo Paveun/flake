@@ -1,4 +1,4 @@
-{ config, pkgs, lib, user, ... }:
+{ config, pkgs, lib, user, catppuccin, ... }:
 
 {
   nix = {
@@ -18,12 +18,20 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   
+  catppuccin.flavour = "frappe";
+  console.catppuccin.enable = true;
+
   # Bootloader
-  boot.loader.grub.enable = true;
-  boot.loader.grub.efiSupport = true;
-  boot.loader.grub.useOSProber = true;
-  boot.loader.grub.device = "nodev";
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+    grub = {
+      enable = true;
+      efiSupport = true;
+      useOSProber = true;
+      device = "nodev";
+      catppuccin.enable = true;
+    };
+    efi.canTouchEfiVariables = true;
+  };
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
