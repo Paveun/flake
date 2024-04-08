@@ -68,7 +68,6 @@
       ];
       catppuccin.enable = true;
     };
-    
     alacritty = {
       enable = true;
       catppuccin.enable = true;
@@ -119,54 +118,62 @@
         };
       };
     }; 
-    
     tmux = {
       enable = true;
       catppuccin.enable = true;
     };
-
     lazygit = {
       enable = true;
       catppuccin.enable = true;
     };
-
     bottom = {
       enable = true;
       catppuccin.enable = true;
     };
-
     btop = {
       enable = true;
       catppuccin.enable = true;
     };
-
     ranger = {
       enable = true;
     };
-
     starship = {
       enable = true;
       enableFishIntegration = true;
       enableBashIntegration = true;
       catppuccin.enable = true;
     };
-
     git = {
       enable = true;
       userName = "paveun";
       userEmail = "a.tresierrajansen@gmail.com";
       lfs.enable = true;
     };
-
     gh = {
       enable = true;
       gitCredentialHelper = {
         enable = true;
       };
     };
-
     home-manager = {
       enable = true;
+    };
+  };
+
+  gtk = {
+    enable = true;
+    font = {
+      name = "Roboto";
+      package = pkgs.roboto;
+    };
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+    catppuccin = {
+      enable = true;
+      size = "compact";
+      cursor.enable = true;
     };
   };
 
