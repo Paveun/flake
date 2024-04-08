@@ -80,7 +80,7 @@
       #   tweaks = [ "rimless" ]; # You can also specify multiple tweaks here
       #   variant = "frappe";
       # })
-      ranger
+      # ranger
       # libsecret
       # libgnome-keyring
       swaylock-effects

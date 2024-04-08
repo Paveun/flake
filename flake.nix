@@ -12,9 +12,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak";
+    catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nix-flatpak, nixvim, ... }:
+  outputs = inputs @ { self, nixpkgs, home-manager, nix-flatpak, nixvim, catppuccin, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -28,7 +29,7 @@
       nixosConfigurations = (
         import ./home/hosts {
           inherit (nixpkgs) lib;
-          inherit inputs user system home-manager nix-flatpak nixvim;
+          inherit inputs user system home-manager nix-flatpak nixvim catppuccin;
         }
       );
     };

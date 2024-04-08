@@ -69,31 +69,15 @@
   environment = {
     systemPackages = with pkgs; [
       wget
-      # subversionClient
-      # alacritty
-      # neofetch
-      # nitch
-      # btop
-      # tmux
       cifs-utils
-      # fishPlugins.z
-      # fishPlugins.autopair
-      # fishPlugins.puffer
-      # linuxHeaders
-      # krabby
     ];
   };
 
   fonts = {
     fontDir.enable = true;
     packages = with pkgs; [
-      # source-code-pro
-      # font-awesome
-      # corefonts
       roboto
       jetbrains-mono
-      # roboto-mono
-      # meslo-lgs-nf
       nerdfonts
       noto-fonts
       noto-fonts-emoji
@@ -103,13 +87,8 @@
 
   programs.fish = {
     enable = true;
-  #   interactiveShellInit = "krabby random --no-title";
   };
  
-  # programs.git.enable = true;
-
-  # programs.starship.enable = true;
-
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
@@ -159,16 +138,6 @@
     "/usr/share/icons" = mkRoSymBind "${aggregatedIcons}/share/icons";
     "/usr/local/share/fonts" = mkRoSymBind "${aggregatedFonts}/share/fonts";
   };
-  # fonts = {
-  #   fontDir.enable = true;
-  #   packages = with pkgs; [
-  #     jetbrains-mono
-  #     roboto
-  #     noto-fonts
-  #     noto-fonts-emoji
-  #     noto-fonts-cjk
-  #   ];
-  # };
 
   # Containers
   virtualisation = {

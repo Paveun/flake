@@ -1,4 +1,4 @@
-{ lib, inputs, system, home-manager, nix-flatpak, nixvim, user, ... }:
+{ lib, inputs, system, home-manager, nix-flatpak, nixvim, catppuccin, user, ... }:
 
 {
   laptop = lib.nixosSystem {
@@ -7,12 +7,17 @@
     modules = [
       ./laptop
       ./configuration.nix
+      catppuccin.nixosModules.catppuccin
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = {inherit user; };
         home-manager.users.${user} = {
-          imports = [(import ./home.nix )] ++ [(import ./laptop/home.nix)];
+          imports = [
+            ./home.nix
+            ./laptop/home.nix
+            catppuccin.homeManagerModules.catppuccin
+          ];
         };
       }
       nix-flatpak.nixosModules.nix-flatpak
@@ -25,12 +30,17 @@
     modules = [
       ./fishtank
       ./configuration.nix
+      catppuccin.nixosModules.catppuccin
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = {inherit user; };
         home-manager.users.${user} = {
-          imports = [(import ./home.nix )] ++ [(import ./fishtank/home.nix)];
+          imports = [
+            ./home.nix
+            ./fishtank/home.nix
+            catppuccin.homeManagerModules.catppuccin
+          ];
         };
       }
       nix-flatpak.nixosModules.nix-flatpak

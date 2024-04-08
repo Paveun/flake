@@ -6,9 +6,9 @@
       source = ./alacritty.toml;
     };
   };
-  home.sessionVariables = {
-    TERMINAL = "alacritty";
-  };
+  # home.sessionVariables = {
+  #   TERMINAL = "alacritty";
+  # };
   # programs = {
   #   alacritty = {
   #     enable = true;
