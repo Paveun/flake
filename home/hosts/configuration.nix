@@ -69,18 +69,18 @@
   environment = {
     systemPackages = with pkgs; [
       wget
-      subversionClient
-      alacritty
-      neofetch
+      # subversionClient
+      # alacritty
+      # neofetch
       # nitch
-      btop
-      tmux
+      # btop
+      # tmux
       cifs-utils
-      fishPlugins.z
-      fishPlugins.autopair
-      fishPlugins.puffer
+      # fishPlugins.z
+      # fishPlugins.autopair
+      # fishPlugins.puffer
       # linuxHeaders
-      krabby
+      # krabby
     ];
   };
 
@@ -103,12 +103,12 @@
 
   programs.fish = {
     enable = true;
-    interactiveShellInit = "krabby random --no-title";
+  #   interactiveShellInit = "krabby random --no-title";
   };
  
-  programs.git.enable = true;
+  # programs.git.enable = true;
 
-  programs.starship.enable = true;
+  # programs.starship.enable = true;
 
   programs.steam = {
     enable = true;
