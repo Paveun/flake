@@ -169,6 +169,8 @@
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
+      # name = "catppuccin-papirus-folders";
+      # package = pkgs.catppuccin-papirus-folders;
     };
     catppuccin = {
       enable = true;
