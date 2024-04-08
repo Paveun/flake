@@ -23,9 +23,9 @@
     ".config/wofi/style.css"={
       source = ./wofi/style.css;
     };
-    ".config/bottom/bottom.toml"={
-      source = ./bottom/bottom.toml;
-    };
+    # ".config/bottom/bottom.toml"={
+    #   source = ./bottom/bottom.toml;
+    # };
   };
 
   home.packages = with pkgs; [

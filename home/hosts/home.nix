@@ -44,6 +44,8 @@
   catppuccin.flavour = "frappe";
   catppuccin.accent = "rosewater";
 
+  xdg.enable = true;
+
   programs = {
     fish = {
       enable = true;
@@ -64,6 +66,7 @@
           src = pkgs.fishPlugins.autopair.src;
         }
       ];
+      catppuccin.enable = true;
     };
     
     alacritty = {
@@ -119,18 +122,22 @@
     
     tmux = {
       enable = true;
+      catppuccin.enable = true;
     };
 
     lazygit = {
       enable = true;
+      catppuccin.enable = true;
     };
 
     bottom = {
       enable = true;
+      catppuccin.enable = true;
     };
 
     btop = {
       enable = true;
+      catppuccin.enable = true;
     };
 
     ranger = {

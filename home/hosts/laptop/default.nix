@@ -3,7 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../alacritty
+    # ../../alacritty
     # ../../plasma
     ../../hyprland
     ../../lunarvim
