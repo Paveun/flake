@@ -17,7 +17,11 @@
   };
   
   environment.systemPackages = with pkgs; [
-    catppuccin-kde
+    (catppuccin-kde.override {
+      flavour = [ "frappe" ];
+      accents = [ "rosewater" ];
+      winDecStyles = [ "classic" ];
+    })
   ];
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
