@@ -32,6 +32,29 @@
     feh
   ];
 
+  services.dunst = {
+    enable = true;
+    settings = {
+      global = {
+        frame_color = "#8caaee";
+        separator_color = "frame";
+      };
+      urgency_low = {
+        background = "#303446";
+        foreground = "#c6d0f5";
+      };
+      urgency_normal = {
+        background = "#303446";
+        foreground = "#c6d0f5";
+      };
+      urgency_critical = {
+        background = "#303446";
+        foreground = "#c6d0f5";
+        frame_color = "#ef9f76";
+      };
+    };
+  };
+
   # gtk = {
   #   enable = true;
   #   font = {

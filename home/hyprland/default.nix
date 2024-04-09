@@ -69,7 +69,7 @@
       wofi
       hyprpaper
       hyprcursor
-      dunst
+      # dunst
       nwg-look
       pavucontrol
       networkmanagerapplet
