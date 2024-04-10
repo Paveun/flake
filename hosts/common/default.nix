@@ -9,6 +9,7 @@
     ../../nixos/flatpak
     ../../nixos/containers
     ../../nixos/packages
+    ../../nixos/system/fonts
     ../../nixos/gaming/steam
   ];
 
