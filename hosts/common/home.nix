@@ -181,7 +181,7 @@
 
   home.file = {
     ".config/wallpaper/default.png"={
-      source = ../wallpaper/default.png;
+      source = ../hosts/wallpaper/default.png;
     };
   };
 
