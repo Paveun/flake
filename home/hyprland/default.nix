@@ -20,8 +20,10 @@
   #   })
   # ];
 
-  # xdg.portal.enable = true;
-  # xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
 
   # Configure X11
   services.xserver = {
@@ -46,7 +48,7 @@
   };
 
   qt.style = "breeze";
-  qt.platformTheme = "qt5ct";
+  qt.platformTheme = "qt6ct";
   
   # security.polkit.enable = true;
   # security.pam.services.${user}.enableGnomeKeyring = true;

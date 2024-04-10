@@ -27,7 +27,27 @@
     #   source = ./bottom/bottom.toml;
     # };
   };
-
+  
+  xdg = {
+    enable = true;
+    portal = {
+      enable = true;
+      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+      xdgOpenUsePortal = true;
+      config = {
+        common = {
+          default = [
+            "gtk"
+          ];
+        };
+      };
+    };
+  };
+  
+  home.pointerCursor.gtk.enable = true;
+  home.pointerCursor.package = pkgs.catppuccin-cursors.frappeRosewater;
+  home.pointerCursor.name = "Catppuccin-Frappe-Rosewater-Cursors";
+  
   home.packages = with pkgs; [
     feh
   ];

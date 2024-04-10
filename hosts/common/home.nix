@@ -172,10 +172,14 @@
       # name = "catppuccin-papirus-folders";
       # package = pkgs.catppuccin-papirus-folders;
     };
+    cursorTheme = {
+      name = "Catppuccin-Frappe-Rosewater-Cursors";
+      package = pkgs.catppuccin-cursors.frappeRosewater;
+    };
     catppuccin = {
       enable = true;
       size = "compact";
-      cursor.enable = true;
+      #cursor.enable = true;
     };
   };
 
