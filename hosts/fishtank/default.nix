@@ -5,9 +5,9 @@
     ./hardware-configuration.nix
     ../common
     # ../../alacritty
-    ../../plasma
-    ../../lunarvim
-    ../../nixvim
+    ../../home/plasma
+    ../../home/lunarvim
+    ../../home/nixvim
   ];
 
   boot = {

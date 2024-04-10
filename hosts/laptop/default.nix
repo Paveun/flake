@@ -6,10 +6,10 @@
     ../common
     # ../../alacritty
     # ../../plasma
-    ../../hyprland
-    ../../lunarvim
-    ../../nixvim
-    ../../lutris
+    ../../home/hyprland
+    ../../home/lunarvim
+    ../../home/nixvim
+    ../../home/lutris
   ];
 
   boot = {
