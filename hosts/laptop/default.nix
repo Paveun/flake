@@ -6,7 +6,6 @@
     ../common
     ../../nixos/system/nvidia
     ../../home/hyprland
-    ../../home/lutris
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
