@@ -4,7 +4,7 @@
   programs = {
     tmux = {
       enable = true;
-      catpuccin.enable = true;
+      catppuccin.enable = true;
     };
   };
 }
