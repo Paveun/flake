@@ -3,6 +3,7 @@
 {
   imports = [
     ./wofi
+    ./waybar
   ];
 
   home.file = {
@@ -12,15 +13,15 @@
     ".config/hypr/hyprpaper.conf"={
       source = ./hypr/hyprpaper.conf;
     };
-    ".config/waybar/config"={
-      source = ./waybar/config;
-    };
-    ".config/waybar/style.css"={
-      source = ./waybar/style.css;
-    };
-    ".config/waybar/mediaplayer.py"={
-      source = ./waybar/mediaplayer.py;
-    };
+    # ".config/waybar/config"={
+    #   source = ./waybar/config;
+    # };
+    # ".config/waybar/style.css"={
+    #   source = ./waybar/style.css;
+    # };
+    # ".config/waybar/mediaplayer.py"={
+    #   source = ./waybar/mediaplayer.py;
+    # };
     # ".config/wofi/config"={
     #   source = ./wofi/config;
     # };

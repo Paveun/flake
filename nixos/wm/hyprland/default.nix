@@ -7,7 +7,7 @@
     # xwayland.hidpi = true;
   };
 
-  programs.waybar.enable = true;
+  # programs.waybar.enable = true;
   # nixpkgs.overlays = [
   #   (self: super: {
   #     waybar = super.waybar.overrideAttrs (oldAttrs: {
