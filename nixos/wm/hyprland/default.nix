@@ -65,7 +65,7 @@
 
   environment = {
     systemPackages = with pkgs; [
-      wofi
+      # wofi
       hyprpaper
       hyprcursor
       # dunst

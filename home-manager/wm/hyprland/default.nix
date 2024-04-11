@@ -1,6 +1,10 @@
 { config, pkgs, lib, user, ... }:
 
 {
+  imports = [
+    ./wofi
+  ];
+
   home.file = {
     ".config/hypr/hyprland.conf"={
       source = ./hypr/hyprland.conf;
@@ -17,12 +21,12 @@
     ".config/waybar/mediaplayer.py"={
       source = ./waybar/mediaplayer.py;
     };
-    ".config/wofi/config"={
-      source = ./wofi/config;
-    };
-    ".config/wofi/style.css"={
-      source = ./wofi/style.css;
-    };
+    # ".config/wofi/config"={
+    #   source = ./wofi/config;
+    # };
+    # ".config/wofi/style.css"={
+    #   source = ./wofi/style.css;
+    # };
   };
   
   xdg = {
