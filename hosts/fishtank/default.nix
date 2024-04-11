@@ -5,10 +5,7 @@
     ./hardware-configuration.nix
     ../common
     ../../nixos/system/nvidia
-    # ../../alacritty
     ../../nixos/wm/plasma
-    ../../home/lunarvim
-    ../../home/nixvim
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;

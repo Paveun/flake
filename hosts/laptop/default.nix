@@ -5,11 +5,7 @@
     ./hardware-configuration.nix
     ../common
     ../../nixos/system/nvidia
-    # ../../alacritty
-    # ../../plasma
     ../../home/hyprland
-    ../../home/lunarvim
-    ../../home/nixvim
     ../../home/lutris
   ];
 

@@ -157,11 +157,11 @@
     ];
   };
 
-  environment.systemPackages = [
+  home.packages = [
     pkgs.ripgrep
   ];
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "nix-2.16.2"
-  ];
+  # nixpkgs.config.permittedInsecurePackages = [
+  #   "nix-2.16.2"
+  # ];
 }

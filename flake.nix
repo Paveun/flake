@@ -45,11 +45,12 @@
               imports = [
                 ./hosts/laptop/home.nix
                 catppuccin.homeManagerModules.catppuccin
+                nixvim.homeManagerModules.nixvim
               ];
             };
           }
           nix-flatpak.nixosModules.nix-flatpak
-          nixvim.nixosModules.nixvim
+          # nixvim.nixosModules.nixvim
         ];
       };
       fishtank = lib.nixosSystem {
@@ -66,11 +67,12 @@
               imports = [
                 ./hosts/fishtank/home.nix
                  catppuccin.homeManagerModules.catppuccin
+                 nixvim.homeManagerModules.nixvim
               ];
             };
           }
           nix-flatpak.nixosModules.nix-flatpak
-          nixvim.nixosModules.nixvim
+          # nixvim.nixosModules.nixvim
         ];
       };
     };
