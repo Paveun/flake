@@ -21,7 +21,10 @@
       # undofile = true;
     };
     globals.mapleader = " ";
-    colorschemes.catppuccin.enable = true;
+    colorschemes.catppuccin = {
+      enable = true;
+      flavour = "frappe";
+    };
     plugins = {
       treesitter = {
         enable = true;
