@@ -1,10 +1,6 @@
 { config, pkgs, user, lib, ... }:
 
 {
-  home-manager.sharedModules = [
-    ./home.nix
-  ];
-
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;

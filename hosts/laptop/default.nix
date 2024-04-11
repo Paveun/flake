@@ -5,7 +5,7 @@
     ./hardware-configuration.nix
     ../common
     ../../nixos/system/nvidia
-    ../../home/hyprland
+    ../../nixos/wm/hyprland
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
