@@ -6,7 +6,7 @@
     ../common
     ../../nixos/system/nvidia
     # ../../alacritty
-    ../../home/plasma
+    ../../nixos/wm/plasma
     ../../home/lunarvim
     ../../home/nixvim
   ];

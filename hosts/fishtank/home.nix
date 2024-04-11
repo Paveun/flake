@@ -3,6 +3,7 @@
 {
   imports = [
     ../common/home.nix
+    ../../home-manager/wm/plasma
   ]; 
 
   home.packages = with pkgs; [
