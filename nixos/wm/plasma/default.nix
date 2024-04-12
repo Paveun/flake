@@ -8,11 +8,13 @@
       enable = true;
       xkb.layout = "us";
       xkb.variant = "";
-      displayManager = {
-        sddm.enable = true;
-        sddm.wayland.enable = true;
-        defaultSession = "plasma";
+    };
+    displayManager = {
+      sddm = {
+        enable = true;
+        wayland.enable = true;
       };
+      defaultSession = "plasma";
     };
   };
   
