@@ -13,21 +13,6 @@
     ".config/hypr/hyprpaper.conf"={
       source = ./hypr/hyprpaper.conf;
     };
-    # ".config/waybar/config"={
-    #   source = ./waybar/config;
-    # };
-    # ".config/waybar/style.css"={
-    #   source = ./waybar/style.css;
-    # };
-    # ".config/waybar/mediaplayer.py"={
-    #   source = ./waybar/mediaplayer.py;
-    # };
-    # ".config/wofi/config"={
-    #   source = ./wofi/config;
-    # };
-    # ".config/wofi/style.css"={
-    #   source = ./wofi/style.css;
-    # };
   };
   
   xdg = {
@@ -51,31 +36,68 @@
     package = pkgs.catppuccin-cursors.frappeRosewater;
     name = "Catppuccin-Frappe-Rosewater-Cursors";
   };
-  
+
+  qt = {
+    enable = true;
+    platformTheme = "gtk";
+  };
+
+  home.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+  };
+
   home.packages = with pkgs; [
+    hyprpaper
+    hyprcursor
+    nwg-look
+    pavucontrol
+    playerctl
+    # kdePackages.dolphin
+    kdePackages.breeze
+    kdePackages.qtwayland
+    qt6Packages.qt6ct
+    # libsForQt5.qt5.qtgraphicaleffects
+    # qt6.qtwayland
+    # fluent-icon-theme
+    # kora-icon-theme
     feh
   ];
 
-  services.dunst = {
-    enable = true;
-    settings = {
-      global = {
-        frame_color = "#8caaee";
-        separator_color = "frame";
+  services = 
+  {
+    network-manager-applet.enable = true;
+    playerctld.enable = true;
+    udiskie = {
+      enable = true;
+      automount = true;
+    };
+    dunst = {
+      enable = true;
+      settings = {
+        global = {
+          frame_color = "#8caaee";
+          separator_color = "frame";
+        };
+        urgency_low = {
+          background = "#303446";
+          foreground = "#c6d0f5";
+        };
+        urgency_normal = {
+          background = "#303446";
+          foreground = "#c6d0f5";
+        };
+        urgency_critical = {
+          background = "#303446";
+          foreground = "#c6d0f5";
+          frame_color = "#ef9f76";
+        };
       };
-      urgency_low = {
-        background = "#303446";
-        foreground = "#c6d0f5";
-      };
-      urgency_normal = {
-        background = "#303446";
-        foreground = "#c6d0f5";
-      };
-      urgency_critical = {
-        background = "#303446";
-        foreground = "#c6d0f5";
-        frame_color = "#ef9f76";
-      };
+    };
+  };
+
+  programs = {
+    swaylock = {
+      enable = true;
     };
   };
 
@@ -115,20 +137,4 @@
   #   # };
   # };
 
-  # xdg.configFile = {
-  #   "gtk-4.0/assets".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";
-  #   "gtk-4.0/gtk.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk.css";
-  #   "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
-  # };
-
-  # xdg.desktopEntries = {
-  #   chrome = {
-  #     comment = "Google Chrome web browser";
-  #     exec = "google-chrome-stable --enable-accelerated-video-decode --enable-features=UseOzonePlatform --ozone-platform=wayland";
-  #     genericName = "Google Chrome";
-  #     icon = "google-chrome-stable";
-  #     name = "Google Chrome";
-  #     type = "Application";
-  #   };
-  # };
 }
