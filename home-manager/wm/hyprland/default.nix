@@ -46,9 +46,11 @@
     };
   };
   
-  home.pointerCursor.gtk.enable = true;
-  home.pointerCursor.package = pkgs.catppuccin-cursors.frappeRosewater;
-  home.pointerCursor.name = "Catppuccin-Frappe-Rosewater-Cursors";
+  home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.catppuccin-cursors.frappeRosewater;
+    name = "Catppuccin-Frappe-Rosewater-Cursors";
+  };
   
   home.packages = with pkgs; [
     feh
