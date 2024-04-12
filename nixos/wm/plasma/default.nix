@@ -32,11 +32,12 @@
   ];
 
   # environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  };
+
+  # xdg.portal = {
+  #   enable = true;
+  #   wlr.enable = true;
+  #   extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-kde ];
+  # };
 
   services.xserver.libinput.enable = true;
   users.users.${user}.extraGroups = [
