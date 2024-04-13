@@ -6,6 +6,7 @@
     # enableNvidiaPatches = true;
     xwayland.enable = true;
     catppuccin.enable = true;
+    catppuccin.flavour = "frappe";
     settings = {
       exec-once = [
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
@@ -19,6 +20,15 @@
       "$mainMod" = "SUPER";
       general = {
         layout = "dwindle";
+        allow_tearing = false;
+        gaps_in = 5;
+        gaps_out = 10;
+        border_size = 2;
+        "col.active_border" = "$rosewater";
+        "col.inactive_border" = "$base";
+      };
+      decoration = {
+        rounding = 2;
       };
       misc = {
         disable_autoreload = true;
@@ -46,6 +56,18 @@
         pseudotile = "yes"; 
         preserve_split = "yes";
       };
+      animations = {
+        enabled = "yes";
+        bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
+        animation = [
+          "windows, 1, 7, myBezier"
+          "windowsOut, 1, 7, default, popin 80%"
+          "border, 1, 10, default"
+          "borderangle, 1, 8, default"
+          "fade, 1, 7, default"
+          "workspaces, 1, 6, default"
+        ];
+      };
       bind = [
         "$mainMod, Q, exec, alacritty"
         "$mainMod, C, killactive, "
@@ -55,6 +77,14 @@
         "$mainMod, R, exec, wofi"
         "$mainMod, P, pseudo, "
         "$mainMod, J, togglesplit, "
+        "$mainMod, left, movefocus, l"
+        "$mainMod, right, movefocus, r"
+        "$mainMod, up, movefocus, u"
+        "$mainMod, down, movefocus, d"
+        "$mainMod, S, togglespecialworkspace, magic"
+        "$mainMod SHIFT, S, movetoworkspace, special:magic"
+        "$mainMod, mouse_down, workspace, e+1"
+        "$mainMod, mouse_up, workspace, e-1"
       ]
       ++ (
         # workspaces
@@ -72,7 +102,29 @@
           )
           10)
       );
+      input = {
+        kb_layout = "us";
+        kb_variant = "";
+        kb_model = "";
+        kb_options = "";
+        kb_rules = "";
+        follow_mouse = 1;
+        touchpad = {
+          natural_scroll = "no";
+        };
+        sensitivity = 0;
+      };
     };
-    extraConfig = "monitor=,highrr,auto,1";
+    extraConfig = ''
+      monitor=,highrr,auto,1
+      device {
+        name = razer-razer-naga-pro
+        sensitivity = -0.7
+      }
+      device {
+        name = razer-razer-naga-pro-1
+        sensitivity = -0.7
+      }
+    '';
   };
 }
