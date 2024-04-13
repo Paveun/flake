@@ -3,7 +3,7 @@
 {
   wayland.windowManager.hyprland = {
     enable = true;
-    enableNvidiaPatches = true;
+    # enableNvidiaPatches = true;
     xwayland.enable = true;
     catppuccin.enable = true;
     settings = {
@@ -24,7 +24,7 @@
         disable_autoreload = true;
         disable_hyprland_logo = true;
       };
-      ENV = [
+      env = [
         "XCURSOR_SIZE,24"
         "QT_QPA_PLATFORM,wayland"
         "QT_QPA_PLATFORMTHEME,qt6ct"
@@ -47,12 +47,12 @@
         preserve_split = "yes";
       };
       bind = [
-        "mainMod, Q, exec alacritty"
+        "$mainMod, Q, exec, alacritty"
         "$mainMod, C, killactive, "
         "$mainMod, M, exit, "
         "$mainMod, E, exec, thunar"
         "$mainMod, V, togglefloating, "
-        "$mainMod, R, exec, $menu"
+        "$mainMod, R, exec, wofi"
         "$mainMod, P, pseudo, "
         "$mainMod, J, togglesplit, "
       ]
@@ -66,8 +66,8 @@
               in
                 builtins.toString (x + 1 - (c * 10));
             in [
-              "$mod, ${ws}, workspace, ${toString (x + 1)}"
-              "$mod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
+              "$mainMod, ${ws}, workspace, ${toString (x + 1)}"
+              "$mainMod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
             ]
           )
           10)
