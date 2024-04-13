@@ -6,12 +6,6 @@
     xwayland.enable = true;
   };
 
-  # xdg.portal = {
-  #   enable = true;
-  #   wlr.enable = true;
-  #   extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland ];
-  # };
-
   services = {
     udisks2.enable = true;
     xserver = {
@@ -35,9 +29,6 @@
     };
   };
 
-  # qt.style = "gtk";
-  # qt.platformTheme = "qt6ct";
-  
   security.pam.services = {
     sddm.enableKwallet = true;
     swaylock = {};
@@ -53,21 +44,7 @@
 
   environment = {
     systemPackages = with pkgs; [
-  #     hyprpaper
-  #     hyprcursor
-  #     nwg-look
-  #     pavucontrol
-  #     networkmanagerapplet
-  #     playerctl
-  #     swaylock-effects
-  #     udiskie
-  #     kdePackages.dolphin
-  #     kdePackages.breeze
       libsForQt5.qt5.qtgraphicaleffects
-  #     qt6Packages.qt6ct
-  #     qt6.qtwayland
-  #     fluent-icon-theme
-  #     kora-icon-theme
     ];
   # sessionVariables.NIXOS_OZONE_WL = "1";
   };
