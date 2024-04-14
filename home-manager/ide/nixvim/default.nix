@@ -15,14 +15,14 @@
       shiftwidth = 2;
       wrap = false;
       cmdheight = 1;
-      # expandtab = true;
-      # autoindent = true;
+      expandtab = true;
+      autoindent = true;
       # smartindent = true;
-      # tabstop = 2;
-      # ignorecase = true;
-      # smartcase = true;
-      # swapfile = false;
-      # undofile = true;
+      tabstop = 2;
+      ignorecase = true;
+      smartcase = true;
+      swapfile = false;
+      undofile = true;
     };
     globals.mapleader = " ";
     colorschemes.catppuccin = {
@@ -40,6 +40,10 @@
       which-key = {
 	      enable = true;
         showKeys = true;
+      };
+      gitsigns = {
+        enable = true;
+        settings.current_line_blame = true;
       };
       nvim-tree = {
         enable = true;
@@ -79,24 +83,43 @@
         extensions.fzf-native = { enable = true; };
       };
       lsp = {
-	      enable = true;
-	      servers = {
-	        bashls.enable = true;
-	        nixd.enable = true;
-	        ruff-lsp.enable = true;
+	enable = true;
+	  servers = {
+	    bashls.enable = true;
+	    nixd.enable = true;
+	    ruff-lsp.enable = true;
           pyright = {
             enable = true;
             autostart = true;
             filetypes = [ "python" ];
           };
-	      };
-	      keymaps.lspBuf = {
-	        "gd" = "definition";
-	        "gD" = "references";
-	        "gt" = "type_definition";
-	        "gi" = "implementation";
-	        "K" = "hover";
-	      };
+	};
+	keymaps.lspBuf = {
+	  "gd" = "definition";
+	  "gD" = "references";
+	  "gt" = "type_definition";
+	  "gi" = "implementation";
+	  "K" = "hover";
+	};
+      };
+      none-ls = {
+        enable = true;
+        sources = {
+          diagnostics = {
+            golangci_lint.enable = true;
+            ktlint.enable = true;
+            statix.enable = true;
+          };
+          formatting = {
+	    alejandra.enable = true;
+	    black.enable = true;
+            markdownlint.enable = true;
+            shellharden.enable = true;
+            shfmt.enable = true;
+	    prettier.enable = true;
+	    stylua.enable = true;
+          };
+        };
       };
       toggleterm = {
         enable = true;
@@ -110,7 +133,8 @@
 	      enable = true;
 	      modes = [ ":" "/" "?" ];
       };
-      lightline.enable = true;
+      illuminate.enable = true;
+      lualine.enable = true;
       bufferline.enable = true;
     };
 
