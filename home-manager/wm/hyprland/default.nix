@@ -70,6 +70,7 @@
     udiskie = {
       enable = true;
       automount = true;
+      tray = "never";
     };
     dunst = {
       enable = true;
@@ -95,12 +96,12 @@
     };
   };
 
-  programs = {
-    swaylock = {
-      enable = true;
-      catppuccin.enable = true;
-    };
-  };
+  # programs = {
+  #   swaylock = {
+  #     enable = true;
+  #     catppuccin.enable = true;
+  #   };
+  # };
 
 
   # gtk = {

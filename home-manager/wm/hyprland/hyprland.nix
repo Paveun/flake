@@ -72,7 +72,7 @@
         "$mainMod, Q, exec, alacritty"
         "$mainMod, C, killactive, "
         "$mainMod, M, exit, "
-        "$mainMod, L, exec, swaylock"
+        "$mainMod, L, exec, hyprlock"
         "$mainMod, E, exec, thunar"
         "$mainMod, V, togglefloating, "
         "$mainMod, R, exec, wofi"
