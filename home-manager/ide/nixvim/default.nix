@@ -23,7 +23,7 @@
     globals.mapleader = " ";
     colorschemes.catppuccin = {
       enable = true;
-      flavour = "frappe";
+      settings.flavour = "frappe";
     };
     plugins = {
       treesitter = {
@@ -96,8 +96,8 @@
       };
       toggleterm = {
         enable = true;
-	      openMapping = "<C-t>";
-        direction = "horizontal";
+	      # openMapping = "<C-t>";
+        settings.direction = "horizontal";
       };
       autoclose = {
 	      enable = true;
