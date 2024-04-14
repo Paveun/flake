@@ -1,6 +1,10 @@
 { config, pkgs, user, lib, nixvim, ... }:
 
 {
+  imports = [
+    ./cmp.nix
+  ];
+
   programs.nixvim = {
     enable = true;
     clipboard.providers.wl-copy.enable = true;
@@ -49,13 +53,13 @@
       nvim-autopairs.enable = true;
       vim-css-color.enable = true;
       comment.enable = true;
-      cmp = {
-        enable = true;
-        settings.sources = [
-          {name = "nvim_lsp";}
-        ];
-      };
-      cmp-nvim-lsp.enable = true;
+      # cmp = {
+      #   enable = true;
+      #   settings.sources = [
+      #     {name = "nvim_lsp";}
+      #   ];
+      # };
+      # cmp-nvim-lsp.enable = true;
       telescope = {
         enable = true;
         keymaps = {
