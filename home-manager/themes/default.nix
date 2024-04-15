@@ -3,9 +3,7 @@
 {
   imports = [
     ./gtk.nix
+    ./catppuccin.nix
     ./wallpaper
   ];
-
-  catppuccin.flavour = "frappe";
-  catppuccin.accent = "rosewater";
 }

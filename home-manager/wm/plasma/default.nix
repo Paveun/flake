@@ -1,6 +1,11 @@
 { config, pkgs, lib, user, catppuccin, ... }:
 
 {
+  imports = [
+    ../../themes/wallpaper
+    ../../themes/catppuccin.nix
+  ];
+
   xdg = {
     enable = true;
     portal = {
@@ -17,9 +22,22 @@
     };
   };
 
-  home.pointerCursor = {
-    gtk.enable = true;
-    package = pkgs.catppuccin-cursors.frappeRosewater;
-    name = "Catppuccin-Frappe-Rosewater-Cursors";
-  };
+  home.packages = with pkgs; [
+    catppuccin-cursors.frappeRosewater
+    (catppuccin-kde.override {
+      flavour = [ "frappe" ];
+      accent = [ "rosewater" ];
+      winDecStyle = [ "modern" ];
+    })
+    (catppuccin-gtk.override {
+      variant = "frappe";
+      accents = [ "rosewater" ];
+    })
+  ]; 
+
+  # home.pointerCursor = {
+  #   gtk.enable = true;
+  #   package = pkgs.catppuccin-cursors.frappeRosewater;
+  #   name = "Catppuccin-Frappe-Rosewater-Cursors";
+  # };
 }

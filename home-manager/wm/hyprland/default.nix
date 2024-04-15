@@ -5,6 +5,7 @@
     ./wofi
     ./waybar
     ./hyprland.nix
+    ../../themes
   ];
 
   home = {

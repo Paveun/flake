@@ -4,7 +4,7 @@
   imports = [
     ../../home-manager/terminal
     ../../home-manager/packages
-    ../../home-manager/themes
+    # ../../home-manager/themes
     ../../home-manager/ide/lunarvim
     ../../home-manager/ide/nixvim
   ];
