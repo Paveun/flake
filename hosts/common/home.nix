@@ -9,10 +9,11 @@
     ../../home-manager/ide/nixvim
   ];
 
-  home.username = "${user}";
-  home.homeDirectory = "/home/${user}";
-
-  home.stateVersion = "23.11";
+  home = {
+    username = "${user}";
+    homeDirectory = "/home/${user}";
+    stateVersion = "23.11";
+  };
 
   nixpkgs.config.allowUnfree = true;
 
