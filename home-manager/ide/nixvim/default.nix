@@ -7,7 +7,8 @@
 
   programs.nixvim = {
     enable = true;
-    clipboard.providers.wl-copy.enable = true;
+    clipboard.register = "unnamedplus";
+    # clipboard.providers.wl-copy.enable = true;
     opts = {
       updatetime = 100;
       number = true;

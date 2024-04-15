@@ -13,7 +13,12 @@
       #   source = ./hypr/hyprland.conf;
       # };
       ".config/hypr/hyprpaper.conf"={
-        source = ./hypr/hyprpaper.conf;
+        # source = ./hypr/hyprpaper.conf;
+        text = ''
+          preload = $HOME/.config/wallpaper/default.png
+          wallpaper = ,$HOME/.config/wallpaper/default.png
+          splash = false
+        '';
       };
       ".config/hypr/hyprlock.conf"={
         source = ./hypr/hyprlock.conf;
@@ -67,6 +72,7 @@
   {
     network-manager-applet.enable = true;
     playerctld.enable = true;
+    cliphist.enable = true;
     udiskie = {
       enable = true;
       automount = true;

@@ -11,7 +11,6 @@
       tree-sitter
       ripgrep
       gcc
-      wl-clipboard
       lunarvim
     ];
   };

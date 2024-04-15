@@ -16,6 +16,9 @@
         "hyprpaper"
         "udiskie"
         "hyprctl setcursor Catppuccin-Frappe-Rosewater-Cursors 24"
+        "wl-paste --type text --watch cliphist store" #Stores only text data
+        "wl-paste --type image --watch cliphist store" #Stores only image data
+        # copyq --start-server"
       ];
       "$mainMod" = "SUPER";
       general = {
@@ -86,6 +89,7 @@
         "$mainMod SHIFT, S, movetoworkspace, special:magic"
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
+        "SUPER, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
       ]
       ++ (
         # workspaces
