@@ -5,7 +5,7 @@
     krabby
     neofetch
     subversionClient
-    devenv
+    # devenv
     kate
     vscode
     winbox
