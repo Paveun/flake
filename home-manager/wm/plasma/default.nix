@@ -23,6 +23,7 @@
   };
 
   home.packages = with pkgs; [
+    wl-clipboard
     catppuccin-cursors.frappeRosewater
     (catppuccin-kde.override {
       flavour = [ "frappe" ];
