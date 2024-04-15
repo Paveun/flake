@@ -26,8 +26,8 @@
     catppuccin-cursors.frappeRosewater
     (catppuccin-kde.override {
       flavour = [ "frappe" ];
-      accent = [ "rosewater" ];
-      winDecStyle = [ "modern" ];
+      accents = [ "rosewater" ];
+      winDecStyles = [ "modern" ];
     })
     (catppuccin-gtk.override {
       variant = "frappe";
