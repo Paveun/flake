@@ -1,6 +1,10 @@
-{ config, pkgs, user, lib, ... }:
-
 {
+  config,
+  pkgs,
+  user,
+  lib,
+  ...
+}: {
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -33,7 +37,7 @@
     sddm.enableKwallet = true;
     swaylock = {};
   };
-  
+
   programs.thunar = {
     enable = true;
     plugins = with pkgs.xfce; [
@@ -46,6 +50,6 @@
     systemPackages = with pkgs; [
       libsForQt5.qt5.qtgraphicaleffects
     ];
-  # sessionVariables.NIXOS_OZONE_WL = "1";
+    # sessionVariables.NIXOS_OZONE_WL = "1";
   };
 }

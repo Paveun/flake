@@ -1,9 +1,7 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   home = {
     file = {
-      ".config/lvim/config.lua"={
+      ".config/lvim/config.lua" = {
         source = ./config.lua;
       };
     };

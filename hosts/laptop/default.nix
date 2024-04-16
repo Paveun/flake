@@ -1,6 +1,11 @@
-{ config, pkgs, user, lib, nixvim, ... }:
-
 {
+  config,
+  pkgs,
+  user,
+  lib,
+  nixvim,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ../common
@@ -15,7 +20,7 @@
   hardware.tuxedo-rs = {
     enable = true;
     tailor-gui.enable = true;
-  }; 
+  };
 
   hardware.nvidia.prime = {
     # offload.enable = true;

@@ -1,6 +1,4 @@
-{ ... }:
-
-{
+{...}: {
   programs.wofi = {
     enable = true;
     settings = {
@@ -22,7 +20,7 @@
     # ".config/wofi/config"={
     #   source = ./config;
     # };
-    ".config/wofi/style.css"={
+    ".config/wofi/style.css" = {
       source = ./style.css;
     };
   };

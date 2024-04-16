@@ -1,6 +1,11 @@
-{ config, pkgs, lib, user, catppuccin, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  user,
+  catppuccin,
+  ...
+}: {
   imports = [
     ./gtk.nix
     ./catppuccin.nix

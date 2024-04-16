@@ -1,8 +1,10 @@
-{ user, pkgs, ... }:
-
 {
+  user,
+  pkgs,
+  ...
+}: {
   programs.fish = {
     enable = true;
   };
-  users.users.${user}.shell = pkgs.fish; 
+  users.users.${user}.shell = pkgs.fish;
 }

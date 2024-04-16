@@ -1,6 +1,11 @@
-{ config, pkgs, lib, user, catppuccin, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  user,
+  catppuccin,
+  ...
+}: {
   gtk = {
     enable = true;
     font = {

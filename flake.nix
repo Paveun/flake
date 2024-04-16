@@ -14,8 +14,15 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     catppuccin.url = "github:catppuccin/nix";
   };
-  outputs = { self, nixpkgs, home-manager, nix-flatpak, nixvim, catppuccin, ... } @ inputs:
-  let
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    nix-flatpak,
+    nixvim,
+    catppuccin,
+    ...
+  } @ inputs: let
     inherit (self) outputs;
     systems = [
       "aarch64-linux"
@@ -23,21 +30,21 @@
     ];
     user = "paveun";
     forAllSystems = nixpkgs.lib.genAttrs systems;
-  in 
-  {
+  in {
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit user inputs outputs; };
+        specialArgs = {inherit user inputs outputs;};
         modules = [
           ./hosts/laptop
           catppuccin.nixosModules.catppuccin
           nix-flatpak.nixosModules.nix-flatpak
-          home-manager.nixosModules.home-manager {
-            home-manager = { 
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = {inherit user inputs outputs; };
+              extraSpecialArgs = {inherit user inputs outputs;};
               users.${user} = {
                 imports = [
                   ./hosts/laptop/home.nix
@@ -50,16 +57,17 @@
         ];
       };
       fishtank = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit user inputs outputs; };
+        specialArgs = {inherit user inputs outputs;};
         modules = [
           ./hosts/fishtank
           catppuccin.nixosModules.catppuccin
           nix-flatpak.nixosModules.nix-flatpak
-          home-manager.nixosModules.home-manager {
+          home-manager.nixosModules.home-manager
+          {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = {inherit user inputs outputs; };
+              extraSpecialArgs = {inherit user inputs outputs;};
               users.${user} = {
                 imports = [
                   ./hosts/fishtank/home.nix

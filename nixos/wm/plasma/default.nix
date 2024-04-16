@@ -1,6 +1,10 @@
-{ config, pkgs, user, lib, ... }:
-
 {
+  config,
+  pkgs,
+  user,
+  lib,
+  ...
+}: {
   # Configure X11
   services = {
     desktopManager.plasma6.enable = true;
@@ -17,12 +21,12 @@
       defaultSession = "plasma";
     };
   };
-  
+
   environment.systemPackages = with pkgs; [
     (catppuccin-kde.override {
-      flavour = [ "frappe" ];
-      accents = [ "rosewater" ];
-      winDecStyles = [ "classic" ];
+      flavour = ["frappe"];
+      accents = ["rosewater"];
+      winDecStyles = ["classic"];
     })
   ];
 

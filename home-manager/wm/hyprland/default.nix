@@ -1,6 +1,10 @@
-{ config, pkgs, lib, user, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  user,
+  ...
+}: {
   imports = [
     ./wofi
     ./waybar
@@ -13,7 +17,7 @@
       # ".config/hypr/hyprland.conf"={
       #   source = ./hypr/hyprland.conf;
       # };
-      ".config/hypr/hyprpaper.conf"={
+      ".config/hypr/hyprpaper.conf" = {
         # source = ./hypr/hyprpaper.conf;
         text = ''
           preload = $HOME/.config/wallpaper/default.png
@@ -21,7 +25,7 @@
           splash = false
         '';
       };
-      ".config/hypr/hyprlock.conf"={
+      ".config/hypr/hyprlock.conf" = {
         source = ./hypr/hyprlock.conf;
       };
     };
@@ -52,7 +56,7 @@
     enable = true;
     portal = {
       enable = true;
-      extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland ];
+      extraPortals = [pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland];
       xdgOpenUsePortal = true;
       config = {
         common = {
@@ -63,14 +67,13 @@
       };
     };
   };
-  
+
   qt = {
     enable = true;
     platformTheme = "gtk";
   };
-  
-  services = 
-  {
+
+  services = {
     network-manager-applet.enable = true;
     playerctld.enable = true;
     cliphist.enable = true;
@@ -110,7 +113,6 @@
   #   };
   # };
 
-
   # gtk = {
   #   enable = true;
   #   font = {
@@ -146,5 +148,4 @@
   #   #   package = pkgs.papirus-icon-theme;
   #   # };
   # };
-
 }

@@ -1,8 +1,13 @@
-{ config, pkgs, lib, user, catppuccin, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  user,
+  catppuccin,
+  ...
+}: {
   home.file = {
-    ".config/wallpaper/default.png"={
+    ".config/wallpaper/default.png" = {
       source = ./default.png;
     };
   };

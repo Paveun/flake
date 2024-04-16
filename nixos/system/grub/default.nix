@@ -1,6 +1,8 @@
-{ config, catppuccin, ... }:
-
 {
+  config,
+  catppuccin,
+  ...
+}: {
   boot.loader = {
     grub = {
       enable = true;

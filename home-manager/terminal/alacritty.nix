@@ -1,6 +1,11 @@
-{ config, pkgs, lib, user, catppuccin, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  user,
+  catppuccin,
+  ...
+}: {
   programs = {
     alacritty = {
       enable = true;
@@ -57,8 +62,8 @@
   home.sessionVariables = {
     TERMINAL = "alacritty";
   };
-  
-  xresources.properties  = {
+
+  xresources.properties = {
     "Xft.dpi" = 96;
   };
 }

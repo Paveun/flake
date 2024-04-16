@@ -1,6 +1,11 @@
-{ config, pkgs, user, lib, nixvim, ... }:
-
 {
+  config,
+  pkgs,
+  user,
+  lib,
+  nixvim,
+  ...
+}: {
   imports = [
     ./cmp.nix
   ];
@@ -39,7 +44,7 @@
       treesitter-context.enable = true;
       rainbow-delimiters.enable = true;
       which-key = {
-	      enable = true;
+        enable = true;
         showKeys = true;
       };
       gitsigns = {
@@ -69,11 +74,11 @@
         enable = true;
         keymaps = {
           "<leader>ff" = {
-              action = "live_grep";
-              options = {
-                desc = "Telescope Files";
-              };
+            action = "live_grep";
+            options = {
+              desc = "Telescope Files";
             };
+          };
           "<leader>fg" = {
             action = "git_files";
             options = {
@@ -81,27 +86,27 @@
             };
           };
         };
-        extensions.fzf-native = { enable = true; };
+        extensions.fzf-native = {enable = true;};
       };
       lsp = {
-	enable = true;
-	  servers = {
-	    bashls.enable = true;
-	    nixd.enable = true;
-	    ruff-lsp.enable = true;
+        enable = true;
+        servers = {
+          bashls.enable = true;
+          nixd.enable = true;
+          ruff-lsp.enable = true;
           pyright = {
             enable = true;
             autostart = true;
-            filetypes = [ "python" ];
+            filetypes = ["python"];
           };
-	};
-	keymaps.lspBuf = {
-	  "gd" = "definition";
-	  "gD" = "references";
-	  "gt" = "type_definition";
-	  "gi" = "implementation";
-	  "K" = "hover";
-	};
+        };
+        keymaps.lspBuf = {
+          "gd" = "definition";
+          "gD" = "references";
+          "gt" = "type_definition";
+          "gi" = "implementation";
+          "K" = "hover";
+        };
       };
       none-ls = {
         enable = true;
@@ -112,27 +117,27 @@
             statix.enable = true;
           };
           formatting = {
-	    alejandra.enable = true;
-	    black.enable = true;
+            alejandra.enable = true;
+            black.enable = true;
             markdownlint.enable = true;
             shellharden.enable = true;
             shfmt.enable = true;
-	    prettier.enable = true;
-	    stylua.enable = true;
+            prettier.enable = true;
+            stylua.enable = true;
           };
         };
       };
       toggleterm = {
         enable = true;
-	      # openMapping = "<C-t>";
+        # openMapping = "<C-t>";
         settings.direction = "horizontal";
       };
       autoclose = {
-	      enable = true;
+        enable = true;
       };
       wilder = {
-	      enable = true;
-	      modes = [ ":" "/" "?" ];
+        enable = true;
+        modes = [":" "/" "?"];
       };
       illuminate.enable = true;
       lualine.enable = true;

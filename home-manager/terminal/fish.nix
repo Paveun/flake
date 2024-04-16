@@ -1,6 +1,11 @@
-{ config, pkgs, lib, user, catppuccin, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  user,
+  catppuccin,
+  ...
+}: {
   programs = {
     fish = {
       enable = true;

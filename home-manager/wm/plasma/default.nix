@@ -1,6 +1,11 @@
-{ config, pkgs, lib, user, catppuccin, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  user,
+  catppuccin,
+  ...
+}: {
   imports = [
     ../../themes/wallpaper
     ../../themes/catppuccin.nix
@@ -10,7 +15,7 @@
     enable = true;
     portal = {
       enable = true;
-      extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-kde];
+      extraPortals = [pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-kde];
       xdgOpenUsePortal = true;
       config = {
         common = {
@@ -26,15 +31,15 @@
     wl-clipboard
     catppuccin-cursors.frappeRosewater
     (catppuccin-kde.override {
-      flavour = [ "frappe" ];
-      accents = [ "rosewater" ];
-      winDecStyles = [ "modern" ];
+      flavour = ["frappe"];
+      accents = ["rosewater"];
+      winDecStyles = ["modern"];
     })
     (catppuccin-gtk.override {
       variant = "frappe";
-      accents = [ "rosewater" ];
+      accents = ["rosewater"];
     })
-  ]; 
+  ];
 
   # home.pointerCursor = {
   #   gtk.enable = true;

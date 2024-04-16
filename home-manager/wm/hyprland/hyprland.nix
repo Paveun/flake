@@ -1,6 +1,9 @@
-{ pkgs, home-manager, catppuccin, ... }:
-
 {
+  pkgs,
+  home-manager,
+  catppuccin,
+  ...
+}: {
   wayland.windowManager.hyprland = {
     enable = true;
     # enableNvidiaPatches = true;
@@ -56,7 +59,7 @@
         new_is_master = true;
       };
       dwindle = {
-        pseudotile = "yes"; 
+        pseudotile = "yes";
         preserve_split = "yes";
       };
       animations = {
@@ -71,42 +74,43 @@
           "workspaces, 1, 6, default"
         ];
       };
-      bind = [
-        "$mainMod, Q, exec, alacritty"
-        "$mainMod, C, killactive, "
-        "$mainMod, M, exit, "
-        "$mainMod, L, exec, hyprlock"
-        "$mainMod, E, exec, thunar"
-        "$mainMod, V, togglefloating, "
-        "$mainMod, R, exec, wofi"
-        "$mainMod, P, pseudo, "
-        "$mainMod, J, togglesplit, "
-        "$mainMod, left, movefocus, l"
-        "$mainMod, right, movefocus, r"
-        "$mainMod, up, movefocus, u"
-        "$mainMod, down, movefocus, d"
-        "$mainMod, S, togglespecialworkspace, magic"
-        "$mainMod SHIFT, S, movetoworkspace, special:magic"
-        "$mainMod, mouse_down, workspace, e+1"
-        "$mainMod, mouse_up, workspace, e-1"
-        "SUPER, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
-      ]
-      ++ (
-        # workspaces
-        # binds $mod + [shift +] {1..10} to [move to] workspace {1..10}
-        builtins.concatLists (builtins.genList (
-            x: let
-              ws = let
-                c = (x + 1) / 10;
-              in
-                builtins.toString (x + 1 - (c * 10));
-            in [
-              "$mainMod, ${ws}, workspace, ${toString (x + 1)}"
-              "$mainMod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
-            ]
-          )
-          10)
-      );
+      bind =
+        [
+          "$mainMod, Q, exec, alacritty"
+          "$mainMod, C, killactive, "
+          "$mainMod, M, exit, "
+          "$mainMod, L, exec, hyprlock"
+          "$mainMod, E, exec, thunar"
+          "$mainMod, V, togglefloating, "
+          "$mainMod, R, exec, wofi"
+          "$mainMod, P, pseudo, "
+          "$mainMod, J, togglesplit, "
+          "$mainMod, left, movefocus, l"
+          "$mainMod, right, movefocus, r"
+          "$mainMod, up, movefocus, u"
+          "$mainMod, down, movefocus, d"
+          "$mainMod, S, togglespecialworkspace, magic"
+          "$mainMod SHIFT, S, movetoworkspace, special:magic"
+          "$mainMod, mouse_down, workspace, e+1"
+          "$mainMod, mouse_up, workspace, e-1"
+          "SUPER, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
+        ]
+        ++ (
+          # workspaces
+          # binds $mod + [shift +] {1..10} to [move to] workspace {1..10}
+          builtins.concatLists (builtins.genList (
+              x: let
+                ws = let
+                  c = (x + 1) / 10;
+                in
+                  builtins.toString (x + 1 - (c * 10));
+              in [
+                "$mainMod, ${ws}, workspace, ${toString (x + 1)}"
+                "$mainMod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
+              ]
+            )
+            10)
+        );
       input = {
         kb_layout = "us";
         kb_variant = "";

@@ -1,6 +1,11 @@
-{ config, pkgs, lib, user, catppuccin, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  user,
+  catppuccin,
+  ...
+}: {
   imports = [
     ../../nixos/system/grub
     ../../nixos/system/audio
@@ -29,7 +34,7 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-  
+
   networking.networkmanager.enable = true;
 
   time.timeZone = "America/Toronto";
@@ -43,9 +48,8 @@
   users.users.${user} = {
     isNormalUser = true;
     description = "Paveun";
-    extraGroups = [ "networkmanager" "wheel" "audio" ];
+    extraGroups = ["networkmanager" "wheel" "audio"];
   };
 
   system.stateVersion = "23.11";
-
 }

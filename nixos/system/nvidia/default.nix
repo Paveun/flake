@@ -1,6 +1,4 @@
-{ config, ... }:
-
-{
+{config, ...}: {
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.opengl = {
