@@ -1,6 +1,6 @@
 {
   description = "A flake of Paveun";
-  
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
@@ -51,25 +51,33 @@
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit user inputs outputs;};
-        modules = nixos-modules ++ [
-          ./hosts/laptop
-          {
-            home-manager.users.${user}.imports = home-modules ++ [
-              ./hosts/laptop/home.nix
-            ];
-          }
-        ];
+        modules =
+          nixos-modules
+          ++ [
+            ./hosts/laptop
+            {
+              home-manager.users.${user}.imports =
+                home-modules
+                ++ [
+                  ./hosts/laptop/home.nix
+                ];
+            }
+          ];
       };
       fishtank = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit user inputs outputs;};
-        modules = nixos-modules ++ [
-          ./hosts/fishtank
-          {
-            home-manager.users.${user}.imports = home-modules ++ [
-              ./hosts/fishtank/home.nix
-            ];
-          }
-        ];
+        modules =
+          nixos-modules
+          ++ [
+            ./hosts/fishtank
+            {
+              home-manager.users.${user}.imports =
+                home-modules
+                ++ [
+                  ./hosts/fishtank/home.nix
+                ];
+            }
+          ];
       };
     };
   };
