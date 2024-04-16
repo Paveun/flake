@@ -28,7 +28,6 @@
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {
-        # inherit system;
         specialArgs = { inherit user inputs outputs; };
         modules = [
           ./hosts/laptop
@@ -51,7 +50,6 @@
         ];
       };
       fishtank = nixpkgs.lib.nixosSystem {
-        # inherit system;
         specialArgs = { inherit user inputs outputs; };
         modules = [
           ./hosts/fishtank
