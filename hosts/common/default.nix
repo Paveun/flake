@@ -17,6 +17,7 @@
     ../../nixos/system/fonts
     ../../nixos/gaming/steam
     ../../nixos/gaming/lutris
+    ../../nixos/cachix
   ];
 
   nix = {
