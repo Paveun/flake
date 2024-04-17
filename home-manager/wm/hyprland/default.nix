@@ -41,6 +41,7 @@
       hyprpaper
       hyprcursor
       hyprlock
+      wl-clipboard
       nwg-look
       pavucontrol
       playerctl
