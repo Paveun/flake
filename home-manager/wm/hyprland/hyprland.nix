@@ -27,14 +27,14 @@
       general = {
         layout = "dwindle";
         allow_tearing = false;
-        gaps_in = 5;
-        gaps_out = 10;
+        gaps_in = 3;
+        gaps_out = 6;
         border_size = 2;
         "col.active_border" = "$rosewater";
         "col.inactive_border" = "$base";
       };
       decoration = {
-        rounding = 2;
+        rounding = 0;
       };
       misc = {
         disable_autoreload = true;
