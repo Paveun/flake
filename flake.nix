@@ -1,6 +1,6 @@
 {
   description = "A flake of Paveun";
-  
+
   nixConfig = {
     extra-substituters = [
       "https://nixpkgs-python.cachix.org"
