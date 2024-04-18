@@ -15,7 +15,7 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "intl";
+  networking.hostName = "laptop";
 
   hardware.tuxedo-rs = {
     enable = true;
