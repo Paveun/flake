@@ -11,6 +11,6 @@
     flake = "/home/${user}/flake";
   };
   environment.sessionVariables = {
-    NH_NOM="1";
+    NH_NOM = "1";
   };
 }

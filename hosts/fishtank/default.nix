@@ -13,7 +13,6 @@
     ../../nixos/wm/plasma
   ];
 
-  
   home-manager.users.${user}.imports = [
     ./home.nix
   ];
