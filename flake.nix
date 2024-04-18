@@ -41,35 +41,37 @@
     ];
     user = "paveun";
     forAllSystems = nixpkgs.lib.genAttrs systems;
-    nixos-modules = [
-      catppuccin.nixosModules.catppuccin
-      nix-flatpak.nixosModules.nix-flatpak
-      home-manager.nixosModules.home-manager
-      {
-        home-manager = {
-          useGlobalPkgs = true;
-          useUserPackages = true;
-          extraSpecialArgs = {inherit user inputs outputs;};
-        };
-      }
-    ];
-    home-modules = [
-      catppuccin.homeManagerModules.catppuccin
-      nixvim.homeManagerModules.nixvim
-    ];
+    # nixos-modules = [
+    #   catppuccin.nixosModules.catppuccin
+    #   nix-flatpak.nixosModules.nix-flatpak
+    #   home-manager.nixosModules.home-manager
+    #   {
+    #     home-manager = {
+    #       useGlobalPkgs = true;
+    #       useUserPackages = true;
+    #       extraSpecialArgs = {inherit user inputs outputs;};
+    #     };
+    #   }
+    # ];
+    # home-modules = [
+    #   catppuccin.homeManagerModules.catppuccin
+    #   nixvim.homeManagerModules.nixvim
+    # ];
   in {
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit user inputs outputs;};
         modules =
-          nixos-modules
-          ++ [
+          # nixos-modules
+          # ++ [
+          [
             ./hosts/laptop
             {
               home-manager.users.${user}.imports =
-                home-modules
-                ++ [
+                # home-modules
+                # ++ [
+                [
                   ./hosts/laptop/home.nix
                 ];
             }
@@ -78,13 +80,15 @@
       fishtank = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit user inputs outputs;};
         modules =
-          nixos-modules
-          ++ [
+          # nixos-modules
+          # ++ [
+          [
             ./hosts/fishtank
             {
               home-manager.users.${user}.imports =
-                home-modules
-                ++ [
+                # home-modules
+                # ++ [
+                [
                   ./hosts/fishtank/home.nix
                 ];
             }

@@ -1,5 +1,6 @@
 {
   config,
+  inputs,
   pkgs,
   lib,
   user,
@@ -7,6 +8,8 @@
   ...
 }: {
   imports = [
+    inputs.catppuccin.homeManagerModules.catppuccin
+    inputs.nixvim.homeManagerModules.nixvim
     ../../home-manager/terminal
     ../../home-manager/packages
     # ../../home-manager/themes

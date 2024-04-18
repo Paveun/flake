@@ -1,5 +1,6 @@
 {
   config,
+  inputs,
   pkgs,
   lib,
   user,
@@ -7,6 +8,9 @@
   ...
 }: {
   imports = [
+    inputs.catppuccin.nixosModules.catppuccin
+    inputs.nix-flatpak.nixosModules.nix-flatpak
+    ./home-manager.nix
     ../../nixos/system/grub
     ../../nixos/system/audio
     ../../nixos/terminal/shell
