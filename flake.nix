@@ -48,22 +48,12 @@
         specialArgs = {inherit user inputs outputs;};
         modules = [
           ./hosts/laptop
-          {
-            home-manager.users.${user}.imports = [
-              ./hosts/laptop/home.nix
-            ];
-          }
         ];
       };
       fishtank = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit user inputs outputs;};
         modules = [
           ./hosts/fishtank
-          {
-            home-manager.users.${user}.imports = [
-              ./hosts/fishtank/home.nix
-            ];
-          }
         ];
       };
     };

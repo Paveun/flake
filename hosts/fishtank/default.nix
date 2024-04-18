@@ -13,6 +13,11 @@
     ../../nixos/wm/plasma
   ];
 
+  
+  home-manager.users.${user}.imports = [
+    ./home.nix
+  ];
+
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "fishtank";
