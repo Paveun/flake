@@ -6,6 +6,8 @@
     systemPackages = with pkgs; [
       wget
       cifs-utils
+      nix-output-monitor
+      nvd
     ];
   };
 }
