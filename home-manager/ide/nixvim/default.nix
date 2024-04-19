@@ -1,11 +1,4 @@
-{
-  config,
-  pkgs,
-  user,
-  lib,
-  nixvim,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./cmp.nix
   ];
@@ -23,7 +16,6 @@
       cmdheight = 1;
       expandtab = true;
       autoindent = true;
-      # smartindent = true;
       tabstop = 2;
       ignorecase = true;
       smartcase = true;
@@ -92,7 +84,11 @@
         enable = true;
         servers = {
           bashls.enable = true;
-          nixd.enable = true;
+          nil_ls = {
+            enable = true;
+            autostart = true;
+            filetypes = ["nix"];
+          };
           ruff-lsp.enable = true;
           pyright = {
             enable = true;
@@ -194,8 +190,4 @@
   home.packages = [
     pkgs.ripgrep
   ];
-
-  # nixpkgs.config.permittedInsecurePackages = [
-  #   "nix-2.16.2"
-  # ];
 }
