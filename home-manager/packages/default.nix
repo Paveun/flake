@@ -9,6 +9,7 @@
     winbox
     google-chrome
     openssl
+    tree
     haruna
     deluge
     protonvpn-gui
