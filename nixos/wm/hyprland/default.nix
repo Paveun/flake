@@ -31,12 +31,20 @@
       };
       defaultSession = "hyprland";
     };
+    gnome.gnome-keyring.enable = true;
   };
 
   security.pam.services = {
-    sddm.enableKwallet = true;
-    swaylock = {};
+    sddm.enableGnomeKeyring = true;
+    hyprlock = {};
   };
+
+  # security.pam.services = {
+  #   sddm.enableKwallet = true;
+  #   swaylock = {};
+  # };
+
+  
 
   programs.thunar = {
     enable = true;
