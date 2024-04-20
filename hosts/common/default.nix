@@ -58,7 +58,7 @@
   programs.dconf.enable = true;
 
   services.printing.enable = true;
-   
+
   users.users.${user} = {
     isNormalUser = true;
     description = "Paveun";

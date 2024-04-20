@@ -45,8 +45,6 @@
   #   swaylock = {};
   # };
 
-  
-
   programs.thunar = {
     enable = true;
     plugins = with pkgs.xfce; [
