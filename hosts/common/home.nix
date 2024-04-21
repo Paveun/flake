@@ -10,6 +10,7 @@
   imports = [
     inputs.catppuccin.homeManagerModules.catppuccin
     inputs.nixvim.homeManagerModules.nixvim
+    inputs.nur.nixosModules.nur
     ../../home-manager/terminal
     ../../home-manager/packages
     # ../../home-manager/themes

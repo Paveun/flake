@@ -1,9 +1,9 @@
 {
   inputs,
   pkgs,
+  config,
   ...
 }: {
-  imports = [inputs.nur.nixosModules.nur];
   programs.firefox = {
     enable = true;
     profiles = {
@@ -50,11 +50,12 @@
             "Google".metaData.alias = "@g";
           };
         };
-        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+        extensions = with config.nur.repos.rycee.firefox-addons; [
           ublock-origin
           darkreader
           proton-pass
           privacy-badger
+          firefox-color
         ];
       };
     };
