@@ -15,6 +15,7 @@
     # ../../home-manager/themes
     ../../home-manager/ide/lunarvim
     ../../home-manager/ide/nixvim
+    ../../home-manager/packages/firefox.nix
   ];
 
   home = {

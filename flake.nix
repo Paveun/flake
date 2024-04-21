@@ -13,6 +13,7 @@
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     catppuccin.url = "github:catppuccin/nix";
+    nur.url = "github:nix-community/NUR";
   };
   outputs = {
     self,
