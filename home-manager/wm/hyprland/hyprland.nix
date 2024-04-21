@@ -93,7 +93,7 @@
           "$mainMod SHIFT, S, movetoworkspace, special:magic"
           "$mainMod, mouse_down, workspace, e+1"
           "$mainMod, mouse_up, workspace, e-1"
-          "SUPER, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
+          "SUPER, B, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
         ]
         ++ (
           # workspaces
