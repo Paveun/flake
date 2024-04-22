@@ -14,5 +14,6 @@
     liquidctl
     razergenie
     via
+    alsa-scarlett-gui
   ];
 }
