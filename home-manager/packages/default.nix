@@ -7,7 +7,13 @@
     kate
     vscode
     winbox
-    google-chrome
+    # google-chrome
+    (google-chrome.override {
+      commandLineArgs = [
+        "--enable-features=UseOzonePlatform"
+        "--ozone-platform=wayland"
+      ];
+    })
     openssl
     tree
     haruna
