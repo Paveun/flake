@@ -22,6 +22,7 @@
     nix-flatpak,
     nixvim,
     catppuccin,
+    nur,
     ...
   } @ inputs: let
     inherit (self) outputs;
