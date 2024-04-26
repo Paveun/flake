@@ -34,5 +34,6 @@
     ncspot
     slack
     gdu
+    xarchiver
   ];
 }
