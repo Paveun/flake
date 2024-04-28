@@ -374,20 +374,6 @@
         "type": "github"
       }
     },
-    "nur": {
-      "locked": {
-        "lastModified": 1714292046,
-        "narHash": "sha256-Q8ZZCnddtcnUWb83f9d8k0U7y2y0PiwI/o3UMzUN/rE=",
-        "owner": "nix-community",
-        "repo": "NUR",
-        "rev": "efc4f3c31bb506958d8c3761fbc903039558ce46",
-        "type": "github"
-      },
-      "original": {
-        "id": "nur",
-        "type": "indirect"
-      }
-    },
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat_2",
@@ -424,8 +410,7 @@
         "nix-flatpak": "nix-flatpak",
         "nix-gaming": "nix-gaming",
         "nixpkgs": "nixpkgs_2",
-        "nixvim": "nixvim",
-        "nur": "nur"
+        "nixvim": "nixvim"
       }
     },
     "systems": {
