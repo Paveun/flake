@@ -1,7 +1,6 @@
 {
   inputs,
   pkgs,
-  config,
   ...
 }: {
   programs.firefox = {
@@ -50,7 +49,6 @@
             "Google".metaData.alias = "@g";
           };
         };
-        # extensions = with config.nur.repos.rycee.firefox-addons; [
         extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
           ublock-origin
           darkreader
@@ -102,7 +100,6 @@
             "Google".metaData.alias = "@g";
           };
         };
-        # extensions = with config.nur.repos.rycee.firefox-addons; [
         extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
           ublock-origin
           darkreader

@@ -31,10 +31,6 @@
     self,
     nixpkgs,
     home-manager,
-    # nix-flatpak,
-    # nixvim,
-    # catppuccin,
-    # nur,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -44,7 +40,6 @@
       "x86_64-linux"
     ];
     user = "paveun";
-    # forAllSystems = nixpkgs.lib.genAttrs systems;
     forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
     pkgsFor = lib.genAttrs systems (
       system:
@@ -54,7 +49,6 @@
         }
     );
   in {
-    # formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
     formatter = forEachSystem (pkgs: pkgs.alejandra);
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {
