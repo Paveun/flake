@@ -19,9 +19,13 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     catppuccin.url = "github:catppuccin/nix";
-    nur.url = "github:nix-community/NUR";
+    # nur.url = "github:nix-community/NUR";
     nix-gaming.url = "github:fufexan/nix-gaming";
   };
   outputs = {
@@ -35,14 +39,24 @@
     ...
   } @ inputs: let
     inherit (self) outputs;
+    lib = nixpkgs.lib // home-manager.lib;
     systems = [
       "aarch64-linux"
       "x86_64-linux"
     ];
     user = "paveun";
-    forAllSystems = nixpkgs.lib.genAttrs systems;
+    # forAllSystems = nixpkgs.lib.genAttrs systems;
+    forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
+    pkgsFor = lib.genAttrs systems (
+      system:
+        import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        }
+    );
   in {
-    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+    # formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+    formatter = forEachSystem (pkgs: pkgs.alejandra);
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit user inputs outputs;};

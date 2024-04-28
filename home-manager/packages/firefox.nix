@@ -50,7 +50,8 @@
             "Google".metaData.alias = "@g";
           };
         };
-        extensions = with config.nur.repos.rycee.firefox-addons; [
+        # extensions = with config.nur.repos.rycee.firefox-addons; [
+        extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
           ublock-origin
           darkreader
           proton-pass
@@ -101,7 +102,8 @@
             "Google".metaData.alias = "@g";
           };
         };
-        extensions = with config.nur.repos.rycee.firefox-addons; [
+        # extensions = with config.nur.repos.rycee.firefox-addons; [
+        extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
           ublock-origin
           darkreader
           proton-pass
