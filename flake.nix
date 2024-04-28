@@ -25,17 +25,16 @@
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     catppuccin.url = "github:catppuccin/nix";
-    # nur.url = "github:nix-community/NUR";
     nix-gaming.url = "github:fufexan/nix-gaming";
   };
   outputs = {
     self,
     nixpkgs,
     home-manager,
-    nix-flatpak,
-    nixvim,
-    catppuccin,
-    nur,
+    # nix-flatpak,
+    # nixvim,
+    # catppuccin,
+    # nur,
     ...
   } @ inputs: let
     inherit (self) outputs;
