@@ -19,12 +19,6 @@
     };
     gnome.gnome-keyring.enable = true;
   };
-
-  security.pam.services = {
-    sddm.enableGnomeKeyring = true;
-    hyprlock = {};
-  };
-
   environment = {
     systemPackages = with pkgs; [
       # libsForQt5.qt5.qtgraphicaleffects

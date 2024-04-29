@@ -1,8 +1,5 @@
 {
-  config,
   pkgs,
-  user,
-  lib,
   ...
 }: {
   imports = [
@@ -24,7 +21,10 @@
       };
     };
   };
-
+  security.pam.services = {
+    sddm.enableGnomeKeyring = true;
+    hyprlock = {};
+  };
   programs.thunar = {
     enable = true;
     plugins = with pkgs.xfce; [
