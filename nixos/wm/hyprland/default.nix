@@ -23,6 +23,7 @@
     displayManager = {
       sddm = {
         enable = true;
+        wayland.enable = true;
         theme = "catppuccin-sddm-corners";
         # theme = "${(pkgs.fetchFromGitHub {
         #   owner = "rototrash";
