@@ -44,16 +44,16 @@
     formatter = forEachSystem (pkgs: pkgs.alejandra);
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit user inputs outputs;};
-        modules = [
-          ./hosts/laptop
-        ];
+        modules = [./hosts/laptop];
+        specialArgs = {
+          inherit user inputs outputs;
+        };
       };
       fishtank = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit user inputs outputs;};
-        modules = [
-          ./hosts/fishtank
-        ];
+        modules = [./hosts/fishtank];
+        specialArgs = {
+          inherit user inputs outputs;
+        };
       };
     };
     homeConfigurations = {
