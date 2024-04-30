@@ -13,9 +13,9 @@
     ../../nixos/wm/hyprland
   ];
 
-  home-manager.users.${user}.imports = [
-    ./home.nix
-  ];
+  # home-manager.users.${user}.imports = [
+  #   ./home.nix
+  # ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 

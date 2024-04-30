@@ -7,7 +7,7 @@
   imports = [
     inputs.catppuccin.nixosModules.catppuccin
     inputs.nix-flatpak.nixosModules.nix-flatpak
-    ./home-manager.nix
+    # ./home-manager.nix
     ../../nixos/system/grub
     ../../nixos/system/audio
     ../../nixos/terminal/shell

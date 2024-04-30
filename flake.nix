@@ -56,5 +56,21 @@
         ];
       };
     };
+    homeConfigurations = {
+      "${user}@laptop" = lib.homeManagerConfiguration {
+        modules = [./hosts/laptop/home.nix];
+        pkgs = pkgsFor.x86_64-linux;
+        extraSpecialArgs = {
+          inherit user inputs outputs;
+        };
+      };
+      "${user}@fishtank" = lib.homeManagerConfiguration {
+        modules = [./hosts/fishtank/home.nix];
+        pkgs = pkgsFor.x86_64-linux;
+        extraSpecialArgs = {
+          inherit user inputs outputs;
+        };
+      };
+    };
   };
 }
