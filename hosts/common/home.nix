@@ -1,6 +1,9 @@
 {
   inputs,
+  outputs,
+  config,
   user,
+  lib,
   ...
 }: {
   imports = [
@@ -20,8 +23,15 @@
     stateVersion = "23.11";
   };
 
-  nixpkgs.config.allowUnfree = true;
+  # nixpkgs.config.allowUnfree = true;
 
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = _: true;
+    };
+  };
+  
   programs = {
     home-manager = {
       enable = true;
