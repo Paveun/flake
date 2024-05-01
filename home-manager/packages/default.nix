@@ -1,8 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     krabby
-    neofetch
-    subversionClient
+    fastfetch
     devenv
     kate
     vscode
@@ -19,13 +18,12 @@
     haruna
     deluge
     protonvpn-gui
-    protonvpn-cli
     conda
     keepassxc
     google-drive-ocamlfuse
-    remmina
+    # remmina
     openfortivpn
-    distrobox
+    # distrobox
     openconnect
     openvpn
     flameshot
