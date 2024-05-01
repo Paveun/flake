@@ -18,6 +18,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     catppuccin.url = "github:catppuccin/nix";
     nix-gaming.url = "github:fufexan/nix-gaming";
+    nix-colors.url = "github:misterio77/nix-colors";
   };
   outputs = {
     self,
