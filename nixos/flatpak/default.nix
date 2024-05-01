@@ -12,14 +12,14 @@
     uninstallUnmanaged = true;
     packages = [
       "com.github.tchx84.Flatseal"
-      "com.brave.Browser"
+      # "com.brave.Browser"
       # "com.slack.Slack"
       "com.obsproject.Studio"
       "com.discordapp.Discord"
       "io.github.spacingbat3.webcord"
       "org.polymc.PolyMC"
-      "com.spotify.Client"
-      "dev.goats.xivlauncher"
+      # "com.spotify.Client"
+      # "dev.goats.xivlauncher"
     ];
   };
 

@@ -35,5 +35,9 @@
     slack
     gdu
     xarchiver
+    vesktop
+    brave
+    spotify
+    xivlauncher
   ];
 }
