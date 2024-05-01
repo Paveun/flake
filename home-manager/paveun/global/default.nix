@@ -1,7 +1,4 @@
-{
-  inputs,
-  ...
-}: {
+{inputs, ...}: {
   imports = [
     inputs.catppuccin.homeManagerModules.catppuccin
     inputs.nixvim.homeManagerModules.nixvim
@@ -20,7 +17,7 @@
       allowUnfreePredicate = _: true;
     };
   };
-  
+
   programs = {
     home-manager = {
       enable = true;
