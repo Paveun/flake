@@ -39,5 +39,6 @@
     brave
     spotify
     xivlauncher
+    prismlauncher
   ];
 }
