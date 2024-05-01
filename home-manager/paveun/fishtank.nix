@@ -6,10 +6,14 @@
   ...
 }: {
   imports = [
-    ../common/home.nix
-    ../../home-manager/wm/plasma
+    ./global
+    ../wm/plasma
   ];
-
+  home = {
+    username = "${user}";
+    homeDirectory = "/home/${user}";
+    stateVersion = "23.11";
+  };
   home.packages = with pkgs; [
     liquidctl
     razergenie

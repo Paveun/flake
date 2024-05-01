@@ -17,14 +17,6 @@
     ../../home-manager/packages/firefox.nix
   ];
 
-  home = {
-    username = "${user}";
-    homeDirectory = "/home/${user}";
-    stateVersion = "23.11";
-  };
-
-  # nixpkgs.config.allowUnfree = true;
-
   nixpkgs = {
     config = {
       allowUnfree = true;
