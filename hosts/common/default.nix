@@ -1,6 +1,7 @@
 {
   inputs,
   pkgs,
+  config,
   user,
   ...
 }: {
@@ -68,8 +69,12 @@
     VISUAL = "nvim";
   };
 
+  sops.secrets.paveun-password.neededForUsers = true;
+  users.mutableUsers = false;
+
   users.users.${user} = {
     isNormalUser = true;
+    hashedPasswordFile = config.sops.secrets.paveun-password.path;
     description = "Paveun";
     extraGroups = ["networkmanager" "wheel" "audio"];
   };
