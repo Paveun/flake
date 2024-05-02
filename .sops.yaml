@@ -1,10 +1,11 @@
 keys:
   - &users:
-    - &paveun age1qjrwrmf485n7jrc8s9hwjta5vr9qx7s3t3aqevx4jgck7ysn5dvqx40tud
+     - &paveun age1qjrwrmf485n7jrc8s9hwjta5vr9qx7s3t3aqevx4jgck7ysn5dvqx40tud 
   - &hosts:
-    # - &fishtank
+     - &fishtank age1r6zvhe6lug8uvy0xharwnn6p695ed4qkzs7pleg986z89ct5gvusswt9x7 
 creation_rules:
   - path_regex: secrets/secrets.yaml$
     key_groups:
       - age:
         - *paveun
+        - *fishtank
