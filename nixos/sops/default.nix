@@ -6,6 +6,10 @@
   sops = {
     defaultSopsFile = ../../secrets/secrets.yaml;
     defaultSopsFormat = "yaml";
-    age.keyFile = "/home/${user}/.config/sops/age/key.txt";
+    age.keyFile = "/home/${user}/.config/sops/age/keys.txt";
+    secrets = {
+      paveun-password = { };
+      "private_keys/fishtank" = { };
+    };
   };
 }

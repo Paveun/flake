@@ -11,6 +11,7 @@
     ../../nixos/system/grub
     ../../nixos/system/audio
     ../../nixos/terminal/shell
+    ../../nixos/sops
     ../../nixos/themes
     ../../nixos/flatpak
     ../../nixos/containers
