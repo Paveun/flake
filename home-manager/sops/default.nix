@@ -6,7 +6,7 @@
   sops = {
     age.keyFile = "/home/${user}/.config/sops/age/keys.txt";
     defaultSopsFile = ../../secrets/secrets.yaml;
-    validateSopsFile = false;
+    validateSopsFiles = false;
     # secrets = {
     #   "private_keys/fishtank" = {
     #     path = "/home/${user}/.ssh/id_fishtank";
