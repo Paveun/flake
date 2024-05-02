@@ -18,11 +18,11 @@
     },
     "catppuccin": {
       "locked": {
-        "lastModified": 1714422957,
-        "narHash": "sha256-fQ1NP//CLQSj/te/qUxO+YiHlz6KYPxzVFSW5ldQGMA=",
+        "lastModified": 1714607657,
+        "narHash": "sha256-AnmN+JOzrpHv7Uw7JSPJ9JEjuqF7gjhx29UuuldNpas=",
         "owner": "catppuccin",
         "repo": "nix",
-        "rev": "f46dffa3345aba8b315ed7ddd1be4bc12f9e9e78",
+        "rev": "b0dc7f3181063daa6532dc5f757ded1a605dfbd5",
         "type": "github"
       },
       "original": {
@@ -62,11 +62,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1714536206,
-        "narHash": "sha256-pnE2Px1VlcnWDc92TUmaILRgrWBbetKhpnMu5DfntbM=",
+        "lastModified": 1714622605,
+        "narHash": "sha256-BuxH5X/Z4jNZ6l49qpv+8pRkqsqkO/23bqAekqunQgA=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "7772d48f5a728af51cd8ac85be5b124e2da0feac",
+        "rev": "8b13889d5b8205e766c518ab0e5ea07e0e637574",
         "type": "gitlab"
       },
       "original": {
