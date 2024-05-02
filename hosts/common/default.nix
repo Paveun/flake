@@ -61,6 +61,12 @@
 
   services.printing.enable = true;
 
+  environment.variables = {
+    EDITOR = "nvim";
+    SYSTEMD_EDITOR = "nvim";
+    VISUAL = "nvim";
+  };
+
   users.users.${user} = {
     isNormalUser = true;
     description = "Paveun";
