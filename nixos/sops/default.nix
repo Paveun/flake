@@ -1,5 +1,10 @@
-{pkgs, inputs, config, user, ...}:
 {
+  pkgs,
+  inputs,
+  config,
+  user,
+  ...
+}: {
   imports = [
     inputs.sops-nix.nixosModules.sops
   ];
