@@ -17,7 +17,8 @@
   #   ./home.nix
   # ];
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
 
   networking.hostName = "fishtank";
 
