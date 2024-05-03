@@ -19,6 +19,15 @@
     #   name = "Catppuccin-Frappe-Rosewater-Cursors";
     #   package = pkgs.catppuccin-cursors.frappeRosewater;
     # };
+    # theme = {
+    #   name = "Catppuccin-Frappe-Rosewater";
+    #   package = pkgs.catppuccin-gtk.override {
+    #     variant = "frappe";
+    #     accents = ["rosewater"];
+    #     size = "compact";
+    #     tweaks = ["normal"];
+    #   };
+    # };
     catppuccin = {
       enable = true;
       flavour = "frappe";
