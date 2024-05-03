@@ -4,6 +4,7 @@
   user,
   lib,
   nixvim,
+  inputs,
   ...
 }: {
   imports = [
@@ -22,16 +23,18 @@
 
   networking.hostName = "laptop";
 
-  hardware.tuxedo-rs = {
-    enable = true;
-    tailor-gui.enable = true;
-  };
-
-  hardware.nvidia.prime = {
-    # offload.enable = true;
-    # offload.enableOffloadCmd = true;
-    sync.enable = true;
-    nvidiaBusId = "PCI:1:0:0";
-    intelBusId = "PCI:0:2:0";
+  hardware = {
+    tuxedo-rs = {
+      enable = true;
+      tailor-gui.enable = true;
+    };
+    tuxedo-keyboard.enable = true;
+    nvidia.prime = {
+      # offload.enable = true;
+      # offload.enableOffloadCmd = true;
+      sync.enable = true;
+      nvidiaBusId = "PCI:1:0:0";
+      intelBusId = "PCI:0:2:0";
+    };
   };
 }
