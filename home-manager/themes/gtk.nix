@@ -5,6 +5,12 @@
   user,
   ...
 }: {
+  home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.catppuccin-cursors.frappeRosewater;
+    name = "Catppuccin-Frappe-Rosewater-Cursors";
+    size = 24;
+  };
   gtk = {
     enable = true;
     font = {
@@ -13,36 +19,34 @@
     };
     iconTheme = {
       name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
+      package = pkgs.catppuccin-papirus-folders.override {
+        flavor = "frappe";
+        accent = "rosewater";
+      };
     };
     # cursorTheme = {
     #   name = "Catppuccin-Frappe-Rosewater-Cursors";
     #   package = pkgs.catppuccin-cursors.frappeRosewater;
     # };
-    # theme = {
-    #   name = "Catppuccin-Frappe-Rosewater";
-    #   package = pkgs.catppuccin-gtk.override {
-    #     variant = "frappe";
-    #     accents = ["rosewater"];
-    #     size = "compact";
-    #     tweaks = ["normal"];
-    #   };
-    # };
-    catppuccin = {
-      enable = true;
-      flavour = "frappe";
-      accent = "rosewater";
-      size = "compact";
-      tweaks = [ "normal" ];
-      cursor = {
-        enable = true;
-        accent = "rosewater";
+    theme = {
+      name = "Catppuccin-Frappe-Compact-Rosewater-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        variant = "frappe";
+        accents = ["rosewater"];
+        size = "compact";
+        tweaks = ["normal"];
       };
     };
-  };
-  xdg.configFile = {
-    "gtk-4.0/assets".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";
-    "gtk-4.0/gtk.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk.css";
-    "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
+    # catppuccin = {
+    #   enable = true;
+    #   flavour = "frappe";
+    #   accent = "rosewater";
+    #   size = "compact";
+    #   tweaks = [ "normal" ];
+    #   # cursor = {
+    #   #   enable = true;
+    #   #   accent = "rosewater";
+    #   # };
+    # };
   };
 }

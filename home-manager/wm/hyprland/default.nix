@@ -29,11 +29,6 @@
         source = ./hypr/hyprlock.conf;
       };
     };
-    pointerCursor = {
-      gtk.enable = true;
-      package = pkgs.catppuccin-cursors.frappeRosewater;
-      name = "Catppuccin-Frappe-Rosewater-Cursors";
-    };
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
     };
@@ -45,9 +40,9 @@
       nwg-look
       pavucontrol
       playerctl
-      kdePackages.breeze
-      kdePackages.qtwayland
-      qt6Packages.qt6ct
+      # kdePackages.breeze
+      # kdePackages.qtwayland
+      # qt6Packages.qt6ct
       # libsForQt5.qt5.qtgraphicaleffects
       feh
     ];
@@ -57,7 +52,10 @@
     enable = true;
     portal = {
       enable = true;
-      extraPortals = [pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland];
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-gtk
+        xdg-desktop-portal-hyprland
+      ];
       xdgOpenUsePortal = true;
       config = {
         common = {
