@@ -9,6 +9,7 @@
   imports = [
     ../../themes/wallpaper
     ../../themes/catppuccin.nix
+    ../../themes/gtk.nix
   ];
 
   xdg = {
@@ -29,16 +30,16 @@
 
   home.packages = with pkgs; [
     wl-clipboard
-    catppuccin-cursors.frappeRosewater
-    (catppuccin-kde.override {
-      flavour = ["frappe"];
-      accents = ["rosewater"];
-      winDecStyles = ["modern"];
-    })
-    (catppuccin-gtk.override {
-      variant = "frappe";
-      accents = ["rosewater"];
-    })
+    # catppuccin-cursors.frappeRosewater
+    # (catppuccin-kde.override {
+    #   flavour = ["frappe"];
+    #   accents = ["rosewater"];
+    #   winDecStyles = ["modern"];
+    # })
+    # (catppuccin-gtk.override {
+    #   variant = "frappe";
+    #   accents = ["rosewater"];
+    # })
   ];
 
   # home.pointerCursor = {
