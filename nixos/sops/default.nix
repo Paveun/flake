@@ -9,7 +9,7 @@
     age.keyFile = "/home/${user}/.config/sops/age/keys.txt";
     secrets = {
       # paveun-password = { };
-      "private_keys/fishtank" = { };
+      # "private_keys/fishtank" = { };
     };
   };
   environment = {
