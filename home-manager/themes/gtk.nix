@@ -15,16 +15,20 @@
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
-    cursorTheme = {
-      name = "Catppuccin-Frappe-Rosewater-Cursors";
-      package = pkgs.catppuccin-cursors.frappeRosewater;
-    };
+    # cursorTheme = {
+    #   name = "Catppuccin-Frappe-Rosewater-Cursors";
+    #   package = pkgs.catppuccin-cursors.frappeRosewater;
+    # };
     catppuccin = {
       enable = true;
       flavour = "frappe";
       accent = "rosewater";
       size = "compact";
       tweaks = [ "normal" ];
+      cursor = {
+        enable = true;
+        accent = "rosewater";
+      };
     };
   };
   xdg.configFile = {
