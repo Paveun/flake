@@ -23,6 +23,7 @@
     catppuccin = {
       enable = true;
       size = "compact";
+      tweaks = [ "normal" ];
     };
   };
 }
