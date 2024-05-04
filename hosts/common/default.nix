@@ -9,6 +9,7 @@
     inputs.catppuccin.nixosModules.catppuccin
     inputs.nix-flatpak.nixosModules.nix-flatpak
     # ./home-manager.nix
+    ../../nixos/system/cachix
     ../../nixos/system/grub
     ../../nixos/system/audio
     ../../nixos/terminal/shell
@@ -28,19 +29,7 @@
       experimental-features = nix-command flakes
     '';
     # Garbage collection
-    settings.auto-optimise-store = true;
-    settings = {
-      extra-substituters = [
-        "https://nixpkgs-python.cachix.org"
-        "https://devenv.cachix.org"
-        "https://nix-gaming.cachix.org"
-      ];
-      extra-trusted-public-keys = [
-        "nixpkgs-python.cachix.org-1:hxjI7pFxTyuTHn2NkvWCrAUcNZLNS3ZAvfYNuYifcEU="
-        "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
-        "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
-      ];
-    };
+    settings.auto-optimise-store = true; 
     # gc = {
     #   automatic = true;
     #   dates = "weekly";
