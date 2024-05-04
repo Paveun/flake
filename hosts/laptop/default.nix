@@ -8,6 +8,7 @@
   ...
 }: {
   imports = [
+    inputs.chaotic.nixosModules.default
     ./hardware-configuration.nix
     ../common
     ../../nixos/system/nvidia
@@ -19,7 +20,9 @@
   # ];
 
   # boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+  boot.kernelPackages = pkgs.linuxPackages_cachyos;
+  environment.systemPackages =  [ pkgs.scx ];
 
   networking.hostName = "laptop";
 
