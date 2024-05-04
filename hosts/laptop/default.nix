@@ -22,19 +22,10 @@
   # boot.kernelPackages = pkgs.linuxPackages_latest;
   # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
-  environment.systemPackages = [pkgs.scx];
-  systemd.services.scx = {
-    description = "scx_rusty daemon";
-    serviceConfig = {
-      Type = "simple";
-      ExecStart = "${pkgs.scx}/bin/scx_rusty";
-      Restart = "always";
-      StandardError = "journal";
-      LogNamespace = "sched-ext";
-    };
-    wantedBy = ["multi-user.target"];
+  chaotic.scx = {
+    enable = true;
+    scheduler = "scx_rusty";
   };
-  systemd.services.scx.enable = true;
 
   networking.hostName = "laptop";
 
