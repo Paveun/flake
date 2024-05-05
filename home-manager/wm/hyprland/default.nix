@@ -83,23 +83,23 @@
     };
     dunst = {
       enable = true;
-      settings = {
+      settings = with config.colorScheme.colors; {
         global = {
-          frame_color = "#8caaee";
+          frame_color = "#${base07}";
           separator_color = "frame";
         };
         urgency_low = {
-          background = "#303446";
-          foreground = "#c6d0f5";
+          background = "#${base00}";
+          foreground = "#${base05}";
         };
         urgency_normal = {
-          background = "#303446";
-          foreground = "#c6d0f5";
+          background = "#${base00}";
+          foreground = "#${base05}";
         };
         urgency_critical = {
-          background = "#303446";
-          foreground = "#c6d0f5";
-          frame_color = "#ef9f76";
+          background = "#${base00}";
+          foreground = "#${base05}";
+          frame_color = "#${base09}";
         };
       };
     };
