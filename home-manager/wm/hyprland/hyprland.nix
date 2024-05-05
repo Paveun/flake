@@ -2,14 +2,15 @@
   pkgs,
   home-manager,
   catppuccin,
+  config,
   ...
 }: {
   wayland.windowManager.hyprland = {
     enable = true;
     # enableNvidiaPatches = true;
     xwayland.enable = true;
-    catppuccin.enable = true;
-    catppuccin.flavour = "frappe";
+    # catppuccin.enable = true;
+    # catppuccin.flavour = "frappe";
     settings = {
       exec-once = [
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
@@ -30,8 +31,8 @@
         gaps_in = 3;
         gaps_out = 6;
         border_size = 2;
-        "col.active_border" = "$rosewater";
-        "col.inactive_border" = "$base";
+        "col.active_border" = "rgb(${config.colorScheme.colors.base06})"; #"$rosewater";
+        "col.inactive_border" = "rgb(${config.colorscheme.colors.base00})"; #"$base";
       };
       decoration = {
         rounding = 0;
