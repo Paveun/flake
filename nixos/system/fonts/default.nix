@@ -5,7 +5,7 @@
       roboto
       jetbrains-mono
       # nerdfonts
-      (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" ]; })
+      (nerdfonts.override {fonts = ["FiraCode" "JetBrainsMono"];})
       noto-fonts
       noto-fonts-emoji
       noto-fonts-cjk
