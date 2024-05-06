@@ -7,7 +7,7 @@
 }: {
   imports = [
     ./wofi
-    ./waybar
+    ./waybar.nix
     ./hyprland.nix
     ./dunst.nix
     ../../themes
