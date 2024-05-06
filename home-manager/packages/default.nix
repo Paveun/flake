@@ -20,6 +20,7 @@
     protonvpn-gui
     conda
     keepassxc
+    mpv
     google-drive-ocamlfuse
     # remmina
     openfortivpn
