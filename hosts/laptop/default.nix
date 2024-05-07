@@ -8,7 +8,7 @@
   ...
 }: {
   imports = [
-    inputs.chaotic.nixosModules.default
+    # inputs.chaotic.nixosModules.default
     ./hardware-configuration.nix
     ../common
     ../../nixos/system/nvidia

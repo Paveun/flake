@@ -7,7 +7,7 @@
   ...
 }: {
   imports = [
-    inputs.chaotic.nixosModules.default
+    # inputs.chaotic.nixosModules.default
     ./hardware-configuration.nix
     ../common
     ../../nixos/system/nvidia
@@ -34,9 +34,11 @@
     options = ["noatime"];
   };
 
-  hardware.openrazer.enable = true;
+  # hardware.openrazer = {
+  #   enable = true;
+  #   users = ["${user}"];
+  # };
   users.users.${user}.extraGroups = [
-    "openrazer"
     "plugdev"
   ];
 
