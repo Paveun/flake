@@ -20,12 +20,12 @@
   # ];
 
   # boot.kernelPackages = pkgs.linuxPackages_latest;
-  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
-  boot.kernelPackages = pkgs.linuxPackages_cachyos;
-  chaotic.scx = {
-    enable = true;
-    scheduler = "scx_rusty";
-  };
+  boot.kernelPackages = pkgs.linuxPackages_zen;
+  # boot.kernelPackages = pkgs.linuxPackages_cachyos;
+  # chaotic.scx = {
+  #   enable = true;
+  #   scheduler = "scx_rusty";
+  # };
 
   networking.hostName = "laptop";
 
