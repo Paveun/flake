@@ -17,6 +17,7 @@
   sops.secrets = {
     "private_keys/fishtank" = {
       path = "/home/${user}/.ssh/id_fishtank";
+      mode = "0400";
     };
   };
   home.file = {

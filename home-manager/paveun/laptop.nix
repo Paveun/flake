@@ -17,6 +17,7 @@
   sops.secrets = {
     "private_keys/laptop" = {
       path = "/home/${user}/.ssh/id_laptop";
+      mode = "0400";
     };
   };
   home.file = {
