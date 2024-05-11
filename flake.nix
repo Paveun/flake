@@ -49,6 +49,7 @@
     );
   in {
     formatter = forEachSystem (pkgs: pkgs.alejandra);
+    nixosModules = import ./modules/nixos;
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {
         modules = [./hosts/laptop];
