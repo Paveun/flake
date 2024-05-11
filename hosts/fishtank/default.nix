@@ -34,10 +34,10 @@
     options = ["noatime"];
   };
 
-  # hardware.openrazer = {
-  #   enable = true;
-  #   users = ["${user}"];
-  # };
+  hardware.openrazer = {
+    enable = true;
+    users = ["${user}"];
+  };
   users.users.${user}.extraGroups = [
     "plugdev"
   ];
