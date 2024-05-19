@@ -16,10 +16,11 @@
     displayManager = {
       sddm = {
         enable = true;
-        wayland.enable = true;
+        # wayland.enable = true;
       };
       defaultSession = "plasma";
     };
+    libinput.enable = true;
   };
 
   environment = {
@@ -45,7 +46,6 @@
   #   extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-kde ];
   # };
 
-  services.xserver.libinput.enable = true;
   users.users.${user}.extraGroups = [
     "input"
   ];

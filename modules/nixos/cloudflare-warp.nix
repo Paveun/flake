@@ -85,6 +85,7 @@ in
       packages = [ cfg.package ];
       services.warp-svc = {
         after = [ "network-online.target" "systemd-resolved.service" ];
+        wants = [ "network-online.target" ];
         wantedBy = [ "multi-user.target" ];
         serviceConfig = {
           StateDirectory = "cloudflare-warp";
