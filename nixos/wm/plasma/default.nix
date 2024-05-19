@@ -22,22 +22,22 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [
-    (catppuccin-kde.override {
-      flavour = ["frappe"];
-      accents = ["rosewater"];
-      winDecStyles = ["classic"];
-    })
-  ];
-
-  environment.plasma6.excludePackages = with pkgs.kdePackages; [
-    elisa
-    oxygen
-    konsole
-    plasma-browser-integration
-  ];
-
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment = {
+    systemPackages = with pkgs; [
+      (catppuccin-kde.override {
+        flavour = ["frappe"];
+        accents = ["rosewater"];
+        winDecStyles = ["classic"];
+      })
+    ];
+    plasma6.excludePackages = with pkgs.kdePackages; [
+      elisa
+      oxygen
+      konsole
+      plasma-browser-integration
+    ];
+    sessionVariables.NIXOS_OZONE_WL = "1";
+  };
 
   # xdg.portal = {
   #   enable = true;
