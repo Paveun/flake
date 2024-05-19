@@ -7,7 +7,7 @@
 }: {
   imports = [
     inputs.catppuccin.nixosModules.catppuccin
-    inputs.nix-flatpak.nixosModules.nix-flatpak
+    # inputs.nix-flatpak.nixosModules.nix-flatpak
     # ./home-manager.nix
     ../../nixos/system/cachix
     ../../nixos/system/grub
@@ -15,7 +15,7 @@
     ../../nixos/terminal/shell
     ../../nixos/sops
     ../../nixos/themes
-    ../../nixos/flatpak
+    # ../../nixos/flatpak
     ../../nixos/containers
     ../../nixos/packages
     ../../nixos/system/fonts
@@ -50,7 +50,9 @@
 
   programs.dconf.enable = true;
 
-  services.printing.enable = true;
+  services = {
+    printing.enable = true;
+  };
 
   environment.variables = {
     EDITOR = "nvim";
