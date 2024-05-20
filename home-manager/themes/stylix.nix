@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   stylix = {
+    # targets.alacritty.enable = false;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
     polarity = "dark";

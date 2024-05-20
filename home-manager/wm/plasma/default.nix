@@ -8,9 +8,12 @@
 }: {
   imports = [
     ../../themes/wallpaper
-    ../../themes/catppuccin.nix
+    ../../themes/stylix.nix
+    # ../../themes/catppuccin.nix
     # ../../themes/gtk.nix
   ];
+
+  stylix.targets.gtk.enable = false;
 
   xdg = {
     enable = true;
