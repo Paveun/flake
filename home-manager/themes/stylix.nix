@@ -1,6 +1,8 @@
 {pkgs, ...}: {
   stylix = {
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
+    polarity = "dark";
     image = ./wallpaper/default.png;
     cursor = {
       package = pkgs.catppuccin-cursors.frappeRosewater;
