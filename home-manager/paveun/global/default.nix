@@ -1,6 +1,7 @@
 {inputs, ...}: {
   imports = [
-    inputs.catppuccin.homeManagerModules.catppuccin
+    inputs.stylix.homeManagerModules.stylix
+    # inputs.catppuccin.homeManagerModules.catppuccin
     inputs.nixvim.homeManagerModules.nixvim
     ../../sops
     ../../terminal
@@ -9,7 +10,7 @@
     ../../ide/lunarvim
     ../../ide/nixvim
     ../../packages/firefox.nix
-    ../../themes/nix-colors.nix
+    # ../../themes/nix-colors.nix
   ];
 
   nixpkgs = {

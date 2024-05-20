@@ -3,6 +3,7 @@
   home-manager,
   catppuccin,
   config,
+  lib,
   ...
 }: {
   wayland.windowManager.hyprland = {
@@ -31,8 +32,8 @@
         gaps_in = 3;
         gaps_out = 6;
         border_size = 2;
-        "col.active_border" = "rgb(${config.colorScheme.colors.base06})"; #"$rosewater";
-        "col.inactive_border" = "rgb(${config.colorscheme.colors.base00})"; #"$base";
+        "col.active_border" = lib.mkForce "rgb(${config.lib.stylix.colors.base06})"; #"$rosewater";
+        "col.inactive_border" = lib.mkForce "rgb(${config.lib.stylix.colors.base00})"; #"$base";
       };
       decoration = {
         rounding = 0;

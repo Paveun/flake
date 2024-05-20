@@ -26,13 +26,13 @@
           src = pkgs.fishPlugins.autopair.src;
         }
       ];
-      catppuccin.enable = true;
+      # catppuccin.enable = true;
     };
     starship = {
       enable = true;
       enableFishIntegration = true;
       enableBashIntegration = true;
-      catppuccin.enable = true;
+      # catppuccin.enable = true;
     };
   };
 }

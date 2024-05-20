@@ -155,17 +155,17 @@
       * {
         border: none;
         border-radius: 0;
-        font-family: "JetBrainsMono Nerd Font";
+        font-family: "JetbrainsMono Nerd Font Mono";
         font-size: 13px;
         min-height: 0;
       }
       window#waybar {
         /*background: transparent;*/
-        background: #${config.colorscheme.colors.base00};
-        color: #${config.colorscheme.colors.base05};
+        background: #${config.lib.stylix.colors.base00};
+        color: #${config.lib.stylix.colors.base05};
       }
       #window {
-        color: #${config.colorscheme.colors.base0F};
+        color: #${config.lib.stylix.colors.base0F};
         font-weight: bold;
         font-family: "Roboto";
       }
@@ -177,15 +177,15 @@
       #workspaces button {
         padding: 0 5px;
         background: transparent;
-        color: #${config.colorscheme.colors.base05};
+        color: #${config.lib.stylix.colors.base05};
         border-top: 2px solid transparent;
       }
       #workspaces button.active {
-        color: #${config.colorscheme.colors.base08};
-        border-top: 2px solid #${config.colorscheme.colors.base08};
+        color: #${config.lib.stylix.colors.base08};
+        border-top: 2px solid #${config.lib.stylix.colors.base08};
       }
       #mode {
-        background: #${config.colorscheme.colors.base04};
+        background: #${config.lib.stylix.colors.base04};
         border-bottom: 3px solid white;
       }
       #clock,
@@ -210,18 +210,18 @@
       #battery {
       }
       #battery icon {
-        color: #${config.colorscheme.colors.base08};
+        color: #${config.lib.stylix.colors.base08};
       }
       #battery.charging {
       }
       @keyframes blink {
         to {
-          background-color: #${config.colorscheme.colors.base06};
-          color: #${config.colorscheme.colors.base08};
+          background-color: #${config.lib.stylix.colors.base06};
+          color: #${config.lib.stylix.colors.base08};
         }
       }
       #battery.warning:not(.charging) {
-        color: #${config.colorscheme.colors.base07};
+        color: #${config.lib.stylix.colors.base07};
         animation-name: blink;
         animation-duration: 0.5s;
         animation-timing-function: linear;
@@ -235,17 +235,17 @@
       #network {
       }
       #network.disconnected {
-        background: #${config.colorscheme.colors.base08};
+        background: #${config.lib.stylix.colors.base08};
       }
       #pulseaudio {
       }
       #pulseaudio.muted {
       }
       #custom-media {
-        color: #${config.colorscheme.colors.base0B};
+        color: #${config.lib.stylix.colors.base0B};
       }
       #custom-playerctl {
-        color: #${config.colorscheme.colors.base0B};
+        color: #${config.lib.stylix.colors.base0B};
       }
       #tray {
       }

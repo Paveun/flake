@@ -8,7 +8,8 @@
 }: {
   imports = [
     ./gtk.nix
-    ./catppuccin.nix
+    # ./catppuccin.nix
+    ./stylix.nix
     ./wallpaper
   ];
 }

@@ -6,7 +6,8 @@
   ...
 }: {
   imports = [
-    inputs.catppuccin.nixosModules.catppuccin
+    # inputs.catppuccin.nixosModules.catppuccin
+    inputs.stylix.nixosModules.stylix
     # inputs.nix-flatpak.nixosModules.nix-flatpak
     # ./home-manager.nix
     ../../nixos/system/cachix

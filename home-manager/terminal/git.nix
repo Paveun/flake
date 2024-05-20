@@ -21,7 +21,7 @@
     };
     lazygit = {
       enable = true;
-      catppuccin.enable = true;
+      # catppuccin.enable = true;
     };
   };
 }

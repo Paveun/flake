@@ -9,7 +9,7 @@
       efiSupport = true;
       useOSProber = true;
       device = "nodev";
-      catppuccin.enable = true;
+      # catppuccin.enable = true;
     };
     efi.canTouchEfiVariables = true;
   };
