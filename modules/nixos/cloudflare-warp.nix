@@ -1,13 +1,13 @@
-{ config, lib, pkgs, ... }:
-
-with lib;
-
-let
-  cfg = config.services.cloudflare-warp;
-
-in
 {
-  meta.maintainers = with maintainers; [ wolfangaukang ];
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+with lib; let
+  cfg = config.services.cloudflare-warp;
+in {
+  meta.maintainers = with maintainers; [wolfangaukang];
 
   options = {
     services.cloudflare-warp = {
@@ -59,14 +59,14 @@ in
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ cfg.package ];
+    environment.systemPackages = with pkgs; [cfg.package];
 
     security.pki = mkIf (cfg.certificate != null) {
-      certificateFiles = [ cfg.certificate ];
+      certificateFiles = [cfg.certificate];
     };
 
     networking.firewall = mkIf cfg.openFirewall {
-      allowedUDPPorts = [ cfg.udpPort ];
+      allowedUDPPorts = [cfg.udpPort];
     };
 
     users.users = mkIf (cfg.user == "warp") {
@@ -78,15 +78,15 @@ in
       };
     };
     users.groups = mkIf (cfg.group == "warp") {
-      warp = { };
+      warp = {};
     };
 
     systemd = {
-      packages = [ cfg.package ];
+      packages = [cfg.package];
       services.warp-svc = {
-        after = [ "network-online.target" "systemd-resolved.service" ];
-        wants = [ "network-online.target" ];
-        wantedBy = [ "multi-user.target" ];
+        after = ["network-online.target" "systemd-resolved.service"];
+        wants = ["network-online.target"];
+        wantedBy = ["multi-user.target"];
         serviceConfig = {
           StateDirectory = "cloudflare-warp";
           User = "warp";
