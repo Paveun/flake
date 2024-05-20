@@ -28,11 +28,5 @@
       ];
       # catppuccin.enable = true;
     };
-    starship = {
-      enable = true;
-      enableFishIntegration = true;
-      enableBashIntegration = true;
-      # catppuccin.enable = true;
-    };
   };
 }
