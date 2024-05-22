@@ -1,4 +1,9 @@
 {config, lib, ...}: {
+  boot.kernelParams = [
+    "nvidia-drm.modeset=1"
+    "nvidia-drm.fbdev=1"
+  ];
+
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.opengl = {
