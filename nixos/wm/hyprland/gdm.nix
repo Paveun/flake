@@ -1,12 +1,12 @@
 {pkgs, ...}: {
   services = {
-    displayManager = {
+    xserver.displayManager = {
       gdm = {
         enable = true;
-        wayland.enable = true;
+        wayland = true;
       };
-      defaultSession = "hyprland";
     };
+    displayManager.defaultSession = "hyprland";
     gnome.gnome-keyring.enable = true;
   };
 
