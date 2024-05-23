@@ -7,6 +7,7 @@
     #   source = ./style.css;
     # };
   };
+  stylix.targets.waybar.enable = false;
 
   programs.waybar = {
     enable = true;
@@ -179,13 +180,14 @@
         background: transparent;
         color: #${config.lib.stylix.colors.base05};
         border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent;
       }
       #workspaces button:hover {
         border-bottom: 3px solid #${config.lib.stylix.colors.base05};
       }
       #workspaces button.active {
         color: #${config.lib.stylix.colors.base08};
-        border-top: 3px solid #${config.lib.stylix.colors.base08};
+        /* border-top: 3px solid #${config.lib.stylix.colors.base08}; */
         border-bottom: 3px solid #${config.lib.stylix.colors.base08};
       }
       #mode {
