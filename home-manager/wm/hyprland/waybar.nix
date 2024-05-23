@@ -178,15 +178,19 @@
         padding: 0 5px;
         background: transparent;
         color: #${config.lib.stylix.colors.base05};
-        border-top: 2px solid transparent;
+        border-top: 3px solid transparent;
+      }
+      #workspaces button:hover {
+        border-bottom: 3px solid #${config.lib.stylix.colors.base05};
       }
       #workspaces button.active {
         color: #${config.lib.stylix.colors.base08};
-        border-top: 2px solid #${config.lib.stylix.colors.base08};
+        border-top: 3px solid #${config.lib.stylix.colors.base08};
+        border-bottom: 3px solid #${config.lib.stylix.colors.base08};
       }
       #mode {
         background: #${config.lib.stylix.colors.base04};
-        border-bottom: 3px solid white;
+        border-bottom: 3px solid #${config.lib.stylix.colors.base05};
       }
       #clock,
       #battery,
