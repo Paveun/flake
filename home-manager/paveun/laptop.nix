@@ -7,7 +7,8 @@
 }: {
   imports = [
     ./global
-    ../wm/hyprland
+    # ../wm/hyprland
+    ../wm/gnome
   ];
   home = {
     username = "${user}";
