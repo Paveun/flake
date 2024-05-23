@@ -19,7 +19,6 @@
     };
   };
   security.pam.services = {
-    sddm.enableGnomeKeyring = true;
     hyprlock = {};
   };
   programs.thunar = {
