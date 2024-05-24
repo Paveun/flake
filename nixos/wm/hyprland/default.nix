@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
-    ./sddm.nix
+    # ./sddm.nix
+    ./gdm.nix
   ];
   programs.hyprland = {
     enable = true;
@@ -19,7 +20,6 @@
     };
   };
   security.pam.services = {
-    sddm.enableGnomeKeyring = true;
     hyprlock = {};
   };
   programs.thunar = {
