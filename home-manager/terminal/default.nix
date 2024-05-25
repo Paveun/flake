@@ -8,7 +8,7 @@
 }: {
   imports = [
     ./alacritty.nix
-    ./fish.nix
+    # ./fish.nix
     ./zsh.nix
     ./starship.nix
     ./git.nix
