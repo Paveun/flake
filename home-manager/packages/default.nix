@@ -39,5 +39,6 @@
     spotify
     xivlauncher
     prismlauncher
+    obsidian
   ];
 }
