@@ -9,7 +9,6 @@
     # ../../ide/lunarvim
     ../../ide/nixvim
     ../../packages/firefox.nix
-    # ../../themes/nix-colors.nix
   ];
 
   nixpkgs = {
