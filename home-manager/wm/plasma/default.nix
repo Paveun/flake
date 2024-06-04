@@ -14,7 +14,7 @@
   ];
 
   stylix.targets.gtk.enable = false;
-  stylix.targets.kde.enable = false;
+  # stylix.targets.kde.enable = false;
 
   xdg = {
     enable = true;
@@ -44,6 +44,7 @@
       variant = "frappe";
       accents = ["rosewater"];
     })
+    rose-pine-gtk-theme
     (catppuccin-papirus-folders.override {
       flavor = "frappe";
       accent = "rosewater";
