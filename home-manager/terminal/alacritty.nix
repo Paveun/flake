@@ -1,14 +1,7 @@
 {
-  config,
-  pkgs,
-  user,
-  lib,
-  ...
-}: {
   programs = {
     alacritty = {
       enable = true;
-      # catppuccin.enable = true;
       settings = {
         env = {
           TERM = "alacritty";

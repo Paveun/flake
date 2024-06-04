@@ -4,7 +4,6 @@
       sddm = {
         enable = true;
         wayland.enable = true;
-        # theme = "catppuccin-sddm-corners";
         # theme = "${(pkgs.fetchFromGitHub {
         #   owner = "rototrash";
         #   repo = "tokyo-night-sddm";
@@ -18,12 +17,4 @@
   };
 
   security.pam.services.sddm.enableGnomeKeyring = true;
-
-  # environment = {
-  #   systemPackages = with pkgs; [
-  #     # libsForQt5.qt5.qtgraphicaleffects
-  #     catppuccin-sddm-corners
-  #   ];
-  #   # sessionVariables.NIXOS_OZONE_WL = "1";
-  # };
 }

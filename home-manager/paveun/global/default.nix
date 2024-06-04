@@ -1,7 +1,6 @@
 {inputs, ...}: {
   imports = [
     inputs.stylix.homeManagerModules.stylix
-    # inputs.catppuccin.homeManagerModules.catppuccin
     inputs.nixvim.homeManagerModules.nixvim
     ../../sops
     ../../terminal

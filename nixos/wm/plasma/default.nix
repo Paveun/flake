@@ -1,8 +1,6 @@
 {
-  config,
   pkgs,
   user,
-  lib,
   ...
 }: {
   # Configure X11
@@ -24,13 +22,8 @@
   };
 
   environment = {
-    systemPackages = with pkgs; [
-      (catppuccin-kde.override {
-        flavour = ["frappe"];
-        accents = ["rosewater"];
-        winDecStyles = ["classic"];
-      })
-    ];
+    # systemPackages = with pkgs; [
+    # ];
     plasma6.excludePackages = with pkgs.kdePackages; [
       elisa
       oxygen
@@ -39,12 +32,6 @@
     ];
     sessionVariables.NIXOS_OZONE_WL = "1";
   };
-
-  # xdg.portal = {
-  #   enable = true;
-  #   wlr.enable = true;
-  #   extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-kde ];
-  # };
 
   users.users.${user}.extraGroups = [
     "input"

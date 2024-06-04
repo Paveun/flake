@@ -1,8 +1,5 @@
 {
-  config,
   pkgs,
-  lib,
-  user,
   ...
 }: {
   imports = [
@@ -83,47 +80,4 @@
       tray = "never";
     };
   };
-
-  # programs = {
-  #   swaylock = {
-  #     enable = true;
-  #     catppuccin.enable = true;
-  #   };
-  # };
-
-  # gtk = {
-  #   enable = true;
-  #   font = {
-  #     name = "Roboto";
-  #     package = pkgs.roboto;
-  #   };
-  #   cursorTheme = {
-  #     name = "frappeRosewater";
-  #     package = pkgs.catppuccin-cursors.frappeRosewater;
-  #   };
-  #   # iconTheme = {
-  #   #   name = "Catppuccin-Frappe-Rosewater-Icons";
-  #   #   package = pkgs.catppuccin-papirus-folders.override {
-  #   #     flavor = "frappe";
-  #   #     accent = "rosewater";
-  #   #   };
-  #   # };
-  #   iconTheme = {
-  #     name = "Papirus-Dark";
-  #     package = pkgs.papirus-icon-theme;
-  #   };
-  #   theme = {
-  #     name = "Catppuccin-Frappe-Compact-Rosewater-Dark";
-  #     package = pkgs.catppuccin-gtk.override {
-  #       accents = [ "rosewater" ];
-  #       size = "compact";
-  #       tweaks = [ "rimless" ];
-  #       variant = "frappe";
-  #     };
-  #   };
-  #   # iconTheme = {
-  #   #   name = "Papirus-Dark";
-  #   #   package = pkgs.papirus-icon-theme;
-  #   # };
-  # };
 }

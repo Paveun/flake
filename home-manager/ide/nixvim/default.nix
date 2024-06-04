@@ -25,10 +25,6 @@
         undofile = true;
       };
       globals.mapleader = " ";
-      # colorschemes.catppuccin = {
-      #   enable = true;
-      #   settings.flavour = "frappe";
-      # };
       plugins = {
         treesitter = {
           enable = true;

@@ -1,7 +1,4 @@
 {
-  pkgs,
-  home-manager,
-  catppuccin,
   config,
   lib,
   ...
@@ -10,8 +7,6 @@
     enable = true;
     # enableNvidiaPatches = true;
     xwayland.enable = true;
-    # catppuccin.enable = true;
-    # catppuccin.flavour = "frappe";
     settings = {
       exec-once = [
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"

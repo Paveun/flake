@@ -1,11 +1,4 @@
 {
-  config,
-  pkgs,
-  lib,
-  user,
-  catppuccin,
-  ...
-}: {
   imports = [
     ./alacritty.nix
     # ./fish.nix

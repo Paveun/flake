@@ -6,9 +6,7 @@
   ...
 }: {
   imports = [
-    # inputs.catppuccin.nixosModules.catppuccin
     inputs.stylix.nixosModules.stylix
-    # inputs.nix-flatpak.nixosModules.nix-flatpak
     # ./home-manager.nix
     ../../nixos/system/cachix
     ../../nixos/system/grub
@@ -16,7 +14,6 @@
     ../../nixos/terminal/shell
     ../../nixos/sops
     ../../nixos/themes
-    # ../../nixos/flatpak
     ../../nixos/containers
     ../../nixos/packages
     ../../nixos/system/fonts

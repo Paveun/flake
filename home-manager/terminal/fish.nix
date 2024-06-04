@@ -1,9 +1,5 @@
 {
-  config,
   pkgs,
-  lib,
-  user,
-  catppuccin,
   ...
 }: {
   programs = {
@@ -26,7 +22,6 @@
           src = pkgs.fishPlugins.autopair.src;
         }
       ];
-      # catppuccin.enable = true;
     };
   };
 }

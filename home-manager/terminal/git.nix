@@ -1,11 +1,4 @@
 {
-  config,
-  pkgs,
-  lib,
-  user,
-  catppuccin,
-  ...
-}: {
   programs = {
     git = {
       enable = true;
@@ -21,7 +14,6 @@
     };
     lazygit = {
       enable = true;
-      # catppuccin.enable = true;
     };
   };
 }

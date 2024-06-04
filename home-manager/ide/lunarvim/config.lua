@@ -31,7 +31,7 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 
 -- -- Change theme settings
-lvim.colorscheme = "catppuccin"
+-- lvim.colorscheme = "catppuccin"
 
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"

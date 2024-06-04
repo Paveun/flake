@@ -1,15 +1,10 @@
 {
-  config,
   pkgs,
-  lib,
-  user,
-  catppuccin,
   ...
 }: {
   imports = [
     ../../themes/wallpaper
     ../../themes/stylix.nix
-    # ../../themes/catppuccin.nix
     # ../../themes/gtk.nix
   ];
 
@@ -34,26 +29,20 @@
 
   home.packages = with pkgs; [
     wl-clipboard
-    catppuccin-cursors.frappeRosewater
-    (catppuccin-kde.override {
-      flavour = ["frappe"];
-      accents = ["rosewater"];
-      winDecStyles = ["modern"];
-    })
-    (catppuccin-gtk.override {
-      variant = "frappe";
-      accents = ["rosewater"];
-    })
+    # catppuccin-cursors.frappeRosewater
+    # (catppuccin-kde.override {
+    #   flavour = ["frappe"];
+    #   accents = ["rosewater"];
+    #   winDecStyles = ["modern"];
+    # })
+    # (catppuccin-gtk.override {
+    #   variant = "frappe";
+    #   accents = ["rosewater"];
+    # })
     rose-pine-gtk-theme
-    (catppuccin-papirus-folders.override {
-      flavor = "frappe";
-      accent = "rosewater";
-    })
+    # (catppuccin-papirus-folders.override {
+    #   flavor = "frappe";
+    #   accent = "rosewater";
+    # })
   ];
-
-  # home.pointerCursor = {
-  #   gtk.enable = true;
-  #   package = pkgs.catppuccin-cursors.frappeRosewater;
-  #   name = "Catppuccin-Frappe-Rosewater-Cursors";
-  # };
 }
