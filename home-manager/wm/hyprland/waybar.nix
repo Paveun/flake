@@ -166,7 +166,8 @@
         color: #${config.lib.stylix.colors.base05};
       }
       #window {
-        color: #${config.lib.stylix.colors.base0F};
+        /* color: #${config.lib.stylix.colors.base0F}; */
+        color: #${config.lib.stylix.colors.base0A};
         font-weight: bold;
         font-family: "Roboto";
       }

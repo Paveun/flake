@@ -32,7 +32,8 @@
         gaps_in = 3;
         gaps_out = 6;
         border_size = 2;
-        "col.active_border" = lib.mkForce "rgb(${config.lib.stylix.colors.base06})"; #"$rosewater";
+        # "col.active_border" = lib.mkForce "rgb(${config.lib.stylix.colors.base06})"; #"$rosewater";
+        "col.active_border" = lib.mkForce "rgb(${config.lib.stylix.colors.base0A})";
         "col.inactive_border" = lib.mkForce "rgb(${config.lib.stylix.colors.base00})"; #"$base";
       };
       decoration = {
