@@ -13,7 +13,8 @@
     # ../../themes/gtk.nix
   ];
 
-  # stylix.targets.gtk.enable = false;
+  stylix.targets.gtk.enable = false;
+  stylix.targets.kde.enable = false;
 
   xdg = {
     enable = true;
