@@ -1,4 +1,4 @@
-{...}: {
+{
   programs.wofi = {
     enable = true;
     settings = {
@@ -16,12 +16,12 @@
       key_expand = "Tab";
     };
   };
-  home.file = {
-    # ".config/wofi/config"={
-    #   source = ./config;
-    # };
-    ".config/wofi/style.css" = {
-      source = ./style.css;
-    };
-  };
+  # home.file = {
+  #   # ".config/wofi/config"={
+  #   #   source = ./config;
+  #   # };
+  #   ".config/wofi/style.css" = {
+  #     source = ./style.css;
+  #   };
+  # };
 }
