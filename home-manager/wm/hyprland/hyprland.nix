@@ -15,7 +15,8 @@
         "dunst"
         "hyprpaper"
         "udiskie"
-        "hyprctl setcursor Catppuccin-Frappe-Rosewater-Cursors 24"
+        # "hyprctl setcursor Catppuccin-Frappe-Rosewater-Cursors 24"
+        "hyprctl setcursor BreezeX-RosePine-Linux 24"
         "wl-paste --type text --watch cliphist store" #Stores only text data
         "wl-paste --type image --watch cliphist store" #Stores only image data
         # copyq --start-server"
