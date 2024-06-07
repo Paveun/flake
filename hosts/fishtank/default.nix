@@ -43,6 +43,4 @@
   users.users.${user}.extraGroups = [
     "plugdev"
   ];
-
-  # environment.sessionVariables.NIXOS_OZONE_WL = "1";
 }

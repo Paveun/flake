@@ -30,7 +30,6 @@
       konsole
       plasma-browser-integration
     ];
-    sessionVariables.NIXOS_OZONE_WL = "1";
   };
 
   users.users.${user}.extraGroups = [
