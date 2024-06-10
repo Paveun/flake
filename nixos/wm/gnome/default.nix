@@ -2,9 +2,12 @@
   services = {
     xserver = {
       enable = true;
-      displayManager.gdm = {
-        enable = true;
-        wayland = true;
+      displayManager = {
+        gdm = {
+          enable = true;
+          wayland = true;
+        };
+        defaultSession = "gnome";
       };
       desktopManager.gnome.enable = true;
     };
@@ -12,5 +15,7 @@
   };
   environment.systemPackages = with pkgs; [
     gnomeExtensions.appindicator
+    gnomeExtensions.caffeine
   ];
+  environment.sessionVariables.MUTTER_DEBUG_KMS_THREAD_TYPE = "user";
 }
