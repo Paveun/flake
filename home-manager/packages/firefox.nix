@@ -1,6 +1,7 @@
 {
   inputs,
   pkgs,
+  config,
   ...
 }: {
   programs.firefox = {
@@ -71,7 +72,7 @@
               definedAliases = ["@k"];
               urls = [
                 {
-                  template = "https://kagi.com/search";
+                  template = "https://kagi.com/search?token=${config.sops.secrets.kagi-token.path}";
                   params = [
                     {
                       name = "q";
