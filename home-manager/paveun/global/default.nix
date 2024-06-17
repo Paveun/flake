@@ -7,7 +7,7 @@
     ../../packages
     # ../../themes
     # ../../ide/lunarvim
-    ../../ide/nixvim
+    # ../../ide/nixvim
     ../../packages/firefox.nix
   ];
 
