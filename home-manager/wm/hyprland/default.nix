@@ -12,14 +12,14 @@
       # ".config/hypr/hyprland.conf"={
       #   source = ./hypr/hyprland.conf;
       # };
-      ".config/hypr/hyprpaper.conf" = {
-        # source = ./hypr/hyprpaper.conf;
-        text = ''
-          preload = $HOME/.config/wallpaper/default.png
-          wallpaper = ,$HOME/.config/wallpaper/default.png
-          splash = false
-        '';
-      };
+      #".config/hypr/hyprpaper.conf" = {
+      #  # source = ./hypr/hyprpaper.conf;
+      #  text = ''
+      #    preload = $HOME/.config/wallpaper/default.png
+      #    wallpaper = ,$HOME/.config/wallpaper/default.png
+      #    splash = false
+      #  '';
+      #};
       ".config/hypr/hyprlock.conf" = {
         source = ./hypr/hyprlock.conf;
       };
