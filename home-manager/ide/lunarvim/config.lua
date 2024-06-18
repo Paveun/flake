@@ -101,15 +101,15 @@ lvim.builtin.treesitter.auto_install = true
 --     },
 -- }
 
-lvim.plugins = {
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    opts = {
-      flavour = "frappe"
-    }
-  }
-}
+-- lvim.plugins = {
+--   {
+--     "catppuccin/nvim",
+--     name = "catppuccin",
+--     opts = {
+--       flavour = "frappe"
+--     }
+--   }
+-- }
 
 -- -- Autocommands (`:help autocmd`) <https://neovim.io/doc/user/autocmd.html>
 -- vim.api.nvim_create_autocmd("FileType", {
