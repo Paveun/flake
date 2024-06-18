@@ -5,6 +5,9 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     initExtra = "krabby random --no-title";
+    shellAliases = {
+      ssh = "TERM=xterm-256color command ssh";
+    };
     oh-my-zsh = {
       enable = true;
       plugins = [
