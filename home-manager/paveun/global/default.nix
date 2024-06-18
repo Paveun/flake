@@ -6,7 +6,7 @@
     ../../terminal
     ../../packages
     # ../../themes
-    # ../../ide/lunarvim
+    ../../ide/lunarvim
     ../../ide/nixvim
     ../../packages/firefox.nix
   ];
