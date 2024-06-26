@@ -52,13 +52,13 @@
         xdg-desktop-portal-hyprland
       ];
       xdgOpenUsePortal = true;
-      config = {
-        common = {
-          default = [
-            "gtk"
-          ];
-        };
-      };
+      # config = {
+      #   common = {
+      #     default = [
+      #       "gtk"
+      #     ];
+      #   };
+      # };
     };
   };
 
