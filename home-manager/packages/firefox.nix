@@ -139,7 +139,7 @@
           proton-pass
           privacy-badger
           firefox-color
-          kagi-search
+          # kagi-search
         ];
       };
       meta4 = {
