@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports = [
     # ./sddm.nix
-    ./gdm.nix
+    # ./gdm.nix
   ];
   programs.hyprland = {
     enable = true;
