@@ -86,6 +86,7 @@
               enable = true;
               autostart = true;
               filetypes = ["nix"];
+              settings.nix.flake.autoArchive = true;
             };
             ruff-lsp.enable = true;
             pyright = {
