@@ -11,8 +11,8 @@
     ./hardware-configuration.nix
     ../common
     ../../nixos/system/nvidia
-    ../../nixos/wm/plasma
-    # ../../nixos/wm/gnome
+    # ../../nixos/wm/plasma
+    ../../nixos/wm/gnome
   ];
 
   # home-manager.users.${user}.imports = [
