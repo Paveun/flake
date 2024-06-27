@@ -11,7 +11,7 @@
         enabled-extensions = with pkgs.gnomeExtensions; [
           appindicator.extensionUuid
           caffeine.extensionUuid
-          system-monitor.extensionUuid
+          # system-monitor.extensionUuid
           user-themes.extensionUuid
         ];
       };
