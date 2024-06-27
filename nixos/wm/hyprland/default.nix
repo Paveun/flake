@@ -11,6 +11,7 @@
   services = {
     gvfs.enable = true;
     udisks2.enable = true;
+    gnome.gnome-keyring.enable = true;
     xserver = {
       enable = true;
       xkb = {
@@ -21,6 +22,7 @@
   };
   security.pam.services = {
     hyprlock = {};
+    sddm.enableGnomeKeyring = true;
   };
   programs.thunar = {
     enable = true;
