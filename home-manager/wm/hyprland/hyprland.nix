@@ -9,6 +9,7 @@
     xwayland.enable = true;
     settings = {
       exec-once = [
+        # "kwalletd6"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "waybar --config $HOME/.config/waybar/config --style $HOME/.config/waybar/style.css"
         "nm-applet --indicator & disown"

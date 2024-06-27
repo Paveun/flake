@@ -10,7 +10,7 @@
     ../wm/hyprland
     # ../wm/gnome
     # ../wm/cosmic
-    ../wm/plasma
+    # ../wm/plasma
   ];
   home = {
     username = "${user}";

@@ -15,7 +15,7 @@
     ../../nixos/wm/hyprland
     # ../../nixos/wm/gnome
     # ../../nixos/wm/cosmic
-    ../../nixos/wm/plasma
+    # ../../nixos/wm/plasma
   ];
 
   # home-manager.users.${user}.imports = [
