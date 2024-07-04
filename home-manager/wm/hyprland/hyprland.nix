@@ -55,9 +55,9 @@
       misc = {
         force_default_wallpaper = 0;
       };
-      master = {
-        new_is_master = true;
-      };
+      # master = {
+      #   new_is_master = true;
+      # };
       dwindle = {
         pseudotile = "yes";
         preserve_split = "yes";
