@@ -40,5 +40,7 @@
     xivlauncher
     prismlauncher
     obsidian
+    fflogs
+    asdf-vm
   ];
 }
