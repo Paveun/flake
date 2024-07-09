@@ -50,6 +50,7 @@
 
   services = {
     printing.enable = true;
+    flatpak.enable = true;
   };
 
   environment.variables = {
