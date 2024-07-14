@@ -50,6 +50,7 @@
 
   services = {
     printing.enable = true;
+    cloudflare-warp.enable = true;
     # flatpak.enable = true;
   };
 
