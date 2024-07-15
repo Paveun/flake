@@ -27,7 +27,6 @@
     # distrobox
     openconnect
     openvpn
-    flameshot
     jq
     gh
     ncspot
