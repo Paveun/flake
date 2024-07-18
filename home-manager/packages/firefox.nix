@@ -4,8 +4,18 @@
   config,
   ...
 }: {
+  home.sessionVariables = {
+    MOZ_ENABLE_WAYLAND = "0";
+  };
   programs.firefox = {
     enable = true;
+    package = pkgs.firefox.overrideAttrs (old: {
+      buildCommand =
+        old.buildCommand
+        + ''
+          substituteInPlace $out/bin/firefox --replace "exec -a" "MOZ_ENABLE_WAYLAND=0 exec -a"
+        '';
+        });
     profiles = {
       default = {
         id = 0;
