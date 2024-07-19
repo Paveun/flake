@@ -33,11 +33,11 @@
   networking.hostName = "laptop";
 
   hardware = {
-    tuxedo-rs = {
-      enable = true;
-      tailor-gui.enable = true;
-    };
-    tuxedo-keyboard.enable = true;
+    # tuxedo-rs = {
+    #   enable = true;
+    #   tailor-gui.enable = true;
+    # };
+    # tuxedo-keyboard.enable = true;
     nvidia.prime = {
       # offload.enable = true;
       # offload.enableOffloadCmd = true;
