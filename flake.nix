@@ -65,6 +65,12 @@
           inherit user inputs outputs;
         };
       };
+      aion = nixpkgs.lib.nixosSystem {
+        modules = [./hosts/aion];
+        specialArgs = {
+          inherit user inputs outputs;
+        };
+      };
     };
     homeConfigurations = {
       "${user}@laptop" = lib.homeManagerConfiguration {
@@ -76,6 +82,13 @@
       };
       "${user}@fishtank" = lib.homeManagerConfiguration {
         modules = [./home-manager/paveun/fishtank.nix];
+        pkgs = pkgsFor.x86_64-linux;
+        extraSpecialArgs = {
+          inherit user inputs outputs;
+        };
+      };
+      "${user}@aion" = lib.homeManagerConfiguration {
+        modules = [./home-manager/paveun/aion.nix];
         pkgs = pkgsFor.x86_64-linux;
         extraSpecialArgs = {
           inherit user inputs outputs;
