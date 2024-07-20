@@ -4,6 +4,7 @@ keys:
   - &hosts:
     - &fishtank age1r6zvhe6lug8uvy0xharwnn6p695ed4qkzs7pleg986z89ct5gvusswt9x7 
     - &laptop age1hmac76n28u022e3kwnv9lqgqsmwplwpqucr90kdwkpwslf44xq4sxyt22w  
+    - &aion age1ydk5l62acvnkrw0p03g4qw63cm3rxpgw77dlh0wfe78pu2d72fysde3e0d
 creation_rules:
   - path_regex: secrets/secrets.yaml$
     key_groups:
@@ -11,3 +12,4 @@ creation_rules:
         - *paveun
         - *fishtank
         - *laptop
+        - *aion
