@@ -27,7 +27,7 @@
     };
   };
   home.packages = with pkgs; [
-    liquidctl
+    # liquidctl
     # razergenie
     via
     alsa-scarlett-gui
