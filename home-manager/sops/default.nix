@@ -14,7 +14,8 @@
       # "private_keys/fishtank" = {
       #   path = "/home/${user}/.ssh/id_fishtank";
       # };
-      kagi-token = {};
+      # kagi-token = {};
+      # kagi-search = {};
     };
   };
 }

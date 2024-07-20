@@ -4,6 +4,9 @@
   config,
   ...
 }: {
+  sops.secrets = {
+    kagi-token = {};
+  };
   home.sessionVariables = {
     MOZ_ENABLE_WAYLAND = "0";
   };
