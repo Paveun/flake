@@ -43,4 +43,9 @@
   users.users.${user}.extraGroups = [
     "plugdev"
   ];
+  hardware.nvidia.prime = {
+    sync.enable = true;
+    nvidiaBusId = "PCI:0:1:0";
+    amdgpuBusId = "PCI:12:0:0";
+  };
 }
