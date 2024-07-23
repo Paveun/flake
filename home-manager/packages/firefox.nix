@@ -18,7 +18,7 @@
         + ''
           substituteInPlace $out/bin/firefox --replace "exec -a" "MOZ_ENABLE_WAYLAND=0 exec -a"
         '';
-        });
+    });
     profiles = {
       default = {
         id = 0;
