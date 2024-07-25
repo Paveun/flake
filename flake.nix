@@ -20,6 +20,10 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-xivlauncher-rb = {
+      url = "github:drakon64/nixos-xivlauncher-rb";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixos-cosmic = {
       url = "github:lilyinstarlight/nixos-cosmic";
       inputs.nixpkgs.follows = "nixpkgs";
