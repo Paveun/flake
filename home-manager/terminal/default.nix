@@ -1,6 +1,7 @@
 {
   imports = [
     ./alacritty.nix
+    ./kitty.nix
     # ./fish.nix
     ./zsh.nix
     ./starship.nix
