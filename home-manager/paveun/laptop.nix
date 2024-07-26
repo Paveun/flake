@@ -7,8 +7,8 @@
 }: {
   imports = [
     ./global
-    ../wm/hyprland
-    # ../wm/gnome
+    # ../wm/hyprland
+    ../wm/gnome
     # ../wm/cosmic
     # ../wm/plasma
   ];
