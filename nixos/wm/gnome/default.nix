@@ -7,9 +7,11 @@
           enable = true;
           wayland = true;
         };
-        defaultSession = "gnome";
       };
       desktopManager.gnome.enable = true;
+    };
+    displayManager = {
+      defaultSession = "gnome";
     };
     dbus.packages = with pkgs; [gnome2.GConf];
   };
