@@ -29,7 +29,7 @@
         treesitter = {
           enable = true;
           nixGrammars = true;
-          indent = true;
+          settings.indent.enable = true;
         };
         treesitter-context.enable = true;
         rainbow-delimiters.enable = true;
@@ -82,7 +82,7 @@
           enable = true;
           servers = {
             bashls.enable = true;
-            nil_ls = {
+            nil-ls = {
               enable = true;
               autostart = true;
               filetypes = ["nix"];
