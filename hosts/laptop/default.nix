@@ -13,8 +13,8 @@
     ../common
     ../../nixos/system/nvidia
     # ../../nixos/wm/hyprland
-    ../../nixos/wm/gnome
-    # ../../nixos/wm/cosmic
+    # ../../nixos/wm/gnome
+    ../../nixos/wm/cosmic
     # ../../nixos/wm/plasma
   ];
 
