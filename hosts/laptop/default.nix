@@ -13,8 +13,8 @@
     ../common
     ../../nixos/system/nvidia
     # ../../nixos/wm/hyprland
-    # ../../nixos/wm/gnome
-    ../../nixos/wm/cosmic
+    ../../nixos/wm/gnome
+    # ../../nixos/wm/cosmic
     # ../../nixos/wm/plasma
   ];
 
@@ -22,8 +22,8 @@
   #   ./home.nix
   # ];
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  # boot.kernelPackages = pkgs.linuxPackages_zen;
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
   # boot.kernelPackages = pkgs.linuxPackages_cachyos;
   # chaotic.scx = {
   #   enable = true;
