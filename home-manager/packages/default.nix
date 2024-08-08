@@ -27,6 +27,7 @@
     google-drive-ocamlfuse
     # remmina
     openfortivpn
+    openvpn
     # distrobox
     openconnect
     openvpn
