@@ -126,11 +126,11 @@
         "yafas": "yafas"
       },
       "locked": {
-        "lastModified": 1723121942,
-        "narHash": "sha256-OfowhlEBPCNcaw1RaC9AuW8bc2Ee2NMngjU8dOljtoU=",
+        "lastModified": 1723131830,
+        "narHash": "sha256-H9Q2y1RJ1ixXvyK6clZ84QXHhLvGzMPOPyBg30sqhmE=",
         "owner": "chaotic-cx",
         "repo": "nyx",
-        "rev": "d266429873c2a75c25eb629448d64387c7e1af22",
+        "rev": "c662fc42ab949b183c166d49efc7823509b20c75",
         "type": "github"
       },
       "original": {
