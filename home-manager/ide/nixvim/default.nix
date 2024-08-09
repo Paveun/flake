@@ -35,7 +35,8 @@
         rainbow-delimiters.enable = true;
         which-key = {
           enable = true;
-          showKeys = true;
+          settings.show_keys = true;
+          # showKeys = true;
         };
         gitsigns = {
           enable = true;
