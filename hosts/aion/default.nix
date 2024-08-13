@@ -45,7 +45,7 @@
   ];
   # hardware.nvidia.prime = {
   #   sync.enable = true;
-  #   nvidiaBusId = "PCI:0:1:0";
+  #   nvidiaBusId = "PCI:1:0:0";
   #   amdgpuBusId = "PCI:12:0:0";
   # };
 }
