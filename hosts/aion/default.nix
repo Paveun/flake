@@ -36,10 +36,13 @@
     options = ["noatime"];
   };
 
-  # hardware.openrazer = {
-  #   enable = true;
-  #   users = ["${user}"];
-  # };
+  hardware = {
+    cpu.amd.updateMicrocode = true;
+    # openrazer = {
+    #   enable = true;
+    #   users = ["${user}"];
+    # };
+  };
   users.users.${user}.extraGroups = [
     "plugdev"
   ];
