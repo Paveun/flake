@@ -1,7 +1,4 @@
-{pkgs, ...}: {
-  imports = [
-    ./xivlauncher-rb.nix
-  ];
+{pkgs, inputs, ...}: {
   home.packages = with pkgs; [
     krabby
     fastfetch
@@ -40,7 +37,8 @@
     vesktop
     brave
     spotify
-    # xivlauncher
+    xivlauncher
+    # inputs.nixos-xivlauncher-rb.packages.x86_64-linux.xivlauncher-rb
     prismlauncher
     obsidian
     fflogs
