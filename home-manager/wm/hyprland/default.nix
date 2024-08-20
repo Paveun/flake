@@ -62,10 +62,10 @@
     };
   };
 
-  qt = {
-    enable = true;
-    #  platformTheme.name = "gtk";
-  };
+  # qt = {
+  #   enable = true;
+  #   #  platformTheme.name = "gtk";
+  # };
 
   services = {
     network-manager-applet.enable = true;
