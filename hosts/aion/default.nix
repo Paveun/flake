@@ -10,7 +10,8 @@
     inputs.chaotic.nixosModules.default
     ./hardware-configuration.nix
     ../common
-    ../../nixos/system/nvidia
+    ../../nixos/system/amdgpu
+    # ../../nixos/system/nvidia
     # ../../nixos/wm/plasma
     ../../nixos/wm/gnome
   ];
