@@ -39,6 +39,7 @@
 
   hardware = {
     cpu.amd.updateMicrocode = true;
+    xone.enable = true;
     # openrazer = {
     #   enable = true;
     #   users = ["${user}"];
