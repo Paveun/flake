@@ -15,6 +15,9 @@
           alphabetical-app-grid.extensionUuid
         ];
       };
+      "org.gnome.mutter" = {
+        check-alive-timeout = 15000;
+      };
     };
   };
   home.packages = with pkgs; [
