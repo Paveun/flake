@@ -8,7 +8,8 @@
   imports = [
     ./global
     # ../wm/plasma
-    ../wm/gnome
+    # ../wm/gnome
+    ../wm/cosmic
   ];
   home = {
     username = "${user}";

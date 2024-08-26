@@ -11,9 +11,9 @@
     ./hardware-configuration.nix
     ../common
     ../../nixos/system/amdgpu
-    # ../../nixos/system/nvidia
     # ../../nixos/wm/plasma
-    ../../nixos/wm/gnome
+    # ../../nixos/wm/gnome
+    ../../nixos/wm/cosmic
   ];
 
   # home-manager.users.${user}.imports = [
