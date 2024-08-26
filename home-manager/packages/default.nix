@@ -39,6 +39,7 @@
     spotify
     xivlauncher
     # inputs.nixos-xivlauncher-rb.packages.x86_64-linux.xivlauncher-rb
+    inputs.zen-browser.packages."${system}".specific
     prismlauncher
     obsidian
     fflogs
