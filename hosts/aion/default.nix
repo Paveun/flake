@@ -40,14 +40,21 @@
   hardware = {
     cpu.amd.updateMicrocode = true;
     xone.enable = true;
-    # openrazer = {
-    #   enable = true;
-    #   users = ["${user}"];
-    # };
+    openrazer = {
+      enable = true;
+      # users = ["${user}"];
+    };
   };
+  
   users.users.${user}.extraGroups = [
     "plugdev"
+    "openrazer"
   ];
+
+  environment.systemPackages = with pkgs; [
+    openrazer-daemon
+  ];
+
   # hardware.nvidia.prime = {
   #   sync.enable = true;
   #   nvidiaBusId = "PCI:1:0:0";
