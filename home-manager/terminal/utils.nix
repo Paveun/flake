@@ -9,8 +9,5 @@
     ranger = {
       enable = true;
     };
-    lf = {
-      enable = true;
-    };
   };
 }
