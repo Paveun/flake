@@ -9,5 +9,6 @@
     ./tmux.nix
     ./utils.nix
     ./direnv.nix
+    ./lf
   ];
 }
