@@ -1,6 +1,6 @@
 {pkgs, inputs, ...}: {
   home.packages = with pkgs; [
-    krabby
+    # krabby
     fastfetch
     devenv
     kate
@@ -18,7 +18,7 @@
     haruna
     deluge
     protonvpn-gui
-    conda
+    # conda
     keepassxc
     mpv
     google-drive-ocamlfuse
