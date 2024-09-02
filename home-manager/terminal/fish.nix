@@ -4,7 +4,7 @@
       enable = true;
       interactiveShellInit = ''
         set fish_greeting
-        krabby random --no-title
+        ${pkgs.krabby}/bin/krabby random --no-title
       '';
       shellAliases = {
         ssh = "TERM=xterm-256color command ssh";
