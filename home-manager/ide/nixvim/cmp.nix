@@ -1,6 +1,13 @@
-{...}: {
+{
   programs.nixvim.plugins = {
     luasnip.enable = true;
+    # copilot-cmp = {
+    #   enable = true;
+    # };
+    # copilot-lua = {
+    #   suggestion.enabled = false;
+    #   panel.enabled = false;
+    # };
     cmp-buffer = {enable = true;};
 
     cmp-emoji = {enable = true;};

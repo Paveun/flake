@@ -26,6 +26,16 @@
       };
       globals.mapleader = " ";
       plugins = {
+        copilot-vim = {
+          enable = true;
+          settings.filetypes = {
+            "*" = false;
+            python = true;
+          };
+        };
+        copilot-chat = {
+          enable = true;
+        };
         treesitter = {
           enable = true;
           nixGrammars = true;
