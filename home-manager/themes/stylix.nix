@@ -8,7 +8,7 @@
     image = ./wallpaper/default.png;
     cursor = {
       package = pkgs.catppuccin-cursors.frappeRosewater;
-      name = "Catppuccin-Frappe-Rosewater-Cursors";
+      name = "catppuccin-frappe-rosewater-cursors";
       # package = pkgs.rose-pine-cursor;
       # name = "BreezeX-RosePine-Linux";
       size = 24;
