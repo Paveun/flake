@@ -52,6 +52,7 @@
           enable = true;
           settings.current_line_blame = true;
         };
+        web-devicons.enable = true;
         nvim-tree = {
           enable = true;
           openOnSetupFile = true;
