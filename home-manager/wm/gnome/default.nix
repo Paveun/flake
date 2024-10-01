@@ -5,7 +5,7 @@
   dconf = {
     enable = true;
     settings = {
-      "org/gnome/desktop/interface".color-scheme = "prefer-dark";
+      # "org/gnome/desktop/interface".color-scheme = "prefer-dark";
       "org/gnome/shell" = {
         disable-user-extensions = false;
         enabled-extensions = with pkgs.gnomeExtensions; [
@@ -15,9 +15,9 @@
           alphabetical-app-grid.extensionUuid
         ];
       };
-      "org.gnome.mutter" = {
-        check-alive-timeout = 15000;
-      };
+      # "org.gnome.mutter" = {
+      #   check-alive-timeout = 15000;
+      # };
     };
   };
   home.packages = with pkgs; [

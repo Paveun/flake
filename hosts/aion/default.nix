@@ -12,8 +12,8 @@
     ../common
     ../../nixos/system/amdgpu
     # ../../nixos/wm/plasma
-    # ../../nixos/wm/gnome
-    ../../nixos/wm/cosmic
+    ../../nixos/wm/gnome
+    # ../../nixos/wm/cosmic
   ];
 
   # home-manager.users.${user}.imports = [

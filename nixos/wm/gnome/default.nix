@@ -15,10 +15,10 @@
     };
     dbus.packages = with pkgs; [gnome2.GConf];
   };
-  environment.systemPackages = with pkgs; [
-    gnomeExtensions.appindicator
-    gnomeExtensions.caffeine
-    gnomeExtensions.alphabetical-app-grid
+  environment.systemPackages = with pkgs.gnomeExtensions; [
+    appindicator
+    caffeine
+    alphabetical-app-grid
   ];
   environment.sessionVariables.MUTTER_DEBUG_KMS_THREAD_TYPE = "user";
 }
