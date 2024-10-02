@@ -8,8 +8,8 @@
   imports = [
     ./global
     # ../wm/hyprland
-    ../wm/gnome
-    # ../wm/cosmic
+    # ../wm/gnome
+    ../wm/cosmic
     # ../wm/plasma
   ];
   home = {
