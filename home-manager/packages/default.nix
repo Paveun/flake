@@ -44,5 +44,6 @@
     obsidian
     fflogs
     asdf-vm
+    ani-cli
   ];
 }
