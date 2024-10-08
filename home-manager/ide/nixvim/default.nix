@@ -94,13 +94,13 @@
           enable = true;
           servers = {
             bashls.enable = true;
-            nil-ls = {
+            nil_ls = {
               enable = true;
               autostart = true;
               filetypes = ["nix"];
               settings.nix.flake.autoArchive = true;
             };
-            ruff-lsp.enable = true;
+            ruff_lsp.enable = true;
             pyright = {
               enable = true;
               autostart = true;
