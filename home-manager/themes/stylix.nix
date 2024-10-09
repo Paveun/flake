@@ -1,14 +1,15 @@
 {pkgs, ...}: {
   stylix = {
     # targets.hyprland.enable = false;
+    targets.kitty.enable = false;
     enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
-    # base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
     polarity = "dark";
     image = ./wallpaper/default.png;
     cursor = {
-      package = pkgs.catppuccin-cursors.frappeRosewater;
-      name = "catppuccin-frappe-rosewater-cursors";
+      package = pkgs.catppuccin-cursors.mochaRosewater;
+      name = "catppuccin-mocha-rosewater-cursors";
       # package = pkgs.rose-pine-cursor;
       # name = "BreezeX-RosePine-Linux";
       size = 24;
