@@ -31,6 +31,7 @@
           settings.filetypes = {
             "*" = false;
             python = true;
+            javascript = true;
           };
         };
         copilot-chat = {
@@ -106,6 +107,18 @@
               autostart = true;
               filetypes = ["python"];
             };
+            ts_ls = {
+              enable = true;
+              autostart = true;
+              filetypes = [
+                "javascript"
+                "javascriptreact"
+                "javascript.jsx"
+                "typescript"
+                "typescriptreact"
+                "typescript.tsx"
+              ];
+            };
           };
           keymaps.lspBuf = {
             "gd" = "definition";
@@ -129,7 +142,10 @@
               markdownlint.enable = true;
               shellharden.enable = true;
               shfmt.enable = true;
-              prettier.enable = true;
+              prettier = {
+                enable = true;
+                disableTsServerFormatter = true;
+              };
               stylua.enable = true;
             };
           };
