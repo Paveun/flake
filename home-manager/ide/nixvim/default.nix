@@ -32,6 +32,11 @@
             "*" = false;
             python = true;
             javascript = true;
+            javascriptreact = true;
+            # javascript.jsx = true;
+            typescript = true;
+            typescriptreact = true;
+            # typescript.tsx = true;
           };
         };
         copilot-chat = {
