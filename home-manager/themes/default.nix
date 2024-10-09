@@ -4,4 +4,5 @@
     ./stylix.nix
     ./wallpaper
   ];
+  stylix.targets.kitty.enable = false;
 }
