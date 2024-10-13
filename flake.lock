@@ -526,11 +526,11 @@
         "umu": "umu"
       },
       "locked": {
-        "lastModified": 1728696993,
-        "narHash": "sha256-hdkdttBD5Mtm2ryfzgVdmH5Lof55qrXEQD0h0PdyWM0=",
+        "lastModified": 1728783634,
+        "narHash": "sha256-kh4rf1WWFzx1wcHf6lToksRm1Qu/abEYiojs/sCxAYQ=",
         "owner": "fufexan",
         "repo": "nix-gaming",
-        "rev": "a2ba9119d2b8f697be3286b1bf987b38c0123baf",
+        "rev": "6accf747c4a29c2ef26ee1a61e9b2466bc9da7b2",
         "type": "github"
       },
       "original": {
@@ -572,11 +572,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1728696962,
-        "narHash": "sha256-zhLDfVImuWQgwczQ+pxdwteWPiULTwYLzJNGluwcO4A=",
+        "lastModified": 1728783352,
+        "narHash": "sha256-9U5sXyy5i8N2iL6dROw8vAAhbbBAVWmKuNbEZj6CzSQ=",
         "owner": "lilyinstarlight",
         "repo": "nixos-cosmic",
-        "rev": "b744a190a610460e51fd2dbd10cf2bfc42711fe8",
+        "rev": "f545d4fc6c01afb04b9108f59d16160dcfa0a971",
         "type": "github"
       },
       "original": {
@@ -651,11 +651,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1728093190,
-        "narHash": "sha256-CAZF2NRuHmqTtRTNAruWpHA43Gg2UvuCNEIzabP0l6M=",
+        "lastModified": 1728538411,
+        "narHash": "sha256-f0SBJz1eZ2yOuKUr5CA9BHULGXVSn6miBuUWdTyhUhU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "e2f08f4d8b3ecb5cf5c9fd9cb2d53bb3c71807da",
+        "rev": "b69de56fac8c2b6f8fd27f2eca01dcda8e0a4221",
         "type": "github"
       },
       "original": {
@@ -742,11 +742,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1728736326,
-        "narHash": "sha256-JYy050VI7AQyDPHjZ/48rdNFfVvdbR0wPtsRA/4nc7E=",
+        "lastModified": 1728752931,
+        "narHash": "sha256-ZTj+Ahtouc9m9Ea4qfAFAkOR/1cq+6H7BOjO69MjZ78=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "2e1b3b7d43f485866573f70411a4797ce38e27bb",
+        "rev": "48b62ac2e607fb0c5332ba2a2455e9cf3184832a",
         "type": "github"
       },
       "original": {
@@ -817,11 +817,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1728613723,
-        "narHash": "sha256-zVVj0PKguM8ZMdLE43YW7dzer3tl9e6i5Qs1fr878+c=",
+        "lastModified": 1728700003,
+        "narHash": "sha256-Ox1pvEHxLK6lAdaKQW21Zvk65SPDag+cD8YA444R/og=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "ca93f28abd2147dd9997261dcaeacc5a30dba463",
+        "rev": "fc1e58ebabe0cef4442eedea07556ff0c9eafcfe",
         "type": "github"
       },
       "original": {
@@ -992,11 +992,11 @@
       },
       "locked": {
         "dir": "packaging/nix",
-        "lastModified": 1728075410,
-        "narHash": "sha256-JjA/C6EgpoAAdrm8KebOizz2+73V9wI6Y7JreAfWAwU=",
+        "lastModified": 1728772489,
+        "narHash": "sha256-6sHjXNhPrRXIV1au5jlSXHeqn/QHb9wyRt7V0F5p4PA=",
         "ref": "refs/heads/main",
-        "rev": "4dc0ef6c299d05cde360bec725765b370d2b75c8",
-        "revCount": 737,
+        "rev": "475e2b37e34a663b11f8c92b79dd45637a3e848c",
+        "revCount": 770,
         "submodules": true,
         "type": "git",
         "url": "https://github.com/Open-Wine-Components/umu-launcher/?dir=packaging/nix"
