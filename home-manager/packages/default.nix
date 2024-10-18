@@ -45,5 +45,6 @@
     fflogs
     asdf-vm
     ani-cli
+    cbonsai
   ];
 }
