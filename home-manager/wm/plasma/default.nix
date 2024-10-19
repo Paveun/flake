@@ -36,7 +36,7 @@
     #   variant = "frappe";
     #   accents = ["rosewater"];
     # })
-    rose-pine-gtk-theme
+    # rose-pine-gtk-theme
     # (catppuccin-papirus-folders.override {
     #   flavor = "frappe";
     #   accent = "rosewater";
