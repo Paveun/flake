@@ -7,8 +7,8 @@
 }: {
   imports = [
     ./global
-    # ../wm/plasma
-    ../wm/gnome
+    ../wm/plasma
+    # ../wm/gnome
     # ../wm/cosmic
   ];
   home = {

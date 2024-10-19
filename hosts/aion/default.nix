@@ -11,8 +11,8 @@
     ./hardware-configuration.nix
     ../common
     ../../nixos/system/amdgpu
-    # ../../nixos/wm/plasma
-    ../../nixos/wm/gnome
+    ../../nixos/wm/plasma
+    # ../../nixos/wm/gnome
     # ../../nixos/wm/cosmic
   ];
 
