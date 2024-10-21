@@ -31,7 +31,7 @@
     stylix.url = "github:danth/stylix";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     nix-gaming.url = "github:fufexan/nix-gaming";
-    zen-browser.url = "github:MarceColl/zen-browser-flake";
+    # zen-browser.url = "github:MarceColl/zen-browser-flake";
   };
   outputs = {
     self,
