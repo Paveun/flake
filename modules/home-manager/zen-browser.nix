@@ -3,7 +3,7 @@
 let
   version = "1.0.1-a.12";
   downloadUrl = "https://github.com/zen-browser/desktop/releases/download/${version}/zen.linux-specific.tar.bz2";
-  sha256 = "sha256:0jkzdrsd1qdw3pwdafnl5xb061vryxzgwmvp1a6ghdwgl2dm2fcz";
+  sha256 = "sha256:1b6klh9sf29kf5blyy2r1496gny6g70h2yfpyir79hxysabdf4qs";
 
   runtimeLibs = with pkgs; [
     libGL libGLU libevent libffi libjpeg libpng libstartup_notification libvpx libwebp
