@@ -1,6 +1,6 @@
 {pkgs, inputs, outputs, ...}: {
   imports = [
-    outputs.homeManagerModules.zen-browser
+    inputs.self.homeManagerModules.zen-browser
   ];
   home.packages = with pkgs; [
     # krabby
