@@ -1,4 +1,9 @@
-{pkgs, inputs, outputs, ...}: {
+{
+  pkgs,
+  inputs,
+  outputs,
+  ...
+}: {
   imports = [
     inputs.self.homeManagerModules.zen-browser
   ];

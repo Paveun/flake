@@ -45,7 +45,7 @@
       # users = ["${user}"];
     };
   };
-  
+
   users.users.${user}.extraGroups = [
     "plugdev"
     "openrazer"
