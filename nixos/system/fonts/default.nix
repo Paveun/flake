@@ -8,7 +8,7 @@
       (nerdfonts.override {fonts = ["FiraCode" "JetBrainsMono"];})
       noto-fonts
       noto-fonts-emoji
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
     ];
   };
 }
