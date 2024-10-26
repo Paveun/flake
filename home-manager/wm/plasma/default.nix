@@ -22,6 +22,15 @@
         };
       };
     };
+    mimeApps = {
+      enable = true;
+      defaultApplications = {
+        "x-scheme-handler/http" = "zen.desktop";
+        "x-scheme-handler/https" = "zen.desktop";
+        "x-scheme-handler/about" = "zen.desktop";
+        "x-scheme-handler/unknown" = "zen.desktop";
+      };
+    };
   };
 
   home.packages = with pkgs; [
