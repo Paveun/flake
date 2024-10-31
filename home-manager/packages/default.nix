@@ -54,5 +54,6 @@
     asdf-vm
     ani-cli
     cbonsai
+    glow
   ];
 }
