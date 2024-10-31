@@ -4,9 +4,9 @@
   lib,
   ...
 }: let
-  version = "1.0.1-a.14";
+  version = "1.0.1-a.16";
   downloadUrl = "https://github.com/zen-browser/desktop/releases/download/${version}/zen.linux-specific.tar.bz2";
-  sha256 = "sha256:0hfi40c0vwrpdgxwp7si9swzg5xmhm67dq797ggpvd6h942xbg2w";
+  sha256 = "sha256:0nmcr4czycgabj5zdxa7sllbnhmcn90kh55f78n9x88cda481q9f";
 
   runtimeLibs = with pkgs;
     [
