@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    systems.url = "github:nix-systems/default-linux";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -10,8 +11,8 @@
     sops-nix = {
       url = "github:mic92/sops-nix";
       # url = "github:Mic92/sops-nix/a4c33bfecb93458d90f9eb26f1cf695b47285243";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.nixpkgs-stable.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs-stable.follows = "nixpkgs";
     };
     nixvim = {
       url = "github:nix-community/nixvim";
@@ -38,17 +39,14 @@
     self,
     nixpkgs,
     home-manager,
+    systems,
     ...
   } @ inputs: let
     inherit (self) outputs;
     lib = nixpkgs.lib // home-manager.lib;
-    systems = [
-      "aarch64-linux"
-      "x86_64-linux"
-    ];
     user = "paveun";
-    forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
-    pkgsFor = lib.genAttrs systems (
+    forEachSystem = f: lib.genAttrs (import systems) (system: f pkgsFor.${system});
+    pkgsFor = lib.genAttrs (import systems) (
       system:
         import nixpkgs {
           inherit system;
@@ -60,19 +58,19 @@
     nixosModules = import ./modules/nixos;
     homeManagerModules = import ./modules/home-manager;
     nixosConfigurations = {
-      laptop = nixpkgs.lib.nixosSystem {
+      laptop = lib.nixosSystem {
         modules = [./hosts/laptop];
         specialArgs = {
           inherit user inputs outputs;
         };
       };
-      fishtank = nixpkgs.lib.nixosSystem {
+      fishtank = lib.nixosSystem {
         modules = [./hosts/fishtank];
         specialArgs = {
           inherit user inputs outputs;
         };
       };
-      aion = nixpkgs.lib.nixosSystem {
+      aion = lib.nixosSystem {
         modules = [./hosts/aion];
         specialArgs = {
           inherit user inputs outputs;

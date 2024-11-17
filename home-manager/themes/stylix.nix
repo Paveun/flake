@@ -7,10 +7,10 @@
     polarity = "dark";
     image = ./wallpaper/default.png;
     cursor = {
-      package = pkgs.catppuccin-cursors.mochaRosewater;
-      name = "catppuccin-mocha-rosewater-cursors";
-      # package = pkgs.rose-pine-cursor;
-      # name = "BreezeX-RosePine-Linux";
+      # package = pkgs.catppuccin-cursors.mochaRosewater;
+      # name = "catppuccin-mocha-rosewater-cursors";
+      package = pkgs.rose-pine-cursor;
+      name = "BreezeX-RosePine-Linux";
       size = 24;
     };
     fonts = {
