@@ -24,7 +24,7 @@
     };
     stylix.url = "github:danth/stylix";
     # chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-    # nix-gaming.url = "github:fufexan/nix-gaming";
+    nix-gaming.url = "github:fufexan/nix-gaming";
   };
   outputs = {
     self,
