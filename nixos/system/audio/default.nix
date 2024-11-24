@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    inputs.nix-gaming.nixosModules.pipewireLowLatency
+    # inputs.nix-gaming.nixosModules.pipewireLowLatency
   ];
   # sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -14,11 +14,11 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    lowLatency = {
-      enable = true;
-      quantum = 64;
-      rate = 4800;
-    };
+    # lowLatency = {
+    #   enable = true;
+    #   quantum = 64;
+    #   rate = 4800;
+    # };
     # extraConfig.pipewire."92-low-latency" = {
     #   "context.properties" = {
     #     "default.clock.rate" = 48000;
