@@ -29,6 +29,8 @@
   #   scheduler = "scx_rusty";
   # };
 
+  boot.kernelParams = [ "preempt=full" ];
+
   networking.hostName = "aion";
 
   fileSystems."/vault" = {
