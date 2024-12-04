@@ -55,5 +55,6 @@
     ani-cli
     cbonsai
     glow
+    floorp
   ];
 }
