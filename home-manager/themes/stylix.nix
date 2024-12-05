@@ -23,8 +23,8 @@
         name = "Roboto";
       };
       monospace = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMonoNFM-Regular";
+        package = pkgs.nerd-fonts.fira-code;
+        name = "FiraCode Nerd Font";
       };
       emoji = {
         package = pkgs.noto-fonts-emoji;
