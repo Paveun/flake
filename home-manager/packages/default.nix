@@ -5,7 +5,7 @@
   ...
 }: {
   imports = [
-    inputs.self.homeManagerModules.zen-browser
+    # inputs.self.homeManagerModules.zen-browser
   ];
   home.packages = with pkgs; [
     # krabby
@@ -47,7 +47,7 @@
     spotify
     # xivlauncher
     inputs.nixos-xivlauncher-rb.packages.x86_64-linux.xivlauncher-rb
-    # inputs.zen-browser.packages."${system}".specific
+    inputs.zen-browser.packages.${pkgs.system}.default
     prismlauncher
     obsidian
     fflogs
