@@ -1,5 +1,5 @@
 {
-  services.hyprlock = {
+  programs.hyprlock = {
     enable = true;
     settings = {
       # GENERAL
@@ -11,7 +11,7 @@
       # BACKGROUND
       background = {
         monitor = "";
-        path = "../../themes/wallpaper/default.png";
+        # path = "../../themes/wallpaper/default.png";
         blur_passes = 0;
         # color = $base;
       };
@@ -20,7 +20,7 @@
         # TIME
         {
           monitor = "";
-          text = "cmd[update:30000] echo '$(date +'%R')'";
+          text = ''cmd[update:30000] echo "$(date +"%R")"'';
           # color = $text
           font_size = 90;
           # font_family = $font
@@ -32,7 +32,7 @@
         # DATE 
         {
           monitor = "";
-          text = "cmd[update:43200000] echo '$(date +'%A, %d %B %Y')'";
+          text = ''cmd[update:43200000] echo "$(date +"%A, %d %B %Y")"'';
           # color = $text;
           font_size = 25;
           # font_family = $font;
@@ -67,11 +67,11 @@
         # inner_color = $surface0
         # font_color = $text
         fade_on_empty = false;
-        placeholder_text = "<span foreground='##$textAlpha'><i>󰌾 Logged in as </i><span foreground='##$accentAlpha'>$USER</span></span>";
+        placeholder_text = ''<i>󰌾 Logged in as </i>$USER'';
         hide_input = false;
           # check_color = $accent
           # fail_color = $red
-        fail_text = "<i>$FAIL <b>($ATTEMPTS)</b></i>";
+        fail_text = ''<i>$FAIL <b>($ATTEMPTS)</b></i>'';
         # capslock_color = $yellow
         position = "0, -35";
         halign = "center";
