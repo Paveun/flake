@@ -3,6 +3,7 @@
     ./wofi
     ./waybar.nix
     ./hyprland.nix
+    ./hypridle.nix
     ./dunst.nix
     ../../themes
   ];
@@ -31,7 +32,6 @@
       hyprpaper
       hyprcursor
       hyprlock
-      hypridle
       wl-clipboard
       nwg-look
       pavucontrol
