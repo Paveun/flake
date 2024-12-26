@@ -44,13 +44,13 @@
         "XCURSOR_SIZE,24"
         "QT_QPA_PLATFORM,wayland"
         # "QT_QPA_PLATFORMTHEME,qt6ct"
-        "LIBVA_DRIVER_NAME,nvidia"
+        # "LIBVA_DRIVER_NAME,nvidia"
         "XDG_SESSION_TYPE,wayland"
-        "GBM_BACKEND,nvidia-drm"
-        "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-        "WLR_NO_HARDWARE_CURSORS,1"
-        "HYPRCURSOR_THEME,Catppuccin-Frappe-Rosewater-Cursors"
-        "HYPRCURSOR_SIZE,24"
+        # "GBM_BACKEND,nvidia-drm"
+        # "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+        # "WLR_NO_HARDWARE_CURSORS,1"
+        # "HYPRCURSOR_THEME,Catppuccin-Frappe-Rosewater-Cursors"
+        # "HYPRCURSOR_SIZE,24"
       ];
       misc = {
         force_default_wallpaper = 0;

@@ -31,6 +31,7 @@
       hyprpaper
       hyprcursor
       hyprlock
+      hypridle
       wl-clipboard
       nwg-look
       pavucontrol
