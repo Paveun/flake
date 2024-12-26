@@ -4,6 +4,7 @@
     ./waybar.nix
     ./hyprland.nix
     ./hypridle.nix
+    ./hyprlock.nix
     ./dunst.nix
     ../../themes
   ];
@@ -21,9 +22,9 @@
       #    splash = false
       #  '';
       #};
-      ".config/hypr/hyprlock.conf" = {
-        source = ./hypr/hyprlock.conf;
-      };
+      # ".config/hypr/hyprlock.conf" = {
+      #   source = ./hypr/hyprlock.conf;
+      # };
     };
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
@@ -31,7 +32,7 @@
     packages = with pkgs; [
       hyprpaper
       hyprcursor
-      hyprlock
+      # hyprlock
       wl-clipboard
       nwg-look
       pavucontrol
