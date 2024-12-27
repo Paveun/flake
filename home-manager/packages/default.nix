@@ -48,6 +48,7 @@
     # xivlauncher
     inputs.nixos-xivlauncher-rb.packages.x86_64-linux.xivlauncher-rb
     inputs.zen-browser.packages.${pkgs.system}.default
+    inputs.ghostty.packages.${pkgs.system}.default
     prismlauncher
     obsidian
     fflogs
