@@ -307,11 +307,11 @@
         "zig": "zig"
       },
       "locked": {
-        "lastModified": 1735924432,
-        "narHash": "sha256-OxI6QxoMsKBBTaH+RNFPIE7kiqYyv8DnO1y8zLWK36g=",
+        "lastModified": 1735930891,
+        "narHash": "sha256-wVnYchGE7IyUrEyxeuWvMKiyh1yYdUQC4XlRyZyanYk=",
         "owner": "ghostty-org",
         "repo": "ghostty",
-        "rev": "7eb35d72758a984c6c028272e6f53b7694e42b60",
+        "rev": "74386be017d6e14c108c5dc9f5f8c08c41110445",
         "type": "github"
       },
       "original": {
@@ -1000,15 +1000,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1735617939,
-        "narHash": "sha256-5kaPvKkWx5okEePzI3KvDpBYn9CGJ/1QUhIX44R5Ny0=",
-        "owner": "youwen5",
+        "lastModified": 1735881391,
+        "narHash": "sha256-T9N1q8YWn9MnIqUpm0+p/kAqktfSoeKfyOTZiXQoNPU=",
+        "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "rev": "48130c8dd35a0f65c6b2eac5b54889ebf58cb9eb",
+        "rev": "4a48a5c007863df58d1586f96010a6d4bde99f69",
         "type": "github"
       },
       "original": {
-        "owner": "youwen5",
+        "owner": "0xc000022070",
         "repo": "zen-browser-flake",
         "type": "github"
       }
