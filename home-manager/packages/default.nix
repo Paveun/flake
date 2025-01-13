@@ -50,7 +50,7 @@
     inputs.zen-browser.packages.${pkgs.system}.default
     inputs.ghostty.packages.${pkgs.system}.default
     prismlauncher
-    obsidian
+    # obsidian
     fflogs
     asdf-vm
     ani-cli
