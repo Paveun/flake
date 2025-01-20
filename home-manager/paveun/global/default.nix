@@ -1,13 +1,13 @@
 {inputs, ...}: {
   imports = [
     inputs.stylix.homeManagerModules.stylix
-    inputs.nixvim.homeManagerModules.nixvim
     ../../sops
     ../../terminal
     ../../packages
     # ../../themes
     # ../../ide/lunarvim
-    ../../ide/nixvim
+    # ../../ide/nixvim
+    ../../ide/nvf
     ../../packages/firefox.nix
   ];
 
