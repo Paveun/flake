@@ -1,5 +1,6 @@
-{pkgs, ...}: {
+{inputs, pkgs, ...}: {
   imports = [
+    inputs.nixvim.homeManagerModules.nixvim
     ./cmp.nix
   ];
 
@@ -26,22 +27,22 @@
       };
       globals.mapleader = " ";
       plugins = {
-        copilot-vim = {
-          enable = true;
-          settings.filetypes = {
-            "*" = false;
-            python = true;
-            javascript = true;
-            javascriptreact = true;
-            # javascript.jsx = true;
-            typescript = true;
-            typescriptreact = true;
-            # typescript.tsx = true;
-          };
-        };
-        copilot-chat = {
-          enable = true;
-        };
+        # copilot-vim = {
+        #   enable = true;
+        #   settings.filetypes = {
+        #     "*" = false;
+        #     python = true;
+        #     javascript = true;
+        #     javascriptreact = true;
+        #     # javascript.jsx = true;
+        #     typescript = true;
+        #     typescriptreact = true;
+        #     # typescript.tsx = true;
+        #   };
+        # };
+        # copilot-chat = {
+        #   enable = true;
+        # };
         treesitter = {
           enable = true;
           nixGrammars = true;
