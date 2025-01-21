@@ -30,7 +30,6 @@
     stylix.url = "github:danth/stylix";
     # chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     nix-gaming.url = "github:fufexan/nix-gaming";
-    ghostty.url = "github:ghostty-org/ghostty";
   };
   outputs = {
     self,
