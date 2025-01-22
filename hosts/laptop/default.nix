@@ -22,8 +22,8 @@
   #   ./home.nix
   # ];
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  # boot.kernelPackages = pkgs.linuxPackages_zen;
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
   # boot.kernelPackages = pkgs.linuxPackages_cachyos;
   # chaotic.scx = {
   #   enable = true;
