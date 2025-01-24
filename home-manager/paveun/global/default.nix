@@ -3,6 +3,7 @@
     inputs.stylix.homeManagerModules.stylix
     ../../sops
     ../../terminal
+    ../../terminal/ghostty.nix
     ../../packages
     # ../../themes
     # ../../ide/lunarvim
