@@ -10,7 +10,7 @@
         theme = {
           enable = true;
           name = "rose-pine";
-          style = "main";
+          style = "moon";
           transparent = false;
         };
         languages = {
