@@ -55,7 +55,7 @@
 
   environment.systemPackages = with pkgs; [
     # openrazer-daemon
-    polychromatic
+    # polychromatic
   ];
 
   # hardware.nvidia.prime = {
