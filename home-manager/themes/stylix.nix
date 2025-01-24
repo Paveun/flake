@@ -3,7 +3,7 @@
     # targets.hyprland.enable = false;
     enable = true;
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
     polarity = "dark";
     image = ./wallpaper/default.png;
     cursor = {
