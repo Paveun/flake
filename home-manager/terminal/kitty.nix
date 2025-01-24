@@ -16,6 +16,6 @@
     #   name = "JetbrainsMono Nerd Font Mono";
     #   size = 10;
     # };
-    # themeFile = "Catppuccin-Mocha";
+    themeFile = "rose-pine-moon";
   };
 }
