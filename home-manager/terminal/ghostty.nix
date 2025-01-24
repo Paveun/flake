@@ -6,7 +6,7 @@
       settings = {
         theme = "rose-pine-moon";
         # font-size = 10;
-        # font-family = "JetBrainsMono Nerd Font";
+        font-family = "JetBrainsMono Nerd Font Mono";
       };
     };
   };
