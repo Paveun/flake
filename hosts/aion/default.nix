@@ -42,10 +42,10 @@
   hardware = {
     cpu.amd.updateMicrocode = true;
     xone.enable = true;
-    openrazer = {
-      enable = true;
-      # users = ["${user}"];
-    };
+    # openrazer = {
+    #   enable = true;
+    #   # users = ["${user}"];
+    # };
   };
 
   users.users.${user}.extraGroups = [
@@ -54,7 +54,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    openrazer-daemon
+    # openrazer-daemon
     polychromatic
   ];
 
