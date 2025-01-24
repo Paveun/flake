@@ -85,7 +85,7 @@
           nvim-cursorline.enable = true;
           cinnamon-nvim.enable = true;
           fidget-nvim.enable = true;
-
+          rainbow-delimiters.enable = true;
           highlight-undo.enable = true;
           indent-blankline.enable = true;
 
@@ -101,7 +101,10 @@
           motion = {
             hop.enable = true;
             leap.enable = true;
-            precognition.enable = true;
+            precognition = {
+              enable = true;
+              setupOpts.startVisible = false;
+            };
           };
 
           images = {
