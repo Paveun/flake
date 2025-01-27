@@ -56,5 +56,6 @@
     cbonsai
     glow
     floorp
+    tidal-hifi
   ];
 }
