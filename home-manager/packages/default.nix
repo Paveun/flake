@@ -57,5 +57,6 @@
     glow
     floorp
     tidal-hifi
+    ollama
   ];
 }
