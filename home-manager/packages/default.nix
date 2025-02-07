@@ -33,7 +33,7 @@
     # remmina
     openfortivpn
     openvpn
-    # distrobox
+    distrobox
     openconnect
     openvpn
     jq
