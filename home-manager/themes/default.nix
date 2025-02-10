@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ./gtk.nix
+    # ./gtk.nix
     ./stylix.nix
     ./wallpaper
   ];
