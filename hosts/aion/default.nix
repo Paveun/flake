@@ -20,8 +20,8 @@
   #   ./home.nix
   # ];
 
-  # boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # boot.kernelPackages = pkgs.linuxPackages_zen;
   # boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
   # boot.kernelPackages = pkgs.linuxPackages_cachyos;
   # chaotic.scx = {
@@ -41,7 +41,8 @@
 
   hardware = {
     cpu.amd.updateMicrocode = true;
-    xone.enable = true;
+    xpadneo.enable = true;
+    # xone.enable = true;
     # openrazer = {
     #   enable = true;
     #   # users = ["${user}"];
@@ -54,6 +55,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    # linuxKernel.packages.linux_zen.xone
     # openrazer-daemon
     # polychromatic
   ];
