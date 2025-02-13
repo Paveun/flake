@@ -22,7 +22,7 @@
           markdown.enable = true;
           ts.enable = true;
           rust.enable = true;
-          # python.enable = true;
+          python.enable = true;
         };
         statusline.lualine = {
           enable = true;
