@@ -21,6 +21,7 @@
           nix.enable = true;
           markdown.enable = true;
           ts.enable = true;
+          ts.lsp.server = "denols";
           rust.enable = true;
           python.enable = true;
         };
