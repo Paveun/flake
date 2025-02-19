@@ -7,9 +7,9 @@
   sops.secrets = {
     kagi-token = {};
   };
-  home.sessionVariables = {
-    MOZ_ENABLE_WAYLAND = "0";
-  };
+  # home.sessionVariables = {
+  #   MOZ_ENABLE_WAYLAND = "0";
+  # };
   programs.firefox = {
     enable = true;
     package = pkgs.firefox.overrideAttrs (old: {
@@ -146,13 +146,13 @@
             "Google".metaData.alias = "@g";
           };
         };
-        extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
+        extensions.packages = with inputs.firefox-addons.packages.${pkgs.system}; [
           ublock-origin
           darkreader
           proton-pass
           privacy-badger
           firefox-color
-          # kagi-search
+          kagi-search
         ];
       };
       meta4 = {
@@ -198,7 +198,7 @@
             "Google".metaData.alias = "@g";
           };
         };
-        extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
+        extensions.packages = with inputs.firefox-addons.packages.${pkgs.system}; [
           ublock-origin
           darkreader
           proton-pass
