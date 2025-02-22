@@ -20,6 +20,13 @@
       # };
     };
   };
+  gtk = {
+    enable = true;
+    iconTheme = {
+      package = pkgs.papirus-icon-theme;
+      name = "Papirus-Dark";
+    };
+  };
   home.packages = with pkgs; [
     wl-clipboard
   ];
