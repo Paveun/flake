@@ -11,7 +11,7 @@
     # krabby
     fastfetch
     devenv
-    kate
+    # kate
     vscode
     winbox
     google-chrome
