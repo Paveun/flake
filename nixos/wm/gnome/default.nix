@@ -19,6 +19,7 @@
     appindicator
     caffeine
     alphabetical-app-grid
+    clipboard-history
   ];
   environment.sessionVariables.MUTTER_DEBUG_KMS_THREAD_TYPE = "user";
 }
