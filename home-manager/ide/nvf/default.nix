@@ -13,6 +13,7 @@
         #   style = "moon";
         #   transparent = false;
         # };
+        useSystemClipboard = true;
         languages = {
           enableLSP = true;
           enableTreesitter = true;
