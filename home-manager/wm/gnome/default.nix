@@ -13,6 +13,7 @@
           caffeine.extensionUuid
           user-themes.extensionUuid
           alphabetical-app-grid.extensionUuid
+          clipboard-history.extensionUuid
         ];
       };
       # "org.gnome.mutter" = {
