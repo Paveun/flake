@@ -58,6 +58,7 @@
     # linuxKernel.packages.linux_zen.xone
     # openrazer-daemon
     # polychromatic
+    amdgpu_top
   ];
 
   # hardware.nvidia.prime = {
