@@ -29,7 +29,7 @@
   #   scheduler = "scx_rusty";
   # };
 
-  boot.kernelParams = [ "preempt=full" ];
+  boot.kernelParams = ["preempt=full"];
 
   networking.hostName = "aion";
 

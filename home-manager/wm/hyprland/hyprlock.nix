@@ -7,7 +7,7 @@
         disable_loading_bar = true;
         hide_cursor = true;
       };
-      
+
       # BACKGROUND
       background = {
         monitor = "";
@@ -15,7 +15,7 @@
         blur_passes = 0;
         # color = $base;
       };
-      
+
       label = [
         # TIME
         {
@@ -28,8 +28,8 @@
           halign = "right";
           valign = "top";
         }
-      
-        # DATE 
+
+        # DATE
         {
           monitor = "";
           text = ''cmd[update:43200000] echo "$(date +"%A, %d %B %Y")"'';
@@ -41,20 +41,20 @@
           valign = "top";
         }
       ];
-      
+
       # USER AVATAR
-      
+
       image = {
-        monitor = ""; 
+        monitor = "";
         path = "~/.face";
         size = 100;
         # border_color = $accent
-      
+
         position = "0, 75";
         halign = "center";
         valign = "center";
       };
-      
+
       # INPUT FIELD
       input-field = {
         monitor = "";
@@ -69,8 +69,8 @@
         fade_on_empty = false;
         placeholder_text = ''<i>󰌾 Logged in as </i>$USER'';
         hide_input = false;
-          # check_color = $accent
-          # fail_color = $red
+        # check_color = $accent
+        # fail_color = $red
         fail_text = ''<i>$FAIL <b>($ATTEMPTS)</b></i>'';
         # capslock_color = $yellow
         position = "0, -35";

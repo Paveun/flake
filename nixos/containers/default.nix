@@ -22,7 +22,7 @@
       };
     };
   };
-  users.users.${user}.extraGroups = [ "docker" ];
+  users.users.${user}.extraGroups = ["docker"];
   environment.systemPackages = [
     pkgs.docker-compose
     # pkgs.podman-compose

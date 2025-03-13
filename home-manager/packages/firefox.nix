@@ -10,7 +10,7 @@
   # home.sessionVariables = {
   #   MOZ_ENABLE_WAYLAND = "0";
   # };
-  stylix.targets.firefox.profileNames = [ "default" "meta4" ];
+  stylix.targets.firefox.profileNames = ["default" "meta4"];
   programs.firefox = {
     enable = true;
     package = pkgs.firefox.overrideAttrs (old: {
