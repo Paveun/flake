@@ -8,7 +8,6 @@
     # ../../ide/lunarvim
     # ../../ide/nixvim
     ../../ide/nvf
-    ../../packages/firefox.nix
   ];
 
   nixpkgs = {

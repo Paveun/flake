@@ -1,17 +1,15 @@
 {
   pkgs,
   inputs,
-  outputs,
   ...
 }: {
   imports = [
+    ./firefox.nix
     # inputs.self.homeManagerModules.zen-browser
   ];
   home.packages = with pkgs; [
-    # krabby
     fastfetch
     devenv
-    # kate
     vscode
     winbox
     google-chrome
@@ -20,19 +18,16 @@
     haruna
     deluge
     protonvpn-gui
-    # conda
     keepassxc
     mpv
-    google-drive-ocamlfuse
-    # remmina
-    openfortivpn
-    openvpn
-    distrobox
-    openconnect
-    openvpn
-    jq
+    # google-drive-ocamlfuse
+    # openfortivpn
+    # openvpn
+    # distrobox
+    # openconnect
+    # jq
     gh
-    ncspot
+    # ncspot
     slack
     gdu
     xarchiver
@@ -49,7 +44,7 @@
     ani-cli
     cbonsai
     glow
-    floorp
+    # floorp
     tidal-hifi
     ollama
   ];
