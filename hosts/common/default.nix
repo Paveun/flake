@@ -17,6 +17,7 @@
     ../../nixos/containers
     ../../nixos/packages
     ../../nixos/system/fonts
+    ../../nixos/system/tailscale
     ../../nixos/gaming/steam
     ../../nixos/gaming/lutris
   ];
