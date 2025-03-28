@@ -53,7 +53,7 @@
         search = {
           force = true;
           default = "Kagi";
-          order = ["Kagi" "Google" "DuckDuckGo"];
+          order = ["Kagi" "google" "ddg"];
           engines = {
             "Nix Packages" = {
               urls = [
@@ -76,12 +76,12 @@
             };
             "NixOS Wiki" = {
               urls = [{template = "https://nixos.wiki/index.php?search={searchTerms}";}];
-              iconUpdateURL = "https://nixos.wiki/favicon.png";
+              icon = "https://nixos.wiki/favicon.png";
               updateInterval = 24 * 60 * 60 * 1000; # every day
               definedAliases = ["@nw"];
             };
             "Kagi" = {
-              iconUpdateURL = "https://kagi.com/favicon.ico";
+              icon = "https://kagi.com/favicon.ico";
               updateInterval = 24 * 60 * 60 * 1000;
               definedAliases = ["@k"];
               urls = [
@@ -97,7 +97,7 @@
               ];
             };
             "GitHub" = {
-              iconUpdateURL = "https://github.com/favicon.ico";
+              icon = "https://github.com/favicon.ico";
               updateInterval = 24 * 60 * 60 * 1000;
               definedAliases = ["@gh"];
               urls = [
@@ -127,8 +127,8 @@
                 }
               ];
             };
-            "YouTube" = {
-              iconUpdateURL = "https://youtube.com/favicon.ico";
+            youtube = {
+              icon = "https://youtube.com/favicon.ico";
               updateInterval = 24 * 60 * 60 * 1000;
               definedAliases = ["@yt"];
               urls = [
@@ -143,8 +143,8 @@
                 }
               ];
             };
-            "Bing".metaData.hidden = true;
-            "Google".metaData.alias = "@g";
+            bing.metaData.hidden = true;
+            google.metaData.alias = "@g";
           };
         };
         extensions.packages = with inputs.firefox-addons.packages.${pkgs.system}; [
@@ -167,8 +167,8 @@
         };
         search = {
           force = true;
-          default = "Google";
-          order = ["Google" "DuckDuckGo"];
+          default = "google";
+          order = ["google" "ddg"];
           engines = {
             "Nix Packages" = {
               urls = [
@@ -191,12 +191,12 @@
             };
             "NixOS Wiki" = {
               urls = [{template = "https://nixos.wiki/index.php?search={searchTerms}";}];
-              iconUpdateURL = "https://nixos.wiki/favicon.png";
+              icon = "https://nixos.wiki/favicon.png";
               updateInterval = 24 * 60 * 60 * 1000; # every day
               definedAliases = ["@nw"];
             };
-            "Bing".metaData.hidden = true;
-            "Google".metaData.alias = "@g";
+            bing.metaData.hidden = true;
+            google.metaData.alias = "@g";
           };
         };
         extensions.packages = with inputs.firefox-addons.packages.${pkgs.system}; [
