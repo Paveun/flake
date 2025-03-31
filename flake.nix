@@ -27,7 +27,8 @@
       url = "github:lilyinstarlight/nixos-cosmic";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    stylix.url = "github:danth/stylix";
+    # stylix.url = "github:danth/stylix";
+    stylix.url = "github:awwpotato/stylix/hotfix-home-manager-integration";
     # chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     nix-gaming.url = "github:fufexan/nix-gaming";
   };
