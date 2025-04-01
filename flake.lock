@@ -871,16 +871,15 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1743458304,
-        "narHash": "sha256-BMiocf4b5KcIMnrG7WxJ7UOKsa9h9mAzMbNPU5k2FZA=",
-        "owner": "awwpotato",
+        "lastModified": 1743464673,
+        "narHash": "sha256-XQXrK7o2c/5VgiyaSbaIeKhtfhSiF5ykppITYzPnXtk=",
+        "owner": "danth",
         "repo": "stylix",
-        "rev": "2fc83b21b831bf6048aefa634c629b7c6bc47b9c",
+        "rev": "711bd28ac96dec8c9187f8db4a297677eef2e654",
         "type": "github"
       },
       "original": {
-        "owner": "awwpotato",
-        "ref": "hotfix-home-manager-integration",
+        "owner": "danth",
         "repo": "stylix",
         "type": "github"
       }
