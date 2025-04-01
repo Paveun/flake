@@ -508,11 +508,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1743531084,
+        "lastModified": 1743539528,
         "narHash": "sha256-IOfLnebyXv2v8srLwKOx7TSi2NhHrvqL5AtpDEGVhJ4=",
         "owner": "lilyinstarlight",
         "repo": "nixos-cosmic",
-        "rev": "c231cbbfdd897b86efc9138a37ac302d5a29fb5d",
+        "rev": "1a6fc6a3d1a9ea00e5ceba15af271330f9e02d4a",
         "type": "github"
       },
       "original": {
@@ -690,11 +690,11 @@
         "nuschtosSearch": "nuschtosSearch"
       },
       "locked": {
-        "lastModified": 1743516183,
-        "narHash": "sha256-IxKxX0aT00oX9BswKA1c76gumpwX/pAoP8NOo4ycgA4=",
+        "lastModified": 1743536158,
+        "narHash": "sha256-/jlBU7EGIfaa5VKwvVyrSspuuNmgKYOjAuTd2ywyevg=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "5a491f4b2bc132cea2b56bfad0d445708c223113",
+        "rev": "754b8df7e37be04b7438decee5a5aa18af72cbe1",
         "type": "github"
       },
       "original": {
