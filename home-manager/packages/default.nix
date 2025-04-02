@@ -35,7 +35,7 @@
     brave
     spotify
     # xivlauncher
-    inputs.nixos-xivlauncher-rb.packages.x86_64-linux.xivlauncher-rb
+    inputs.nixos-xivlauncher-rb.packages.${pkgs.system}.xivlauncher-rb
     inputs.zen-browser.packages.${pkgs.system}.default
     prismlauncher
     # obsidian
