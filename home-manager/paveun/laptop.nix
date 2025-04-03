@@ -30,4 +30,10 @@
   };
   home.packages = with pkgs; [
   ];
+  services = {
+    ollama = {
+      enable = true;
+      acceleration = "cuda";
+    };
+  };
 }

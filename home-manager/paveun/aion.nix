@@ -33,4 +33,10 @@
     via
     alsa-scarlett-gui
   ];
+  services = {
+    ollama = {
+      enable = true;
+      acceleration = "rocm";
+    };
+  };
 }
