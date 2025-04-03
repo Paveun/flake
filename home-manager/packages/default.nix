@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./firefox.nix
+    ./ollama.nix
     # inputs.self.homeManagerModules.zen-browser
   ];
   home.packages = with pkgs; [
@@ -46,6 +47,5 @@
     glow
     # floorp
     tidal-hifi
-    ollama
   ];
 }
