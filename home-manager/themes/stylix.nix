@@ -5,7 +5,7 @@
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
     polarity = "dark";
-    image = ./wallpaper/default.png;
+    image = ./wallpaper/chibi_g5.jpeg;
     cursor = {
       # package = pkgs.catppuccin-cursors.mochaRosewater;
       # name = "catppuccin-mocha-rosewater-cursors";
