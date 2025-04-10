@@ -1,7 +1,7 @@
 {
   home.file = {
     ".config/wallpaper/default.png" = {
-      source = ./default.png;
+      source = ./chibi_g5.jpeg;
     };
   };
 }
