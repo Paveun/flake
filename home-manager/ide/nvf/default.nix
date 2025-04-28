@@ -23,7 +23,7 @@
           markdown.enable = true;
           ts.enable = true;
           ts.lsp.server = "denols";
-          rust.enable = true;
+          # rust.enable = true;
           python.enable = true;
         };
         statusline.lualine = {
@@ -50,8 +50,8 @@
         };
         git = {
           enable = true;
-          gitsigns.enable = true;
-          gitsigns.codeActions.enable = true;
+          # gitsigns.enable = true;
+          # gitsigns.codeActions.enable = true;
         };
         terminal = {
           toggleterm = {
