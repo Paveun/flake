@@ -6,8 +6,8 @@
     ../../packages
     # ../../themes
     # ../../ide/lunarvim
-    ../../ide/nixvim
-    # ../../ide/nvf
+    # ../../ide/nixvim
+    ../../ide/nvf
   ];
 
   nixpkgs = {
