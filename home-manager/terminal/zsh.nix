@@ -4,7 +4,7 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    initExtra = "${pkgs.krabby}/bin/krabby random --no-title";
+    initContent = "${pkgs.krabby}/bin/krabby random --no-title";
     shellAliases = {
       ssh = "TERM=xterm-256color command ssh";
     };
