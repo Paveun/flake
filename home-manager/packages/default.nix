@@ -17,7 +17,7 @@
     tree
     haruna
     deluge
-    # protonvpn-gui
+    protonvpn-gui
     keepassxc
     mpv
     # google-drive-ocamlfuse
