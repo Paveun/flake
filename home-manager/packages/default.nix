@@ -33,16 +33,16 @@
     xarchiver
     vesktop
     brave
-    spotify
+    # spotify
     xivlauncher
     # inputs.nixos-xivlauncher-rb.packages.${pkgs.system}.xivlauncher-rb
     inputs.zen-browser.packages.${pkgs.system}.default
     prismlauncher
     # obsidian
     fflogs
-    asdf-vm
+    # asdf-vm
     ani-cli
-    cbonsai
+    # cbonsai
     glow
     # floorp
     tidal-hifi
