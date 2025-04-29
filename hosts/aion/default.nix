@@ -7,7 +7,7 @@
   ...
 }: {
   imports = [
-    # inputs.chaotic.nixosModules.default
+    inputs.chaotic.nixosModules.default
     ./hardware-configuration.nix
     ../common
     ../../nixos/system/amdgpu
@@ -20,14 +20,14 @@
   #   ./home.nix
   # ];
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
   # boot.kernelPackages = pkgs.linuxPackages_zen;
   # boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
-  # boot.kernelPackages = pkgs.linuxPackages_cachyos;
-  # chaotic.scx = {
-  #   enable = true;
-  #   scheduler = "scx_rusty";
-  # };
+  boot.kernelPackages = pkgs.linuxPackages_cachyos;
+  services.scx = {
+    enable = true;
+    # scheduler = "scx_rusty";
+  };
 
   boot.kernelParams = ["preempt=full"];
 
