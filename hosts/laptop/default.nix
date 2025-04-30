@@ -8,7 +8,7 @@
   ...
 }: {
   imports = [
-    inputs.chaotic.nixosModules.default
+    # inputs.chaotic.nixosModules.default
     ./hardware-configuration.nix
     ../common
     ../../nixos/system/nvidia
@@ -22,13 +22,13 @@
   #   ./home.nix
   # ];
 
-  # boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   # boot.kernelPackages = pkgs.linuxPackages_zen;
-  boot.kernelPackages = pkgs.linuxPackages_cachyos;
-  services.scx = {
-    enable = true;
-    # scheduler = "scx_rusty";
-  };
+  # boot.kernelPackages = pkgs.linuxPackages_cachyos;
+  # services.scx = {
+  #   enable = true;
+  #   # scheduler = "scx_rusty";
+  # };
 
   networking.hostName = "laptop";
 
