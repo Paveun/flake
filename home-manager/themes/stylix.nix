@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   stylix = {
     # targets.hyprland.enable = false;
+    targets.mako.enable = false;
     enable = true;
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
