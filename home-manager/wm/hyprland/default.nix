@@ -26,9 +26,9 @@
       #   source = ./hypr/hyprlock.conf;
       # };
     };
-    sessionVariables = {
-      NIXOS_OZONE_WL = "1";
-    };
+    # sessionVariables = {
+    #   NIXOS_OZONE_WL = "1";
+    # };
     packages = with pkgs; [
       hyprpaper
       hyprcursor
@@ -45,24 +45,24 @@
     ];
   };
 
-  xdg = {
-    enable = true;
-    portal = {
-      enable = true;
-      extraPortals = with pkgs; [
-        xdg-desktop-portal-gtk
-        xdg-desktop-portal-hyprland
-      ];
-      xdgOpenUsePortal = true;
-      config = {
-        common = {
-          default = [
-            "gtk"
-          ];
-        };
-      };
-    };
-  };
+  # xdg = {
+  #   enable = true;
+  #   portal = {
+  #     enable = true;
+  #     extraPortals = with pkgs; [
+  #       xdg-desktop-portal-gtk
+  #       xdg-desktop-portal-hyprland
+  #     ];
+  #     xdgOpenUsePortal = true;
+  #     config = {
+  #       common = {
+  #         default = [
+  #           "gtk"
+  #         ];
+  #       };
+  #     };
+  #   };
+  # };
 
   # qt = {
   #   enable = true;

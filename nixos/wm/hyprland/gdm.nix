@@ -6,7 +6,7 @@
         wayland = true;
       };
     };
-    displayManager.defaultSession = "hyprland-uwsm";
+    displayManager.defaultSession = "hyprland";
     gnome.gnome-keyring.enable = true;
   };
 

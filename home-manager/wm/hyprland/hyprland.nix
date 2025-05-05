@@ -6,18 +6,18 @@
   wayland.windowManager.hyprland = {
     enable = true;
     # enableNvidiaPatches = true;
-    xwayland.enable = true;
     settings = {
       exec-once = [
         # "kwalletd6"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "waybar --config $HOME/.config/waybar/config --style $HOME/.config/waybar/style.css"
-        "nm-applet --indicator & disown"
+        # "waybar --config $HOME/.config/waybar/config --style $HOME/.config/waybar/style.css"
+        "waybar"
+        # "nm-applet --indicator & disown"
         "dunst"
         "hyprpaper"
         "udiskie"
         # "hyprctl setcursor Catppuccin-Frappe-Rosewater-Cursors 24"
-        "hyprctl setcursor BreezeX-RosePine-Linux 24"
+        # "hyprctl setcursor BreezeX-RosePine-Linux 24"
         "wl-paste --type text --watch cliphist store" #Stores only text data
         "wl-paste --type image --watch cliphist store" #Stores only image data
         # copyq --start-server"
@@ -41,11 +41,11 @@
         disable_hyprland_logo = true;
       };
       env = [
-        "XCURSOR_SIZE,24"
-        "QT_QPA_PLATFORM,wayland"
+        # "XCURSOR_SIZE,24"
+        # "QT_QPA_PLATFORM,wayland"
         # "QT_QPA_PLATFORMTHEME,qt6ct"
         # "LIBVA_DRIVER_NAME,nvidia"
-        "XDG_SESSION_TYPE,wayland"
+        # "XDG_SESSION_TYPE,wayland"
         # "GBM_BACKEND,nvidia-drm"
         # "__GLX_VENDOR_LIBRARY_NAME,nvidia"
         # "WLR_NO_HARDWARE_CURSORS,1"
@@ -76,7 +76,7 @@
       };
       bind =
         [
-          "$mainMod, Q, exec, alacritty"
+          "$mainMod, Q, exec, kitty"
           "$mainMod, C, killactive, "
           "$mainMod, M, exit, "
           "$mainMod, L, exec, hyprlock"

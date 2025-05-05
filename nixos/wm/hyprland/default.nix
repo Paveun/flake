@@ -5,21 +5,21 @@
   ];
   programs.hyprland = {
     enable = true;
-    withUWSM = true;
-    xwayland.enable = true;
+    # withUWSM = true;
+    # xwayland.enable = true;
   };
 
   services = {
     gvfs.enable = true;
     udisks2.enable = true;
     # gnome.gnome-keyring.enable = true;
-    xserver = {
-      enable = true;
-      xkb = {
-        layout = "us";
-        variant = "";
-      };
-    };
+    # xserver = {
+    #   enable = true;
+    #   xkb = {
+    #     layout = "us";
+    #     variant = "";
+    #   };
+    # };
   };
   security.pam.services = {
     hyprlock = {};
