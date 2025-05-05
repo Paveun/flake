@@ -38,6 +38,7 @@
       url = "gitlab:GNOME/gvdb?ref=main&host=gitlab.gnome.org";
       flake = false;
     };
+    treefmt-nix.url = "github:numtide/treefmt-nix";
   };
   outputs = {
     self,
@@ -50,6 +51,7 @@
     lib = nixpkgs.lib // home-manager.lib;
     user = "paveun";
     forEachSystem = f: lib.genAttrs (import systems) (system: f pkgsFor.${system});
+    treefmtEval = forEachSystem (pkgs: pkgs.treefmt-nix.lib.evalModule pkgs ./treefmt.nix);
     pkgsFor = lib.genAttrs (import systems) (
       system:
         import nixpkgs {
@@ -58,7 +60,10 @@
         }
     );
   in {
-    formatter = forEachSystem (pkgs: pkgs.alejandra);
+    formatter = forEachSystem (pkgs: treefmtEval.${pkgs.system}.config.build.wrapper);
+    checks = forEachSystem (pkgs: {
+      formatting = treefmtEval.${pkgs.system}.config.build.check self;
+    });
     nixosModules = import ./modules/nixos;
     homeManagerModules = import ./modules/home-manager;
     nixosConfigurations = {
