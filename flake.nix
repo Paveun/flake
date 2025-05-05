@@ -45,13 +45,14 @@
     nixpkgs,
     home-manager,
     systems,
+    treefmt-nix,
     ...
   } @ inputs: let
     inherit (self) outputs;
     lib = nixpkgs.lib // home-manager.lib;
     user = "paveun";
     forEachSystem = f: lib.genAttrs (import systems) (system: f pkgsFor.${system});
-    treefmtEval = forEachSystem (pkgs: pkgs.treefmt-nix.lib.evalModule pkgs ./treefmt.nix);
+    treefmtEval = forEachSystem (pkgs: treefmt-nix.lib.evalModule pkgs ./treefmt.nix);
     pkgsFor = lib.genAttrs (import systems) (
       system:
         import nixpkgs {
