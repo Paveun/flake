@@ -11,4 +11,5 @@
   };
 
   security.pam.services.gdm.enableGnomeKeyring = true;
+  security.pam.services.greetd.enableGnomeKeyring = true;
 }
