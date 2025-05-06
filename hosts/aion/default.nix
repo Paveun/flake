@@ -12,9 +12,9 @@
     ../common
     ../../nixos/system/amdgpu
     # ../../nixos/wm/plasma
-    # ../../nixos/wm/gnome
+    ../../nixos/wm/gnome
     # ../../nixos/wm/cosmic
-    ../../nixos/wm/hyprland
+    # ../../nixos/wm/hyprland
   ];
 
   # home-manager.users.${user}.imports = [
