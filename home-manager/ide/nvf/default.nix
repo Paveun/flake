@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{inputs, pkgs, ...}: {
   imports = [
     inputs.nvf.homeManagerModules.default
   ];
@@ -13,7 +13,14 @@
         #   style = "moon";
         #   transparent = false;
         # };
-        useSystemClipboard = true;
+        # useSystemClipboard = true;
+        clipboard = {
+          enable = true;
+          providers = {
+            wl-copy.enable = true;
+          };
+          registers = "unnamedplus";
+        };
         lsp.enable = true;
         languages = {
           # enableLSP = true;
