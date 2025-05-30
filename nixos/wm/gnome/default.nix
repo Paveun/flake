@@ -4,20 +4,16 @@
   ...
 }: {
   services = {
-    xserver = {
-      enable = true;
-      displayManager = {
-        gdm = {
-          enable = true;
-          wayland = true;
-        };
-      };
-      desktopManager.gnome.enable = true;
-    };
+    # xserver.enable = true;
     displayManager = {
+      gdm = {
+        enable = true;
+        wayland = true;
+      };
       defaultSession = "gnome";
     };
-    dbus.packages = with pkgs; [gnome2.GConf];
+    desktopManager.gnome.enable = true;
+    # dbus.packages = with pkgs; [gnome2.GConf];
   };
   environment.systemPackages = with pkgs.gnomeExtensions; [
     appindicator
@@ -25,7 +21,7 @@
     alphabetical-app-grid
     clipboard-history
   ];
-  environment.sessionVariables.MUTTER_DEBUG_KMS_THREAD_TYPE = "user";
+  # environment.sessionVariables.MUTTER_DEBUG_KMS_THREAD_TYPE = "user";
   # nixpkgs.overlays = [
   #   (self: super: {
   #     mutter = super.mutter.overrideAttrs (old: {
