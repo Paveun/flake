@@ -9,8 +9,8 @@
       vim = {
         theme = {
           enable = true;
-          name = "rose-pine";
-          style = "moon";
+          name = "catppuccin";
+          style = "mocha";
           transparent = false;
         };
         # useSystemClipboard = true;
