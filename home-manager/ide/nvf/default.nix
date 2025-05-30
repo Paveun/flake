@@ -7,12 +7,12 @@
     enable = true;
     settings = {
       vim = {
-        # theme = {
-        #   enable = true;
-        #   name = "rose-pine";
-        #   style = "moon";
-        #   transparent = false;
-        # };
+        theme = {
+          enable = true;
+          name = "rose-pine";
+          style = "moon";
+          transparent = false;
+        };
         # useSystemClipboard = true;
         clipboard = {
           enable = true;
