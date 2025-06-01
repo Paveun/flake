@@ -55,6 +55,10 @@
     "openrazer"
   ];
 
+  services.udev.extraRules = ''
+    KERNEL=="hidraw*", ATTRS{idVendor}=="4653", ATTRS{idProduct}=="0004", MODE="0660", GROUP="plugdev", TAG+="uaccess", TAG+="udev-acl"
+  '';
+
   environment.systemPackages = with pkgs; [
     # linuxKernel.packages.linux_zen.xone
     # openrazer-daemon
