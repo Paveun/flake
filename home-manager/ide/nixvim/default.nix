@@ -13,7 +13,7 @@
     nixvim = {
       enable = true;
       nixpkgs.config.allowUnfree = true;
-      colorschemes.rose-pine.enable = true;
+      colorschemes.catppuccin.enable = true;
       clipboard.register = "unnamedplus";
       # clipboard.providers.wl-copy.enable = true;
       opts = {
