@@ -46,5 +46,7 @@
     glow
     # floorp
     tidal-hifi
+    # ventoy
   ];
+  # nixpkgs.config.permittedInsecurePackages = ["ventoy-1.1.05"];
 }
